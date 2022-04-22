@@ -1,0 +1,21 @@
+{
+  "name": "arkia-cloud-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@devnote-dev/pterojs": "^1.2.0",
+    "body-parser": "^1.19.2",
+    "cross-fetch": "^3.1.5",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "ipware": "^2.0.0",
+    "node-fetch": "^3.2.0",
+    "request": "^2.88.2"
+  }
+}
