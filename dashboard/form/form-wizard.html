@@ -1058,7 +1058,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                             </svg>
                                         </div>
-                                        <span class="dark-wizard">Compte</span>
+                                        <span class="dark-wizard">Informations personnelles</span>
                                     </a>
                                 </li>
                                 <li id="payment" class="mb-2 col-lg-3 col-md-6 text-start">
@@ -1085,7 +1085,7 @@
                                 <div class="form-card text-start">
                                     <div class="row">
                                     <div class="col-7">
-                                        <h3 class="mb-4">Account Information:</h3>
+                                        <h3 class="mb-4">Détails de la commande:</h3>
                                     </div>
                                     <div class="col-5">
                                         <h2 class="steps">Etape 1 - 4</h2>
@@ -1094,42 +1094,52 @@
                                     <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Default</label>
+                                            <label class="form-label">Cycle de facturation *</label>
                                             <select class="form-select mb-3 shadow-none">
-                                                <option selected="">Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                                <option selected="">Choisissez un cycle de facturation</option>
+                                                <option value="1">Mensuel</option>
+                                                <option value="2">Semi-annuel (-20%)</option>
+                                                <option value="3">Annuel (-35%)</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Username: *</label>
-                                            <input type="text" class="form-control" name="uname" placeholder="UserName" />
+                                            <label class="form-label">Nom du serveur *</label>
+                                            <input type="text" class="form-control" name="uname" placeholder="Nom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Password: *</label>
-                                            <input type="password" class="form-control" name="pwd" placeholder="Password" />
+                                            <label class="form-label">Bases de données suplémentaire</label>
+                                            <select class="form-select mb-3 shadow-none">
+                                                <option selected="">Bases de données suplémentaire</option>
+                                                <option value="1">5 Bases de données suplémentaire (+2€)</option>
+                                                <option value="2">10 Bases de données suplémentaire (+4€)</option>
+                                                <option value="3">15 Bases de données suplémentaire (+6€)</option>
+                                            </select>                                        
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Confirm Password: *</label>
-                                            <input type="password" class="form-control" name="cpwd" placeholder="Confirm Password" />
+                                            <label class="form-label">Backups suplémentaire</label>
+                                            <select class="form-select mb-3 shadow-none">
+                                                <option selected="">Backups suplémentaire</option>
+                                                <option value="1">5 Backups suplémentaire (+4€)</option>
+                                                <option value="2">10 Backups suplémentaire (+8€)</option>
+                                                <option value="3">15 Backups suplémentaire (+10€)</option>
+                                            </select>   
                                         </div>
                                     </div>
                                     </div>
                                 </div>
-                                <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Next" >Next</button>
+                                <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Next" >Suivant</button>
                             </fieldset>
                             <fieldset>
                                 <div class="form-card text-start">
                                     <div class="row">
                                     <div class="col-7">
-                                        <h3 class="mb-4">Personal Information:</h3>
+                                        <h3 class="mb-4">Informations personnelles:</h3>
                                     </div>
                                     <div class="col-5">
                                         <h2 class="steps">Etape 2 - 4</h2>
@@ -1138,32 +1148,268 @@
                                     <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">First Name: *</label>
-                                            <input type="text" class="form-control" name="fname" placeholder="First Name" />
+                                            <label class="form-label">Prénom *</label>
+                                            <input type="text" class="form-control" name="fname" placeholder="Prénom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Last Name: *</label>
-                                            <input type="text" class="form-control" name="lname" placeholder="Last Name" />
+                                            <label class="form-label">Nom *</label>
+                                            <input type="text" class="form-control" name="lname" placeholder="Nom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Contact No.: *</label>
-                                            <input type="text" class="form-control" name="phno" placeholder="Contact No." />
+                                            <label class="form-label">Adresse courriel *</label>
+                                            <input type="text" class="form-control" name="phno" placeholder="Adresse courriel" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Alternate Contact No.: *</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Alternate Contact No." />
+                                            <label class="form-label">Téléphone *</label>
+                                            <input type="text" class="form-control" name="phno_2" placeholder="Téléphone" />
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <h3 class="mb-4">Adresse de facturation:</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Adresse *</label>
+                                            <input type="text" class="form-control" name="phno_2" placeholder="Adresse" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Adresse 2 (Optionnel)</label>
+                                            <input type="text" class="form-control" name="phno_2" placeholder="Adresse 2 (Optionnel)" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Ville *</label>
+                                            <input type="text" class="form-control" name="phno_2" placeholder="Ville" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Pays</label>
+                                            <select class="form-select mb-3 shadow-none">
+                                                <option selected="">--</option>
+                                                <option value="1">Afghanistan</option>
+                                                <option value="2">Albania</option>
+                                                <option value="3">Algeria</option>
+                                                <option value="4">Andorra</option>
+                                                <option value="5">Angola</option>
+                                                <option value="6">Antigua & Deps</option>
+                                                <option value="7">Argentina</option>
+                                                <option value="8">Armenia</option>
+                                                <option value="9">Australia</option>
+                                                <option value="10">Austria</option>
+                                                <option value="11">Azerbaijan</option>
+                                                <option value="12">Bahamas</option>
+                                                <option value="13">Bahrain</option>
+                                                <option value="14">Bangladesh</option>
+                                                <option value="15">Barbados</option>
+                                                <option value="16">Belarus</option>
+                                                <option value="17">Belgium</option>
+                                                <option value="18">Belize</option>
+                                                <option value="19">Benin</option>
+                                                <option value="20">Bhutan</option>
+                                                <option value="21">Bolivia</option>
+                                                <option value="22">Bosnia Herzegovina</option>
+                                                <option value="23">Botswana</option>
+                                                <option value="24">Brazil</option>
+                                                <option value="25">Brunei</option>
+                                                <option value="26">Bulgaria</option>
+                                                <option value="27">Burkina</option>
+                                                <option value="28">Burundi</option>
+                                                <option value="29">Cambodia</option>
+                                                <option value="30">Cameroon</option>
+                                                <option value="31">Canada</option>
+                                                <option value="32">Cape Verde</option>
+                                                <option value="33">Central African Rep</option>
+                                                <option value="34">Chad</option>
+                                                <option value="35">Chile</option>
+                                                <option value="36">China</option>
+                                                <option value="37">Colombia</option>
+                                                <option value="38">Comoros</option>
+                                                <option value="39">Congo</option>
+                                                <option value="40">Congo {Democratic Rep}</option>
+                                                <option value="41">Costa Rica</option>
+                                                <option value="42">Croatia</option>
+                                                <option value="43">Cuba</option>
+                                                <option value="44">Cyprus</option>
+                                                <option value="45">Czech Republic</option>
+                                                <option value="46">Denmark</option>
+                                                <option value="47">Djibouti</option>
+                                                <option value="48">Dominica</option>
+                                                <option value="49">Dominican Republic</option>
+                                                <option value="50">East Timor</option>
+                                                <option value="51">Ecuador</option>
+                                                <option value="52">Egypt</option>
+                                                <option value="53">El Salvador</option>
+                                                <option value="54">Equatorial Guinea</option>
+                                                <option value="55">Eritrea</option>
+                                                <option value="56">Estonia</option>
+                                                <option value="57">Ethiopia</option>
+                                                <option value="58">Fiji</option>
+                                                <option value="59">Finland</option>
+                                                <option value="60">France</option>
+                                                <option value="61">Gabon</option>
+                                                <option value="62">Gambia</option>
+                                                <option value="63">Georgia</option>
+                                                <option value="64">Germany</option>
+                                                <option value="65">Ghana</option>
+                                                <option value="66">Greece</option>
+                                                <option value="67">Grenada</option>
+                                                <option value="68">Guatemala</option>
+                                                <option value="69">Guinea</option>
+                                                <option value="70">Guinea-Bissau</option>
+                                                <option value="71">Guyana</option>
+                                                <option value="72">Haiti</option>
+                                                <option value="73">Honduras</option>
+                                                <option value="74">Hungary</option>
+                                                <option value="75">Iceland</option>
+                                                <option value="76">India</option>
+                                                <option value="77">Indonesia</option>
+                                                <option value="78">Iran</option>
+                                                <option value="79">Iraq</option>
+                                                <option value="80">Ireland {Republic}</option>
+                                                <option value="81">Israel</option>
+                                                <option value="82">Italy</option>
+                                                <option value="83">Ivory Coast</option>
+                                                <option value="84">Jamaica</option>
+                                                <option value="85">Japan</option>
+                                                <option value="86">Jordan</option>
+                                                <option value="87">Kazakhstan</option>
+                                                <option value="88">Kenya</option>
+                                                <option value="89">Kiribati</option>
+                                                <option value="90">Korea North</option>
+                                                <option value="91">Korea South</option>
+                                                <option value="92">Kosovo</option>
+                                                <option value="93">Kuwait</option>
+                                                <option value="94">Kyrgyzstan</option>
+                                                <option value="95">Laos</option>
+                                                <option value="96">Latvia</option>
+                                                <option value="97">Lebanon</option>
+                                                <option value="98">Lesotho</option>
+                                                <option value="99">Liberia</option>
+                                                <option value="100">Libya</option>
+                                                <option value="101">Liechtenstein</option>
+                                                <option value="102">Lithuania</option>
+                                                <option value="103">Luxembourg</option>
+                                                <option value="104">Macedonia</option>
+                                                <option value="105">Madagascar</option>
+                                                <option value="106">Malawi</option>
+                                                <option value="107">Malaysia</option>
+                                                <option value="108">Maldives</option>
+                                                <option value="109">Mali</option>
+                                                <option value="110">Malta</option>
+                                                <option value="111">Marshall Islands</option>
+                                                <option value="112">Mauritania</option>
+                                                <option value="113">Mauritius</option>
+                                                <option value="114">Mexico</option>
+                                                <option value="115">Micronesia</option>
+                                                <option value="116">Moldova</option>
+                                                <option value="117">Monaco</option>
+                                                <option value="118">Mongolia</option>
+                                                <option value="119">Montenegro</option>
+                                                <option value="120">Morocco</option>
+                                                <option value="121">Mozambique</option>
+                                                <option value="122">Myanmar, {Burma}</option>
+                                                <option value="123">Namibia</option>
+                                                <option value="124">Nauru</option>
+                                                <option value="125">Nepal</option>
+                                                <option value="126">Netherlands</option>
+                                                <option value="127">New Zealand</option>
+                                                <option value="128">Nicaragua</option>
+                                                <option value="129">Niger</option>
+                                                <option value="130">Nigeria</option>
+                                                <option value="131">Norway</option>
+                                                <option value="132">Oman</option>
+                                                <option value="133">Pakistan</option>
+                                                <option value="134">Palau</option>
+                                                <option value="135">Panama</option>
+                                                <option value="136">Papua New Guinea</option>
+                                                <option value="137">Paraguay</option>
+                                                <option value="138">Peru</option>
+                                                <option value="139">Philippines</option>
+                                                <option value="140">Poland</option>
+                                                <option value="141">Portugal</option>
+                                                <option value="142">Qatar</option>
+                                                <option value="143">Romania</option>
+                                                <option value="144">Russian Federation</option>
+                                                <option value="145">Rwanda</option>
+                                                <option value="146">St Kitts & Nevis</option>
+                                                <option value="147">St Lucia</option>
+                                                <option value="148">Saint Vincent & the Grenadines</option>
+                                                <option value="149">Samoa</option>
+                                                <option value="150">San Marino</option>
+                                                <option value="151">Sao Tome & Principe</option>
+                                                <option value="152">Saudi Arabia</option>
+                                                <option value="153">Senegal</option>
+                                                <option value="154">Serbia</option>
+                                                <option value="155">Seychelles</option>
+                                                <option value="156">Sierra Leone</option>
+                                                <option value="157">Singapore</option>
+                                                <option value="158">Slovakia</option>
+                                                <option value="159">Slovenia</option>
+                                                <option value="160">Solomon Islands</option>
+                                                <option value="161">Somalia</option>
+                                                <option value="162">South Africa</option>
+                                                <option value="163">Spain</option>
+                                                <option value="164">Sri Lanka</option>
+                                                <option value="165">Sudan</option>
+                                                <option value="166">Suriname</option>
+                                                <option value="167">Swaziland</option>
+                                                <option value="168">Sweden</option>
+                                                <option value="169">Switzerland</option>
+                                                <option value="170">Syria</option>
+                                                <option value="171">Taiwan</option>
+                                                <option value="172">Tajikistan</option>
+                                                <option value="173">Tanzania</option>
+                                                <option value="174">Thailand</option>
+                                                <option value="175">Togo</option>
+                                                <option value="176">Tonga</option>
+                                                <option value="177">Trinidad & Tobago</option>
+                                                <option value="178">Tunisia</option>
+                                                <option value="179">Turkey</option>
+                                                <option value="180">Turkmenistan</option>
+                                                <option value="181">Tuvalu</option>
+                                                <option value="182">Uganda</option>
+                                                <option value="183">Ukraine</option>
+                                                <option value="184">United Arab Emirates</option>
+                                                <option value="185">United Kingdom</option>
+                                                <option value="186">United States</option>
+                                                <option value="187">Uruguay</option>
+                                                <option value="188">Uzbekistan</option>
+                                                <option value="189">Vanuatu</option>
+                                                <option value="190">Vatican City</option>
+                                                <option value="191">Venezuela</option>
+                                                <option value="192">Vietnam</option>
+                                                <option value="193">Yemen</option>
+                                                <option value="194">Zambia</option>
+                                                <option value="195">Zimbabwe</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Province *</label>
+                                            <input type="text" class="form-control" name="phno_2" placeholder="Province" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Code postal *</label>
+                                            <input type="text" class="form-control" name="phno_2" placeholder="Code postal" />
                                         </div>
                                     </div>
                                     </div>
                                 </div>
-                                <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Next" >Next</button>
-                                <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-end me-1" value="Previous" >Previous</button>
+                                <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Next" >Suivant</button>
+                                <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-end me-1" value="Previous" >Précedent</button>
                             </fieldset>
                             <fieldset>
                                 <div class="form-card text-start">
@@ -1184,8 +1430,8 @@
                                     <input type="file" class="form-control" name="pic-2" accept="image/*">
                                     </div>
                                 </div>
-                                <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Submit" >Submit</button>
-                                <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-end me-1" value="Previous" >Previous</button>
+                                <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Submit" >Valider</button>
+                                <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-end me-1" value="Previous" >Précedent</button>
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
