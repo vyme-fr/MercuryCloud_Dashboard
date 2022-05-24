@@ -76,6 +76,11 @@ app.post('/api/create_ptero_services', jsonParser, function (req, res) {
   .catch(err => console.error(err)).then(() => {res.send("OK !")})
 })
 
+app.post('/api/order-form', jsonParser, function (req, res) {
+  console.log(req.body)
+  res.json({"response": "OK"})
+})
+
 app.get('/', (req, res) => {
     ipInfo = getIP(req);
     logger()

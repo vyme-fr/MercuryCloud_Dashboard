@@ -1095,8 +1095,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Cycle de facturation *</label>
-                                            <select class="form-select mb-3 shadow-none">
-                                                <option selected="">Choisissez un cycle de facturation</option>
+                                            <select id="cycle-fac" class="form-select mb-3 shadow-none">
+                                                <option selected="" value="0">Choisissez un cycle de facturation</option>
                                                 <option value="1">Mensuel</option>
                                                 <option value="2">Semi-annuel (-20%)</option>
                                                 <option value="3">Annuel (-35%)</option>
@@ -1106,13 +1106,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Nom du serveur *</label>
-                                            <input type="text" class="form-control" name="uname" placeholder="Nom" />
+                                            <input id="srv-name" type="text" class="form-control" name="uname" placeholder="Nom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Bases de données suplémentaire</label>
-                                            <select class="form-select mb-3 shadow-none">
+                                            <select id="db-sup" class="form-select mb-3 shadow-none">
                                                 <option selected="">Bases de données suplémentaire</option>
                                                 <option value="1">5 Bases de données suplémentaire (+2€)</option>
                                                 <option value="2">10 Bases de données suplémentaire (+4€)</option>
@@ -1123,7 +1123,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Backups suplémentaire</label>
-                                            <select class="form-select mb-3 shadow-none">
+                                            <select id="bkp-sup" class="form-select mb-3 shadow-none">
                                                 <option selected="">Backups suplémentaire</option>
                                                 <option value="1">5 Backups suplémentaire (+4€)</option>
                                                 <option value="2">10 Backups suplémentaire (+8€)</option>
@@ -1149,25 +1149,25 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Prénom *</label>
-                                            <input type="text" class="form-control" name="fname" placeholder="Prénom" />
+                                            <input id="first-name" type="text" class="form-control" name="fname" placeholder="Prénom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Nom *</label>
-                                            <input type="text" class="form-control" name="lname" placeholder="Nom" />
+                                            <input id="last-name" type="text" class="form-control" name="lname" placeholder="Nom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Adresse courriel *</label>
-                                            <input type="text" class="form-control" name="phno" placeholder="Adresse courriel" />
+                                            <input id="mail" type="text" class="form-control" name="phno" placeholder="Adresse courriel" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Téléphone *</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Téléphone" />
+                                            <input id="tel" type="text" class="form-control" name="phno_2" placeholder="Téléphone" />
                                         </div>
                                     </div>
                                     <div class="col-7">
@@ -1176,26 +1176,32 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Adresse *</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Adresse" />
+                                            <input id="address-1" type="text" class="form-control" name="phno_2" placeholder="Adresse" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Adresse 2 (Optionnel)</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Adresse 2 (Optionnel)" />
+                                            <input id="address-2" type="text" class="form-control" name="phno_2" placeholder="Adresse 2 (Optionnel)" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Ville *</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Ville" />
+                                            <input id="city" type="text" class="form-control" name="phno_2" placeholder="Ville" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Code postal *</label>
+                                            <input id="zip" type="text" class="form-control" name="phno_2" placeholder="Code postal" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Pays</label>
-                                            <select class="form-select mb-3 shadow-none">
-                                                <option selected="">--</option>
+                                            <select id="country" class="form-select mb-3 shadow-none">
+                                                <option selected="" value="0">--</option>
                                                 <option value="1">Afghanistan</option>
                                                 <option value="2">Albania</option>
                                                 <option value="3">Algeria</option>
@@ -1397,13 +1403,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Province *</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Province" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label">Code postal *</label>
-                                            <input type="text" class="form-control" name="phno_2" placeholder="Code postal" />
+                                            <input id="state" type="text" class="form-control" name="phno_2" placeholder="Province" />
                                         </div>
                                     </div>
                                     </div>
@@ -1413,22 +1413,7 @@
                             </fieldset>
                             <fieldset>
                                 <div class="form-card text-start">
-                                    <div class="row">
-                                    <div class="col-7">
-                                        <h3 class="mb-4">Image Upload:</h3>
-                                    </div>
-                                    <div class="col-5">
-                                        <h2 class="steps">Etape 3 - 4</h2>
-                                    </div>
-                                    </div>
-                                    <div class="form-group">
-                                    <label class="form-label">Upload Your Photo:</label>
-                                    <input type="file" class="form-control" name="pic" accept="image/*">
-                                    </div>
-                                    <div class="form-group">
-                                    <label class="form-label">Upload Signature Photo:</label>
-                                    <input type="file" class="form-control" name="pic-2" accept="image/*">
-                                    </div>
+                                    <image src="../../assets/images/payement.gif"></image>
                                 </div>
                                 <button type="button" name="next" class="btn btn-primary next action-button float-end" value="Submit" >Valider</button>
                                 <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-end me-1" value="Previous" >Précedent</button>
@@ -1710,7 +1695,7 @@
     <script src="../../assets/js/plugins/slider-tabs.js"></script>
     
     <!-- Form Wizard Script -->
-    <script src="../../assets/js/plugins/form-wizard.js"></script>
+    <script src="../../assets/js/pages/order-form.js"></script>
     
     <!-- AOS Animation Plugin-->
     
