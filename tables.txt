@@ -1,0 +1,1 @@
+USER : uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts

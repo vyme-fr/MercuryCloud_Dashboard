@@ -2,16 +2,40 @@ const https = require('https');
 const express = require('express');
 var getIP = require('ipware')().get_ip;
 const fs = require('fs')
+var crypto = require("crypto");
+const uuid = require('uuid');
 const fetch = require('cross-fetch');
 const request = require('request');
 const req = require('express/lib/request');
 const bodyParser = require('body-parser')
+const bcrypt = require('bcrypt')
 const app = express();
 const PORT = 400
 var ipInfo = ""
 const pterodactyl_api_key = "n6ZIvdfORa4WOUE8xFFTSnB7s8atEHTAZKDdxFnjUW92kklK"
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : '192.168.50.17',
+  user     : 'mercurycloud_api',
+  password : 'r6z14kKL2tFDaU6G',
+  database : 'mercurycloud_api'
+});
 
-function logger() {
+console.log(`   
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝`);
+connection.connect(function(err) {
+  if (err) {
+    console.error(`  [ERROR] Database error !\n${err.stack}`);
+    return;
+  }
+ 
+  console.log(`  [INFO] Database succefull connected ! (${connection.threadId})`);
+  function logger() {
     let date_ob = new Date();;
     let date = ("0" + date_ob.getDate()).slice(-2);
     let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
@@ -64,7 +88,7 @@ app.post('/api/create_ptero_services', jsonParser, function (req, res) {
   }
   console.log(req.body)
   
-  fetch("https://admin.arkia-mc.fr/api/application/servers", {
+  fetch("https://panel.mercucyrcloud.fr/api/application/servers", {
     "method": "POST",
     "headers": {
       "Accept": "application/json",
@@ -81,27 +105,66 @@ app.post('/api/order-form', jsonParser, function (req, res) {
   res.json({"response": "OK"})
 })
 
+app.post('/api/login-user', jsonParser, function (req, res) {
+  var sql = `SELECT password FROM users WHERE mail = '${req.body.mail}'`;
+  connection.query(sql, function (err, result) {
+    if (err) throw err;
+    if (result.length == 0) {
+      res.json({'error': true, 'code': 404})
+    } else {
+      bcrypt.compare(req.body.password, result[0].password, function(err, result) {
+        if (result === true) {
+          var sql = `SELECT * FROM users WHERE mail = '${req.body.mail}'`;
+          connection.query(sql, function (err, result) {
+            if (err) throw err;
+            res.json({'error': false, 'uuid': result[0].uuid, 'token': result[0].token})
+          });
+        } else {
+          res.json({'error': true, 'code': 403})
+        }
+      });
+    }
+  });
+  console.log(req.body)
+})
+
+app.post('/api/create-user', jsonParser, function (req, res) {
+  bcrypt.hash(req.body.password, 10, function(err, hash) {
+    var sql = `INSERT INTO users (uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts) VALUES('${uuid.v4()}', '${req.body.username}', '${req.body.mail.toLowerCase()}', '${crypto.randomBytes(20).toString('hex')}', '${hash}', 0, 0, 0, 0, 0)`;
+    connection.query(sql, function (err, result) {
+      if (err) throw err;
+    });
+  });
+  console.log("  [INFO] User " + req.body.username + " created !")
+  res.json({"response": "OK"})
+})
+
 app.get('/', (req, res) => {
     ipInfo = getIP(req);
     logger()
-    usertoken = req.query.token;
-    if (usertoken === "0123456789") {
-
-        var activity = []
-        activity.push({
-            "name": "Maintenance Serveur Epsilon",
-            "date": "17 FEV 15:59"
-        })
-        activity.push({
-            "name": "Maintenance réseau",
-            "date": "11 JUL 8:10"
-        })
-        activity.push({
-            "name": "Maintenance DNS",
-            "date": "15 JUN 11:00"
-        })
-        return res.json(
-        {
+    console.log(req.query)
+    var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+    connection.query(sql, function (err, result) {
+      if (err) throw err;
+      if (result.length == 0) {
+        res.json({'error': true, 'code': 404})
+      } else {
+        if (result[0].token === req.query.token) {
+          var activity = []
+          activity.push({
+              "name": "Maintenance Serveur Epsilon",
+              "date": "17 FEV 15:59"
+          })
+          activity.push({
+              "name": "Maintenance réseau",
+              "date": "11 JUL 8:10"
+          })
+          activity.push({
+              "name": "Maintenance DNS",
+              "date": "15 JUN 11:00"
+          })
+          return res.json(
+          {
             "error": false,
             "username": "Savalet",
             "stats_array": {
@@ -135,17 +198,14 @@ app.get('/', (req, res) => {
                 "status": "Terminé"
               }
             ],
-            "get_ip": ipInfo.clientIp.split("::ffff:")[1]
-        });
-    } else {
-        return res.json(
-            {
-                "error": 403,
-                "msg": "Unauthorized access"
-            }
-        )
-    }
+              "get_ip": ipInfo.clientIp.split("::ffff:")[1]
+          });
+        } else {
+          res.json({'error': true, 'code': 403})
+        }
+      }
+    });
 });
 app.listen(PORT, () =>
-	 console.log(`\n\n[INFO] Arkia API listening on port http://localhost:${PORT}/ !\n\n`),
-);
+	 console.log(`  [INFO] MercuryCloud API listening on http://localhost:${PORT}/ !`));
+});

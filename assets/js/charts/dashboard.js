@@ -4,6 +4,12 @@
   var cpu = []
   var ram = []
 
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
   async function postData(url = '', data = {}) {
     const response = await fetch(url, {
       method: 'POST',
@@ -48,17 +54,15 @@
       'oom_disabled': true
   }
   console.log(data);
-
-    postData('http://localhost:400/api/create_ptero_services', data)
-    .then(data => {
-    });
-  }
-  
-  fetch('http://localhost:400/?token=0123456789')
+  postData('http://localhost:400/api/create_ptero_services', data)
+  .then(data => {});
+}
+  fetch(`http://127.0.0.1:400/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
   .then(function (response) {
     return response.json();
   })
   .then(function (myJson) {
+    console.log(myJson)
     if (myJson.error === false) {
 
       document.getElementById("hello").innerHTML = "Bonjour " + myJson.username + " !"
@@ -70,11 +74,11 @@
       document.getElementById("services_suspended").innerHTML = myJson.counters[4]
       document.getElementById("alerts").innerHTML = myJson.counters[5]
       var invoiced_table = ""
-      var color = "green"
+      var color = "#39EE30"
       for (let i = 0; i < myJson.invoices_table.length; i++) {
-        if (myJson.invoices_table[i].status == "Terminé") {color = "green"}
-        if (myJson.invoices_table[i].status == "En Attente") {color = "orange"}
-        if (myJson.invoices_table[i].status == "Remboursé") {color = "blue"}
+        if (myJson.invoices_table[i].status == "Terminé") {color = "#28B463"}
+        if (myJson.invoices_table[i].status == "En Attente") {color = "#E67E22"}
+        if (myJson.invoices_table[i].status == "Remboursé") {color = "#2874A6"}
 
         invoiced_table = invoiced_table + `
         <tr>
@@ -369,7 +373,7 @@
           })
       }
     } else {
-      window.location.replace("file:///C:/Users/Savalet/Documents/DEV/sites/Arkia%20Cloud%20Dashboard/dashboard/auth/sign-in.html");
+       // window.location.replace("file:///C:/Users/Savalet/Documents/DEV/sites/MercuryCloud_Dashboard/dashboard/auth/sign-in.html");
     }
   })
 })(jQuery)
