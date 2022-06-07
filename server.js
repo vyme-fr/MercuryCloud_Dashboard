@@ -10,6 +10,19 @@ const req = require('express/lib/request');
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const app = express();
+
+function logger(msg) {
+  let date_ob = new Date();;
+  let date = ("0" + date_ob.getDate()).slice(-2);
+  let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+  let year = date_ob.getFullYear();
+  let hours = date_ob.getHours();
+  let minutes = date_ob.getMinutes();
+  let seconds = date_ob.getSeconds();
+  console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg)
+  fs.appendFileSync('latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
+}
+
 const PORT = 400
 var ipInfo = ""
 const pterodactyl_api_key = "n6ZIvdfORa4WOUE8xFFTSnB7s8atEHTAZKDdxFnjUW92kklK"
@@ -21,7 +34,10 @@ var connection = mysql.createConnection({
   database : 'mercurycloud_api'
 });
 
-console.log(`   
+logger(`   
+
+
+
   ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
   ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
   ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
@@ -30,22 +46,11 @@ console.log(`
   ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝`);
 connection.connect(function(err) {
   if (err) {
-    console.error(`  [ERROR] Database error !\n${err.stack}`);
+    logger(` [ERROR] Database error !\n  ${err.stack}`);
     return;
   }
- 
-  console.log(`  [INFO] Database succefull connected ! (${connection.threadId})`);
-  function logger() {
-    let date_ob = new Date();;
-    let date = ("0" + date_ob.getDate()).slice(-2);
-    let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
-    let year = date_ob.getFullYear();
-    let hours = date_ob.getHours();
-    let minutes = date_ob.getMinutes();
-    let seconds = date_ob.getSeconds();
-    console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1])
-    fs.appendFileSync('latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + '\n')
-}
+  logger(` [INFO] Database succefull connected ! (${connection.threadId})`);
+
 
 app.use((req, res, next) => {
     res.append('Access-Control-Allow-Origin', ['*']);
@@ -86,7 +91,7 @@ app.post('/api/create_ptero_services', jsonParser, function (req, res) {
     'skip_scripts': req.body.skip_scripts,
     'oom_disabled': req.body.oom_disabled,
   }
-  console.log(req.body)
+  logger(req.body)
   
   fetch("https://panel.mercucyrcloud.fr/api/application/servers", {
     "method": "POST",
@@ -96,12 +101,12 @@ app.post('/api/create_ptero_services', jsonParser, function (req, res) {
       "Authorization": `Bearer ${pterodactyl_api_key}`,
     },
     "body": JSON.stringify(req.body)
-  }).then(response => console.log(response))
+  }).then(response => logger(response))
   .catch(err => console.error(err)).then(() => {res.send("OK !")})
 })
 
 app.post('/api/order-form', jsonParser, function (req, res) {
-  console.log(req.body)
+  logger(req.body)
   res.json({"response": "OK"})
 })
 
@@ -116,7 +121,7 @@ app.post('/api/login-user', jsonParser, function (req, res) {
         if (result === true) {
           var sql = `SELECT * FROM users WHERE mail = '${req.body.mail}'`;
           connection.query(sql, function (err, result) {
-            if (err) throw err;
+            if (err) {logger(" [ERROR] Database error\n  " + err)};
             res.json({'error': false, 'uuid': result[0].uuid, 'token': result[0].token})
           });
         } else {
@@ -125,27 +130,26 @@ app.post('/api/login-user', jsonParser, function (req, res) {
       });
     }
   });
-  console.log(req.body)
+  logger(req.body)
 })
 
 app.post('/api/create-user', jsonParser, function (req, res) {
   bcrypt.hash(req.body.password, 10, function(err, hash) {
     var sql = `INSERT INTO users (uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts) VALUES('${uuid.v4()}', '${req.body.username}', '${req.body.mail.toLowerCase()}', '${crypto.randomBytes(20).toString('hex')}', '${hash}', 0, 0, 0, 0, 0)`;
     connection.query(sql, function (err, result) {
-      if (err) throw err;
+        if (err) {logger(" [ERROR] Database error\n  " + err)};
     });
   });
-  console.log("  [INFO] User " + req.body.username + " created !")
+  logger(" [INFO] User " + req.body.username + " created !")
   res.json({"response": "OK"})
 })
 
 app.get('/', (req, res) => {
     ipInfo = getIP(req);
-    logger()
-    console.log(req.query)
+    logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1])
     var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
     connection.query(sql, function (err, result) {
-      if (err) throw err;
+      if (err) {logger(" [ERROR] Database error\n  " + err)};
       if (result.length == 0) {
         res.json({'error': true, 'code': 404})
       } else {
@@ -207,5 +211,5 @@ app.get('/', (req, res) => {
     });
 });
 app.listen(PORT, () =>
-	 console.log(`  [INFO] MercuryCloud API listening on http://localhost:${PORT}/ !`));
+	 logger(` [INFO] MercuryCloud API listening on http://localhost:${PORT}/ !`));
 });
