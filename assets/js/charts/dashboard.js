@@ -54,10 +54,10 @@
       'oom_disabled': true
   }
   console.log(data);
-  postData('http://localhost:400/api/create_ptero_services', data)
+  postData('https://api.mercurycloud.fr/api/create_ptero_services', data)
   .then(data => {});
 }
-  fetch(`http://127.0.0.1:400/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+  fetch(`https://api.mercurycloud.fr/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
   .then(function (response) {
     return response.json();
   })

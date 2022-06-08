@@ -69,7 +69,7 @@
             form_array.push(form2)
             form = {"order": form_array}
             console.log(form)
-            postData('http://localhost:400/api/order-form', form).catch(function(error) {
+            postData('https://api.mercurycloud.fr/api/order-form', form).catch(function(error) {
                 console.log('[ERROR] ' + error.message);
                 location.href = "../errors/error500.html";
 

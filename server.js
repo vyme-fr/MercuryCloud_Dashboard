@@ -28,7 +28,7 @@ var ipInfo = ""
 const pterodactyl_api_key = "n6ZIvdfORa4WOUE8xFFTSnB7s8atEHTAZKDdxFnjUW92kklK"
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : '192.168.50.17',
+  host     : '192.168.20.22',
   user     : 'mercurycloud_api',
   password : 'r6z14kKL2tFDaU6G',
   database : 'mercurycloud_api'

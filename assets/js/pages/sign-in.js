@@ -14,7 +14,7 @@ function connect() {
         'mail': document.getElementById("email").value,
         'password': document.getElementById("password").value
     }
-    postData('http://127.0.0.1:400/api/login-user', data).then(data => {
+    postData('https://api.mercurycloud.fr/api/login-user', data).then(data => {
         console.log(data)
         if (data.error == false) {
             document.cookie = `uuid=${data.uuid}`
