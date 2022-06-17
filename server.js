@@ -19,13 +19,16 @@ function logger(msg) {
   let hours = date_ob.getHours();
   let minutes = date_ob.getMinutes();
   let seconds = date_ob.getSeconds();
+  if (seconds < 10) {seconds = "0" + seconds}
+  if (hours < 10) {hours = "0" + hours}
+  if (minutes < 10) {minutes = "0" + minutes}
   console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg)
   fs.appendFileSync('latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
 }
 
 const PORT = 400
 var ipInfo = ""
-const pterodactyl_api_key = "n6ZIvdfORa4WOUE8xFFTSnB7s8atEHTAZKDdxFnjUW92kklK"
+const pterodactyl_api_key = "ptla_28BCpHTsEFDr80yyNU4WLsdkSbGwxnT5kqFuzEHjx81"
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : '192.168.20.22',
@@ -62,52 +65,58 @@ app.use((req, res, next) => {
 
 var jsonParser = bodyParser.json()
 
+app.post('/api/order-form', jsonParser, function (req, res) {
+  var docker_img = "ghcr.io/pterodactyl/yolks:java_17"
+  var env = {}
+  var egg = 0
+
+  if (req.body.order[0].srv_nest == 1) {egg = 1; docker_img = "ghcr.io/pterodactyl/yolks:java_17"; env = {"SERVER_JARFILE": "bungeecord.jar","BUNGEE_VERSION": "latest"}}
+  if (req.body.order[0].srv_nest == 2) {egg = 3; docker_img = "ghcr.io/pterodactyl/yolks:java_17"; env = {"SERVER_JARFILE": "server.jar","MINECRAFT_VERSION": "1.18.2","BUILD_NUMBER": "latest"}}
 
 
-app.post('/api/create_ptero_services', jsonParser, function (req, res) {
+    let data = {
+      'name': "MC_JAVA " + req.body.order[0].srv_name + " (" + req.body.order[1].first_name + ")",
+      "user": 1,
+      "egg": egg,
+      'docker_image': docker_img,
+      'startup': "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}",
+      "limits": {
+          "memory": 2048,
+          "swap": 2048,
+          "disk": 4096,
+          "io": 500,
+          "cpu": 200
+        },
+        "feature_limits": {
+          'databases': req.body.order[0].db_sup,
+          'allocations': 0,
+          'backups': req.body.order[0].bkp_sup,
+        },
+        "environment": env,
+        "allocation": {
+          "default": 1,
+          "addtional": []
+        },
+        "deploy": {
+          "locations": [2],
+          "dedicated_ip": false,
+          "port_range": []
+        },
+        "start_on_completion": false,
+        "skip_scripts": false,
+        "oom_disabled": true
+      }
   
-  let data = {
-    'name': req.body.name,
-    'user': req.body.user,
-    'egg': req.body.egg,
-    'docker_image': req.body.docker_image,
-    'startup': req.body.startup,
-    'limits': {
-        'memory': req.body.limits.memory,
-        'swap': req.body.limits.swap,
-        'disk': req.body.limits.disk,
-        'io': req.body.limits.io,
-        'cpu': req.body.limits.cpu,
-    },
-    'feature_limits': {
-        'databases': req.body.feature_limits.databases,
-        'allocations': req.body.feature_limits.allocations,
-        'backups': req.body.feature_limits.backups,
-    },
-    'environment': req.body.environment,
-    'allocation': req.body.allocation,
-    'deploy': req.body.deploy,
-    'start_on_completion': req.body.start_on_completion,
-    'skip_scripts': req.body.skip_scripts,
-    'oom_disabled': req.body.oom_disabled,
-  }
-  logger(req.body)
-  
-  fetch("https://panel.mercucyrcloud.fr/api/application/servers", {
+  fetch("https://panel.mercurycloud.fr/api/application/servers", {
     "method": "POST",
     "headers": {
       "Accept": "application/json",
       "Content-Type": "application/json",
       "Authorization": `Bearer ${pterodactyl_api_key}`,
     },
-    "body": JSON.stringify(req.body)
-  }).then(response => logger(response))
-  .catch(err => console.error(err)).then(() => {res.send("OK !")})
-})
-
-app.post('/api/order-form', jsonParser, function (req, res) {
-  logger(req.body)
-  res.json({"response": "OK"})
+    "body": JSON.stringify(data)
+  }).then(response => logger(JSON.stringify(response)))
+  .catch(err => console.error(err)).then(() => {logger(" [DEBUG] New service !" + "\n Name : " + req.body.order[0].srv_name + "\n Owner first name : " + req.body.order[1].first_name + "\n Owner last name : " + req.body.order[1].last_name + "\n Owner mail : " + req.body.order[1].mail); res.json({"error": false})})  
 })
 
 app.post('/api/login-user', jsonParser, function (req, res) {
@@ -140,13 +149,69 @@ app.post('/api/create-user', jsonParser, function (req, res) {
         if (err) {logger(" [ERROR] Database error\n  " + err)};
     });
   });
-  logger(" [INFO] User " + req.body.username + " created !")
+  logger(" [INFO] User " + toString(req.body.username) + " created !")
   res.json({"response": "OK"})
 })
 
+app.post('/api/create-product', jsonParser, function (req, res) {
+  ipInfo = getIP(req);
+  logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
+  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  connection.query(sql, function (err, result) {
+    if (err) {logger(" [ERROR] Database error\n  " + err)};
+    if (result.length == 0) {
+      res.json({'error': true, 'code': 404})
+    } else {
+      if (result[0].token === req.query.token) {
+        var sql = `INSERT INTO mc_products (id, name, description, price) VALUES('${crypto.randomBytes(3).toString('hex')}', '${req.body.name}', '${req.body.description}', '${req.body.price}')`;
+        connection.query(sql, function (err, result) {
+            if (err) {logger(" [ERROR] Database error\n  " + err)};
+        });
+        logger(" [DEBUG] Product " + toString(req.body.name) + " created !")
+        return res.json({"response": "OK"});
+      } else {
+        res.json({'error': true, 'code': 403})
+      }
+    }
+  });
+})
+
+app.get('/api/mc-products', jsonParser, function (req, res) {
+  ipInfo = getIP(req);
+  logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
+  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  connection.query(sql, function (err, result) {
+    if (err) {logger(" [ERROR] Database error\n  " + err)};
+    if (result.length == 0) {
+      res.json({'error': true, 'code': 404})
+    } else {
+      if (result[0].token === req.query.token) {
+        var sql = `SELECT * FROM mc_products`;
+        connection.query(sql, function (err, result) {
+            if (err) {logger(" [ERROR] Database error\n  " + err)};
+            products = []
+            for(var i= 0; i < result.length; i++)
+            {
+              products.push({
+                "id": result[i].id,
+                "name": result[i].name,
+                "description": result[i].description,
+                "price": result[i].price
+              })
+            }
+            return res.json({'error': false, 'products': products})
+          });
+      } else {
+        res.json({'error': true, 'code': 403})
+      }
+    }
+  });
+})
+
+
 app.get('/', (req, res) => {
     ipInfo = getIP(req);
-    logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1])
+    logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
     var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
     connection.query(sql, function (err, result) {
       if (err) {logger(" [ERROR] Database error\n  " + err)};
@@ -193,7 +258,7 @@ app.get('/', (req, res) => {
                 "name": "Paiement par mois DEDI1",
                 "date": "22/02/2022",
                 "price": 485.25,
-                "status": "Remboursé"
+                "status": "Remboursé" 
               },              
               {
                 "name": "Paiement par mois VPS5",
@@ -209,7 +274,8 @@ app.get('/', (req, res) => {
         }
       }
     });
-});
-app.listen(PORT, () =>
-	 logger(` [INFO] MercuryCloud API listening on http://localhost:${PORT}/ !`));
+  });
+  app.listen(PORT, () =>
+     logger(` [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !`)
+  );
 });

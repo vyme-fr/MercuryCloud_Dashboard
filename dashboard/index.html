@@ -984,7 +984,7 @@
                     <li><a class="dropdown-item" href="../dashboard/app/user-profile.html">Profile</a></li>
                     <li><a class="dropdown-item" href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="../dashboard/auth/sign-in.html">Logout</a></li>
+                    <li><button class="dropdown-item" onclick="document.cookie = `uuid=0;max-age=1; path=/;`; document.cookie = `token=0;max-age=1; path=/;`; window.location.replace('/dashboard/auth/sign-in.html')">Logout</button></li>
                   </ul>
                 </li>
               </ul>

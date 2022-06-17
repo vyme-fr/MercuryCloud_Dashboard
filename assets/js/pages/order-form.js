@@ -31,9 +31,11 @@
         if(n==1){
             form1 = {
                 "cycle": document.getElementById("cycle-fac").value,
-                "srv-name": document.getElementById("srv-name").value,
-                "db-sup": document.getElementById("db-sup").value,
-                "bkp-sup": document.getElementById("bkp-sup").value
+                "srv_name": document.getElementById("srv-name").value,
+                "srv_type": 1,
+                "srv_nest": 2,
+                "db_sup": document.getElementById("db-sup").value,
+                "bkp_sup": document.getElementById("bkp-sup").value
             }
             document.getElementById("account").classList.add("done");
             document.getElementById("personal").classList.add("active");
@@ -45,12 +47,12 @@
         }
         if(n==2){
             form2 = {
-                "first-name": document.getElementById("first-name").value,
-                "last-name": document.getElementById("last-name").value,
+                "first_name": document.getElementById("first-name").value,
+                "last_name": document.getElementById("last-name").value,
                 "mail": document.getElementById("mail").value,
                 "tel": document.getElementById("tel").value,
-                "address-1": document.getElementById("address-1").value,
-                "address-2": document.getElementById("address-2").value,
+                "address_1": document.getElementById("address-1").value,
+                "address_2": document.getElementById("address-2").value,
                 "city": document.getElementById("city").value,
                 "zip": document.getElementById("zip").value,
                 "country": document.getElementById("country").value,
@@ -64,23 +66,11 @@
             document.getElementById("confirm").classList.remove("active");
         }
         if(n==3){
-            var form_array = []
-            form_array.push(form1)
-            form_array.push(form2)
-            form = {"order": form_array}
-            console.log(form)
-            postData('https://api.mercurycloud.fr/api/order-form', form).catch(function(error) {
-                console.log('[ERROR] ' + error.message);
-                location.href = "../errors/error500.html";
-
-            })
             document.getElementById("account").classList.add("done");
             document.getElementById("personal").classList.add("done");
             document.getElementById("payment").classList.add("done");
             document.getElementById("confirm").classList.add("active");
             document.getElementById("confirm").classList.remove("done");
-
-
         }
     } 
     const showTab=(n)=>{
@@ -101,6 +91,7 @@
     Array.from(nextbtn, (nbtn) => {
     nbtn.addEventListener('click',function()
     {
+        console.log("tab " + currentTab)
         if (currentTab == 0) {
             var ok = 0
             var no = 0
@@ -244,6 +235,18 @@
             if(ok > 2 && no == 0) {
                 nextBtnFunction(1);
             }
+        }
+        if (currentTab == 2) {
+            var form_array = []
+            form_array.push(form1)
+            form_array.push(form2)
+            form = {"order": form_array}
+            console.log(form)
+            postData('https://api.mercurycloud.fr/api/order-form', form).catch(function(error) {
+                console.log('[ERROR] ' + error.message);
+                location.href = "../errors/error500.html";
+            })
+            nextBtnFunction(1);
         }
     })
 });

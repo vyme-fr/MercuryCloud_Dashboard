@@ -1,1 +1,3 @@
 USER : uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts
+MC_SERVICES : id, uuid, product_id, suspend
+MC_PRODUCTS : id, name, description, price

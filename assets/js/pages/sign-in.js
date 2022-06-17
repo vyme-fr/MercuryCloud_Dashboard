@@ -17,9 +17,9 @@ function connect() {
     postData('https://api.mercurycloud.fr/api/login-user', data).then(data => {
         console.log(data)
         if (data.error == false) {
-            document.cookie = `uuid=${data.uuid}`
-            document.cookie = `token=${data.token}`
-            window.location.replace("file:///C:/Users/Savalet/Documents/DEV/sites/MercuryCloud_Dashboard/dashboard/index.html")
+            document.cookie = `uuid=${data.uuid};max-age=86400; path=/;`
+            document.cookie = `token=${data.token};max-age=86400; path=/;`
+            window.location.replace("/dashboard")
         } else {
             document.getElementById("email").value = ""
             document.getElementById("password").value = ""

@@ -20,49 +20,12 @@
     });
     return response.json()
   }
-  function create_ptero_services(name, user, egg, docker_image, startup, memory, disk, io, cpu, db, allocations, bkp, env, additional_allocations, locations, dedicated_ip, port_range) {
-    let data = {
-      'name': name,
-      'user': user,
-      'egg': egg,
-      'docker_image': docker_image,
-      'startup': startup,
-      'limits': {
-          'memory': memory,
-          'swap': -1,
-          'disk': disk,
-          'io': io,
-          'cpu': cpu,
-      },
-      'feature_limits': {
-          'databases': db,
-          'allocations': allocations,
-          'backups': bkp
-      },
-      'environment': env,
-      'allocation': {
-        'default': 1,
-        'additional': additional_allocations,
-      },
-      'deploy': {
-        'locations': locations,
-        'dedicated_ip': dedicated_ip,
-        'port_range': port_range
-      },
-      'start_on_completion': false,
-      'skip_scripts': false,
-      'oom_disabled': true
-  }
-  console.log(data);
-  postData('https://api.mercurycloud.fr/api/create_ptero_services', data)
-  .then(data => {});
-}
+
   fetch(`https://api.mercurycloud.fr/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
   .then(function (response) {
     return response.json();
   })
   .then(function (myJson) {
-    console.log(myJson)
     if (myJson.error === false) {
 
       document.getElementById("hello").innerHTML = "Bonjour " + myJson.username + " !"
@@ -373,7 +336,7 @@
           })
       }
     } else {
-       // window.location.replace("file:///C:/Users/Savalet/Documents/DEV/sites/MercuryCloud_Dashboard/dashboard/auth/sign-in.html");
+       window.location.replace("/dashboard/auth/sign-in.html");
     }
   })
 })(jQuery)
