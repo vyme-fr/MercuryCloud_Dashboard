@@ -1,3 +1,3 @@
 USER : uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts
 MC_SERVICES : id, uuid, product_id, suspend
-MC_PRODUCTS : id, name, description, price
+MC_PRODUCTS : id, name, description, price, cpu, cpu_pinning, ram, disk	swap, io, egg, startup_command, env	

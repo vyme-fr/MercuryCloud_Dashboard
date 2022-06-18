@@ -2594,3 +2594,1461 @@
 [2022-06-17 22:01:23]  [DEBUG] GET from : undefined, undefined
 [2022-06-17 22:03:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
 [2022-06-17 22:03:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:03:53]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 17:03:53]  [INFO] Database succefull connected ! (45057)
+[2022-06-18 17:03:53]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 17:04:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:04:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:04:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:04:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:04:21]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 17:04:21]  [INFO] Database succefull connected ! (45065)
+[2022-06-18 17:04:21]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 17:04:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:04:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:05:59]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:06:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:06:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:06:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:06:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:07:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:11:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:12:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:15:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:16:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:17:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:17:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:17:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:18:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:18:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:18:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:19:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:22:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:22:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:22:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:23:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 17:33:46]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 17:42:08]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 17:42:09]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:03:03]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:13:26]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:23:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:24:52]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:25:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:25:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:26:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:27:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:28:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:29:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:29:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:30:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:31:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:33:10]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:33:10]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:33:18]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:34:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:34:52]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:34:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:35:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:41:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:41:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:42:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:43:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:43:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:44:00]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:44:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:44:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:44:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:44:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:44:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:46:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:46:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:49:26]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:50:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:51:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:51:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:51:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:52:51]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 18:55:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:56:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:56:11]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:56:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:57:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:57:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 18:59:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:01:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:03:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:07:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:08:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:12:24]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 19:45:53]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 19:53:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:54:00]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:54:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:54:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:54:46]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 19:55:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:56:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:56:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:56:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:57:11]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 19:57:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 20:19:20]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 20:44:49]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 20:49:15]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 20:54:32]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 21:28:27]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 21:43:41]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 21:52:09]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 21:54:13]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:01:52]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:04:26]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 22:04:26]  [INFO] Database succefull connected ! (46471)
+[2022-06-18 22:04:26]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 22:04:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:04:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:08:14]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:08:39]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:12:07]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:12:26]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:13:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:30:29]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:32:09]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 22:32:09]  [INFO] Database succefull connected ! (46598)
+[2022-06-18 22:32:09]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 22:32:11]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:32:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:32:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:33:06]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:33:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:33:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:33:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:34:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:35:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:41:24]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 22:41:24]  [INFO] Database succefull connected ! (46680)
+[2022-06-18 22:41:24]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 22:45:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:46:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:46:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:47:06]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:48:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:48:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:51:25]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 22:51:25]  [INFO] Database succefull connected ! (46717)
+[2022-06-18 22:51:25]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 22:51:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:51:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:51:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:51:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:52:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:53:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:54:09]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:54:17]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 22:56:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:56:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:56:39]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 22:56:39]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('f6ece6', 'Tier II', 'Tier Vdsifu...' at line 1
+[2022-06-18 22:58:10]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 22:58:10]  [INFO] Database succefull connected ! (46793)
+[2022-06-18 22:58:10]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 22:58:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 22:58:12]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 22:58:12]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('82f0f2', 'Tier II', 'Tier Vdsifu...' at line 1
+[2022-06-18 23:00:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:00:40]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:00:40]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('c6287d', 'Tier II', 'Tier Vdsifu...' at line 1
+[2022-06-18 23:01:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:01:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:01:48]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:01:48]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('9f62fc', '1', '2', '3', 4, '5', ...' at line 1
+[2022-06-18 23:02:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:02:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:02:31]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:02:31]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('80f1f1', '1', '2', '3', 4, '5', ...' at line 1
+[2022-06-18 23:03:38]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:03:38]  [INFO] Database succefull connected ! (46953)
+[2022-06-18 23:03:38]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:03:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:03:40]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:03:40]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('ce1e95', '1', '2', '3', '4', '5'...' at line 1
+[2022-06-18 23:04:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:04:01]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:04:01]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('9aeeff', 'Tier IID', 'Serveur Mi...' at line 1
+[2022-06-18 23:05:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:05:35]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:05:35]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('8a3957', '1', '2', '3', '4', '5'...' at line 1
+[2022-06-18 23:05:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:05:39]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:05:39]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('ea7043', '1', '2', '3', '4', '5'...' at line 1
+[2022-06-18 23:05:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:05:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:05:41]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'swap, io, egg, startup_command, env) VALUES('f935ff', '1', '2', '3', '4', '5'...' at line 1
+[2022-06-18 23:06:01]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:06:01]  [INFO] Database succefull connected ! (47023)
+[2022-06-18 23:06:01]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:06:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:06:03]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:06:03]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'MINECRAFT_VERSION': 'latest','SERVER_JARFILE': 'server.jar','DL_PATH': '','BU...' at line 1
+[2022-06-18 23:06:19]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:06:19]  [INFO] Database succefull connected ! (47037)
+[2022-06-18 23:06:19]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:06:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:06:21]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:06:21]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'MINECRAFT_VERSION': 'latest','SERVER_JARFILE': 'server.jar','DL_PATH': '','BU...' at line 1
+[2022-06-18 23:14:20]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:14:20]  [INFO] Database succefull connected ! (47207)
+[2022-06-18 23:14:20]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:14:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:14:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:14:38]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:14:38]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:14:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:15:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:15:21]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:15:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:15:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:15:37]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:15:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:15:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:15:59]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:16:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:16:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:02]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:17:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:17:35]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:00]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:00]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:16]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:18]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:22]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:23]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:23]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:23]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:23]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:24]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:18:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:18:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:19:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:19:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:19:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:22:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:22:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:22:47]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:22:58]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:22:58]  [INFO] Database succefull connected ! (47318)
+[2022-06-18 23:22:58]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:23:00]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:04]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:23:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:27]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:23:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:53]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:23:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:23:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:24:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:25:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:28:53]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 23:32:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:32:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:32:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:33:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:34:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:34:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:35:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:35:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:35:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:35:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:35:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:38:49]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:38:49]  [INFO] Database succefull connected ! (47442)
+[2022-06-18 23:38:49]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:39:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:39:32]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:39:32]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''mc_products' WHERE 'mc_products'.'id' = '0e70af'' at line 1
+[2022-06-18 23:40:32]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:40:32]  [INFO] Database succefull connected ! (47456)
+[2022-06-18 23:40:32]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:40:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:40:34]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:40:34]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''mc_products' WHERE 'id' = '0e70af'' at line 1
+[2022-06-18 23:40:51]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:40:51]  [INFO] Database succefull connected ! (47457)
+[2022-06-18 23:40:51]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:40:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:40:53]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:40:53]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''mc_products' WHERE 'id' = '0e70af'' at line 1
+[2022-06-18 23:41:52]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:41:52]  [INFO] Database succefull connected ! (47463)
+[2022-06-18 23:41:52]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:41:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:41:55]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:41:55]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''mc_products' WHERE 'id' = '0e70af'' at line 1
+[2022-06-18 23:42:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:42:10]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:42:10]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''mc_products' WHERE 'id' = '0e70af'' at line 1
+[2022-06-18 23:42:12]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:42:12]  [INFO] Database succefull connected ! (47467)
+[2022-06-18 23:42:12]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:42:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:42:14]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:42:14]  [ERROR] Database error
+  Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''mc_products' WHERE 'id' = '0e70af'' at line 1
+[2022-06-18 23:42:49]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-18 23:42:49]  [INFO] Database succefull connected ! (47468)
+[2022-06-18 23:42:49]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-18 23:42:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:42:50]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:42:59]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:42:59]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:46:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:46:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:06]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:06]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:47:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:48:00]  [DEBUG] GET from : undefined, undefined
+[2022-06-18 23:49:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:49:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:49:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:49:46]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:49:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:49:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:50:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:13]  [DEBUG] Product [object Undefined] created !
+[2022-06-18 23:51:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:18]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-18 23:51:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:51:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:52:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:52:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:52:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:52:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:53:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:53:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:53:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:54:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:54:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:54:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:58:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:58:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:59:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:59:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:59:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-18 23:59:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:15]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:00:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:02:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:03:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:03:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:03:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:04:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:04:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:47]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 00:05:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:05:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:06:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:06:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:06:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:07:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:08:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:08:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:10:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:10:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:11:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:11:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:52]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:12:58]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:13:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:13:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:13:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:13:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:13:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:13:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:36]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:36]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:14:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:16:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:16:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:16:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:16:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:16:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:17:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:17:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:17:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:17:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:17:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:17:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:18:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:18:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:19:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:19:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:19:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:19:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:19:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:22:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:22:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:08]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:24:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 00:41:04]  [DEBUG] GET from : undefined, undefined

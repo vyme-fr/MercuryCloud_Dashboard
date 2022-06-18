@@ -163,12 +163,37 @@ app.post('/api/create-product', jsonParser, function (req, res) {
       res.json({'error': true, 'code': 404})
     } else {
       if (result[0].token === req.query.token) {
-        var sql = `INSERT INTO mc_products (id, name, description, price) VALUES('${crypto.randomBytes(3).toString('hex')}', '${req.body.name}', '${req.body.description}', '${req.body.price}')`;
+        var sql = `INSERT INTO mc_products (id, name, description, price, cpu, cpu_pinning, ram, disk, swap, io, egg, startup_command, env) VALUES('${crypto.randomBytes(3).toString('hex')}', '${req.body.name}', '${req.body.description}', '${req.body.price}', '${req.body.cpu}', '${req.body.cpu_pinning}', '${req.body.ram}', '${req.body.disk}', '${req.body.swap}', '${req.body.io}', '${req.body.egg}', '${req.body.startup_command}', "${req.body.env}")`;
         connection.query(sql, function (err, result) {
             if (err) {logger(" [ERROR] Database error\n  " + err)};
         });
         logger(" [DEBUG] Product " + toString(req.body.name) + " created !")
-        return res.json({"response": "OK"});
+        return res.json({"error": false, "response": "OK"});
+      } else {
+        res.json({'error': true, 'code': 403})
+      }
+    }
+  });
+})
+
+app.delete('/api/delete-product', jsonParser, function (req, res) {
+  ipInfo = getIP(req);
+  var response = "OK"
+  var error = false
+  logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
+  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  connection.query(sql, function (err, result) {
+    if (err) {logger(" [ERROR] Database error\n  " + err)};
+    if (result.length == 0) {
+      res.json({'error': true, 'code': 404})
+    } else {
+      if (result[0].token === req.query.token) {
+        var sql = `DELETE FROM mc_products WHERE id='${req.body.id}'`;
+        connection.query(sql, function (err, result) {
+            if (err) {logger(" [ERROR] Database error\n  " + err), error = true, response = "Database error"};
+        });
+        logger(" [DEBUG] Product " + toString(req.body.id) + " deleted !")
+        return res.json({"error": error, "response": response});
       } else {
         res.json({'error': true, 'code': 403})
       }
