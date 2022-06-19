@@ -271,9 +271,9 @@ function create_product() {
             env_vars.push(document.getElementById("env_" + i).value)
         }
         for(var i= 0; i < env_vars.length; i++) {
-            env_vars_json = env_vars_json + `'${env_vars_title[i]}': '${env_vars[i]}'` 
-            if (i < env_vars.length - 1) {env_vars_json = env_vars_json + ','}
-            if (i == env_vars.length - 1) {env_vars_json = env_vars_json + '}'}
+            env_vars_json = env_vars_json + `"${env_vars_title[i]}": "${env_vars[i]}"` 
+            if (i < env_vars.length - 1) {env_vars_json = env_vars_json + ","}
+            if (i == env_vars.length - 1) {env_vars_json = env_vars_json + "}"}
         }
         body = {
             "name": document.getElementById("name").value,
@@ -292,7 +292,7 @@ function create_product() {
         postData(`https://api.mercurycloud.fr/api/create-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
-                window.location.replace("/dashboard/app/user-list.html")
+                window.location.replace("/dashboard/products/mc-products-list.html")
             } else {
                 console.log('[ERROR] ' + data);
                 location.href = "../errors/error500.html";

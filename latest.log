@@ -4053,3 +4053,1022 @@
 [2022-06-19 00:24:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
 [2022-06-19 00:41:04]  [DEBUG] GET from : undefined, undefined
 [2022-06-19 00:47:19]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 01:01:27]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 01:24:42]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 02:30:45]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 02:58:01]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 02:58:01]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 02:59:53]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 03:03:41]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 03:58:24]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 03:59:11]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 05:41:10]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 06:00:12]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 06:18:49]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 06:21:43]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 06:24:15]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 06:44:02]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 06:48:47]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 07:20:17]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 07:39:14]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 07:39:16]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 07:39:16]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 07:46:22]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 08:30:43]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 08:45:50]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 09:05:58]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 09:10:25]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 09:35:20]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 09:45:00]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 10:51:20]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 10:54:58]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 10:54:58]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 11:11:39]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 11:23:16]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 11:32:25]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 11:36:21]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 11:45:25]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 12:01:31]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 12:03:11]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 13:04:44]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 13:46:08]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 13:53:12]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 14:09:10]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 14:17:58]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 14:35:44]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 14:49:23]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 15:18:17]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 15:21:00]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 15:21:00]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 15:31:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:31:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:31:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:31:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:31:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:31:59]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:32:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:33:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:33:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:33:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:33:11]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:33:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:33:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:34:02]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 15:34:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:34:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:34:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:34:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:34:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:34:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:35:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:35:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:35:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:35:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:35:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:36:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:36:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:38:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:38:06]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:38:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:38:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:38:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:10]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:39:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:40:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:40:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:40:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:40:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:40:51]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 15:40:58] [object Object]
+[2022-06-19 15:40:58]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:41:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:42:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:42:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:41]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:42]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 15:44:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:44:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:08]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:08]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:17]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 15:45:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:19]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 15:45:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:20]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 15:45:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:22]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 15:45:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:24]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 15:45:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 15:45:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:09:45]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:10:51]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:10:51]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:11:01]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:15:20]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:18:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:18:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:19:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:22:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:22:50]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 16:22:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:22:59]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:22:59]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:23:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:23:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:24:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:24:51]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:25:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:25:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:25:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:25:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:25:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:25:56]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 16:25:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:25:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:26:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:26:33]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:27:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:27:20]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 16:27:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:27:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:27:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:28:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:28:03]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 16:28:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:28:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:28:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:29:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:29:18]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 16:29:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:29:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:29:51]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:29:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:30:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:30:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:31:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:31:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:13]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:32:15]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:32:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:32:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:39:47]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:39:47]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:39:47]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:40:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:40:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:40:15]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:41:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:41:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:41:52]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:42:36]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:43:33]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:44:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:44:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:44:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:44:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:44:55]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:45:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:45:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:45:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:46:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:50:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:50:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:50:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:52:49]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 16:52:49]  [INFO] Database succefull connected ! (52426)
+[2022-06-19 16:52:49]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 16:53:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:53:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:55:04]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:55:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:56:18]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 16:56:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 16:57:16]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:02:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:02:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:02:57]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:03:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:03:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:03:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:03:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:03:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:03:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:03:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:04:07]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:04:13] [object Object]
+[2022-06-19 17:04:13]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:04:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:04:16]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:04:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:04:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:05:36]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 17:05:36]  [INFO] Database succefull connected ! (52473)
+[2022-06-19 17:05:36]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 17:06:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:07:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:07:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:07:41]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 17:07:41]  [INFO] Database succefull connected ! (52482)
+[2022-06-19 17:07:41]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 17:08:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:08:27]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:08:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:08:44]  [DEBUG] product_id 05b22a
+[2022-06-19 17:08:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:16:04]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 17:16:04]  [INFO] Database succefull connected ! (52535)
+[2022-06-19 17:16:04]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 17:16:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:16:18] 3
+[2022-06-19 17:31:25]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:31:26]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:31:26]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:40:37]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:40:37]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:50:45]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 17:51:09] [object Object]
+[2022-06-19 17:51:22] [object Object]
+[2022-06-19 17:51:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:51:31]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:51:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:52:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:52:09]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:52:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:35]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 17:54:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:41]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 17:54:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:54:46]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:55:08]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 17:55:49]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:05:04]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 18:06:39]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 18:08:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:11:00]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:11:00]  [INFO] Database succefull connected ! (52825)
+[2022-06-19 18:11:00]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:11:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:11:03]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:11:08]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:11:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:11:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:14:24]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:14:24]  [INFO] Database succefull connected ! (52905)
+[2022-06-19 18:14:24]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:14:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:14:39] {"name":"MC_JAVA qzd (qzd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"8192","swap":"0","disk":"40960","io":"10","cpu":"600"},"feature_limits":{"databases":"3","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:14:40] {"size":0,"timeout":0}
+[2022-06-19 18:14:40]  [DEBUG] New service !
+ Name : qzd
+ Owner first name : qzd
+ Owner last name : qzd
+ Owner mail : qzd
+[2022-06-19 18:15:29]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:31]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:17:31]  [INFO] Database succefull connected ! (52943)
+[2022-06-19 18:17:31]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:17:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:36]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:36]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:54]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 18:17:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:17:54]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:18:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:18:02]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 18:18:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:18:02]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:18:08]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:19:39]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:19:39]  [INFO] Database succefull connected ! (52977)
+[2022-06-19 18:19:39]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:20:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:40]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:20:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:21:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:21:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:21:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:21:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:21:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:22:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:22:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:22:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:22:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:22:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:23]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:33]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:35]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:23:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:24:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:25:22]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:25:22]  [INFO] Database succefull connected ! (52999)
+[2022-06-19 18:25:22]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:25:42]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:25:42]  [INFO] Database succefull connected ! (53000)
+[2022-06-19 18:25:42]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:25:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:25:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:25:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:25:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:25:58]  [DEBUG] New service !
+ Name : gtdh
+ Owner first name : dfg
+ Owner last name : dfg
+ Owner mail : dfg
+[2022-06-19 18:27:39]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:27:39]  [INFO] Database succefull connected ! (53019)
+[2022-06-19 18:27:39]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:27:41]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:27:51]  [DEBUG] New service !
+ Name : qsd
+ Owner first name : qds
+ Owner last name : qsd
+ Owner mail : sqd
+[2022-06-19 18:29:22]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:29:22]  [INFO] Database succefull connected ! (53028)
+[2022-06-19 18:29:22]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:29:24]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:29:34]  [DEBUG] New service !
+ Name : sdf
+ Owner first name : sdf
+ Owner last name : sdf
+ Owner mail : sdf
+[2022-06-19 18:31:30]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:31:30]  [INFO] Database succefull connected ! (53041)
+[2022-06-19 18:31:30]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:31:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:31:48]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:31:48]  [INFO] Database succefull connected ! (53042)
+[2022-06-19 18:31:48]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:31:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:32:00]  [DEBUG] New service !
+ Name : qzd
+ Owner first name : qzd
+ Owner last name : qzd
+ Owner mail : zqd
+[2022-06-19 18:34:48]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 18:35:04]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:35:04]  [INFO] Database succefull connected ! (53061)
+[2022-06-19 18:35:04]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:35:05]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:35:15] {"name":"MC_JAVA qsd (qsd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"24576","swap":"0","disk":"102400","io":"10","cpu":"1200"},"feature_limits":{"databases":"2","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:35:15] {"size":0,"timeout":0}
+[2022-06-19 18:35:15]  [DEBUG] New service !
+ Name : qsd
+ Owner first name : qsd
+ Owner last name : dqs
+ Owner mail : qsd
+[2022-06-19 18:36:05]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:36:05]  [INFO] Database succefull connected ! (53082)
+[2022-06-19 18:36:05]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:36:07]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:36:16] {"name":"MC_JAVA qzd (qzd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"24576","swap":"0","disk":"102400","io":"10","cpu":"1200"},"feature_limits":{"databases":"2","allocations":0,"backups":"2"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:36:16]  [DEBUG] New service !
+ Name : qzd
+ Owner first name : qzd
+ Owner last name : qzd
+ Owner mail : qzd
+[2022-06-19 18:36:32]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:36:32]  [INFO] Database succefull connected ! (53086)
+[2022-06-19 18:36:32]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:36:34]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:36:43] {"name":"MC_JAVA qsd (qsd)","user":1,"egg":3,"docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"24576","swap":"0","disk":"102400","io":"10","cpu":"1200"},"feature_limits":{"databases":"2","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:36:43]  [DEBUG] New service !
+ Name : qsd
+ Owner first name : qsd
+ Owner last name : qsd
+ Owner mail : qsd
+[2022-06-19 18:36:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:36:48]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:36:50]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:37:03] {"name":"MC_JAVA qsd (qsd)","user":1,"egg":3,"docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"4096","swap":"0","disk":"10240","io":"10","cpu":"200"},"feature_limits":{"databases":"1","allocations":0,"backups":"2"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:37:03]  [DEBUG] New service !
+ Name : qsd
+ Owner first name : qsd
+ Owner last name : qsdqsd
+ Owner mail : qsd
+[2022-06-19 18:37:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:37:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:37:21]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:37:34] {"name":"MC_JAVA qzd (qzd)","user":1,"egg":3,"docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"24576","swap":"0","disk":"102400","io":"10","cpu":"1200"},"feature_limits":{"databases":"1","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:37:34]  [DEBUG] New service !
+ Name : qzd
+ Owner first name : qzd
+ Owner last name : qzd
+ Owner mail : qzd
+[2022-06-19 18:41:14]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:15]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:15]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:18]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:22]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:41:22]  [INFO] Database succefull connected ! (53119)
+[2022-06-19 18:41:22]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:41:33] {"name":"Tier IV fgvsd (sdf)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"12288","swap":"0","disk":"61440","io":"10","cpu":"800"},"feature_limits":{"databases":"2","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:41:33]  [DEBUG] New service !
+ Name : fgvsd
+ Owner first name : sdf
+ Owner last name : sdf
+ Owner mail : sdf
+[2022-06-19 18:41:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:41:55] {"name":"Tier I sdf (sdf)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"4096","swap":"0","disk":"10240","io":"10","cpu":"200"},"feature_limits":{"databases":"2","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:41:55]  [DEBUG] New service !
+ Name : sdf
+ Owner first name : sdf
+ Owner last name : sdf
+ Owner mail : sdf
+[2022-06-19 18:42:25]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:46:43]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:46:43]  [INFO] Database succefull connected ! (53224)
+[2022-06-19 18:46:43]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:46:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:46:45]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:46:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:46:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:46:56]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:47:13] {"name":"Tier II fdssgtsfxsdhwsfeuygdsfwluifgwfgsu (sdf)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"6144","swap":"0","disk":"20480","io":"10","cpu":"400"},"feature_limits":{"databases":"2","allocations":0,"backups":"3"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:47:13]  [DEBUG] New service !
+ Name : fdssgtsfxsdhwsfeuygdsfwluifgwfgsu
+ Owner first name : sdf
+ Owner last name : sdf
+ Owner mail : sdf
+[2022-06-19 18:47:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:47:27]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:47:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:47:30]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:47:47] {"name":"Tier III qzdzddd (qzd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"8192","swap":"0","disk":"40960","io":"10","cpu":"600"},"feature_limits":{"databases":"1","allocations":0,"backups":"1"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:47:47]  [DEBUG] New service !
+ Name : qzdzddd
+ Owner first name : qzd
+ Owner last name : qzd
+ Owner mail : qzd
+[2022-06-19 18:47:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:47:57]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:48:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:48:15] {"name":"Tier IV qzdqzdqzdqzdqzd (qzd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"12288","swap":"0","disk":"61440","io":"10","cpu":"800"},"feature_limits":{"databases":"1","allocations":0,"backups":"3"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:48:15]  [DEBUG] New service !
+ Name : qzdqzdqzdqzdqzd
+ Owner first name : qzd
+ Owner last name : qzd
+ Owner mail : qzd
+[2022-06-19 18:48:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:48:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:49:10]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:49:10]  [INFO] Database succefull connected ! (53259)
+[2022-06-19 18:49:10]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:49:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:49:20]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:49:22]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:49:35] {"name":"Tier I qsdddd (qsd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"4096","swap":"0","disk":"10240","io":"10","cpu":"200"},"feature_limits":{"databases":"1","allocations":0,"backups":"2"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:49:35]  [DEBUG] New service !
+ Name : qsdddd
+ Owner first name : qsd
+ Owner last name : qsd
+ Owner mail : qsd
+[2022-06-19 18:49:58]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:49:58]  [INFO] Database succefull connected ! (53263)
+[2022-06-19 18:49:58]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:50:00]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:50:13] {"name":"Tier I qsdqsdsqdqsd (qsdsqd)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":"4096","swap":"0","disk":"10240","io":"10","cpu":"200"},"feature_limits":{"databases":"1","allocations":0,"backups":"2"},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:50:13]  [DEBUG] New service !
+ Name : qsdqsdsqdqsd
+ Owner first name : qsdsqd
+ Owner last name : qsdsqd
+ Owner mail : qsdqsd
+[2022-06-19 18:51:35]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 18:51:35]  [INFO] Database succefull connected ! (53283)
+[2022-06-19 18:51:35]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 18:51:37]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:51:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:51:39]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:51:42]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:51:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:51:44]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:52:00] {"name":"Tier VI azqersdfghbjk (wdsf)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":24576,"swap":0,"disk":102400,"io":10,"cpu":1200},"feature_limits":{"databases":1,"allocations":0,"backups":2},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:52:00]  [DEBUG] New service !
+ Name : azqersdfghbjk
+ Owner first name : wdsf
+ Owner last name : fdswg
+ Owner mail : wfdg
+[2022-06-19 18:52:12]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:52:15]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:52:15]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:52:17]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 18:52:28] {"name":"Tier I dezrq (sef)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":4096,"swap":0,"disk":10240,"io":10,"cpu":200},"feature_limits":{"databases":3,"allocations":0,"backups":1},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 18:52:29]  [DEBUG] New service !
+ Name : dezrq
+ Owner first name : sef
+ Owner last name : sefsef
+ Owner mail : sef
+[2022-06-19 19:03:19]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:03:47]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 19:03:52] [object Object]
+[2022-06-19 19:03:53]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:28]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:32]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:43]  [DEBUG] Product [object Undefined] created !
+[2022-06-19 19:04:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:43]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:47]  [DEBUG] Product [object Undefined] deleted !
+[2022-06-19 19:04:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:04:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:05:01]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:05:19] {"name":"Tier I toto (sdf)","user":1,"egg":"3","docker_image":"ghcr.io/pterodactyl/yolks:java_17","startup":"java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}","limits":{"memory":4096,"swap":0,"disk":10240,"io":10,"cpu":200},"feature_limits":{"databases":1,"allocations":0,"backups":2},"environment":{"MINECRAFT_VERSION":"1.18.2","SERVER_JARFILE":"server.jar","DL_PATH":"","BUILD_NUMBER":"latest"},"allocation":{"default":1,"addtional":[]},"deploy":{"locations":[2],"dedicated_ip":false,"port_range":[]},"start_on_completion":false,"skip_scripts":false,"oom_disabled":true}
+[2022-06-19 19:05:19]  [DEBUG] New service !
+ Name : toto
+ Owner first name : sdf
+ Owner last name : dsf
+ Owner mail : sdf
+[2022-06-19 19:05:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:05:26]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:05:47]  [DEBUG] GET from : undefined, 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-06-19 19:12:04]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 19:24:10]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 19:33:36]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-06-19 19:33:36]  [INFO] Database succefull connected ! (53522)
+[2022-06-19 19:33:36]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !
+[2022-06-19 19:43:58]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 19:44:00]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 19:44:05]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 20:05:04]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 20:27:58]  [DEBUG] GET from : undefined, undefined
+[2022-06-19 20:53:45]  [DEBUG] GET from : undefined, undefined

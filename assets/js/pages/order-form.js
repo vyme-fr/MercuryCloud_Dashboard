@@ -1,6 +1,12 @@
 (function () {
     "use strict";
 
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
     async function postData(url = '', data = {}) {
         const response = await fetch(url, {
           method: 'POST',
@@ -10,7 +16,7 @@
           body: JSON.stringify(data)
         });
         return response.json()
-      }
+    }
 
     var form1
     var form2
@@ -237,21 +243,34 @@
             }
         }
         if (currentTab == 2) {
-            var form_array = []
-            form_array.push(form1)
-            form_array.push(form2)
-            form = {"order": form_array}
-            console.log(form)
-            postData('https://api.mercurycloud.fr/api/order-form', form).catch(function(error) {
-                console.log('[ERROR] ' + error.message);
-                location.href = "../errors/error500.html";
-            })
-            nextBtnFunction(1);
+            const params = new URLSearchParams(window.location.search)
+            for (const param of params) {
+                var form_array = []
+                form_array.push(form1)
+                form_array.push(form2)
+                form = {"product_id": param[1], "order": form_array}
+                postData(`https://api.mercurycloud.fr/api/order-form?uuid=${getCookie("uuid")}&token=${getCookie("token")}` , form).then(data => {
+                    console.log(data)
+                    if (data.error == false) {
+                        nextBtnFunction(1);
+                    } else {
+                        if (data.code == 403) {
+                            console.log('[ERROR] ' + data);
+                            window.location.replace("/dashboard/auth/sign-in.html");
+                        } else {
+                            if (data.code == 404) {
+                                console.log('[ERROR] ' + data);
+                                window.location.replace("/dashboard/auth/sign-in.html");
+                            } else {
+                                window.location.replace("/dashboard/errors/error500.html");    
+                            }
+                        }
+                    }
+                })    
+            }
         }
     })
 });
-
-// previousbutton
 
 const prebtn= document.querySelectorAll('.previous')
     Array.from(prebtn, (pbtn) => {
