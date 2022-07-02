@@ -1,5 +1,7 @@
 var router = require('express').Router();
 const server = require('../server.js')
+server.logger(" [INFO] / route loaded !")
+
 router.get('', (req, res) => {
     ipInfo = server.ip(req);
     server.logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)

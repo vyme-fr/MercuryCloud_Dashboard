@@ -166,7 +166,7 @@
             }
 
 
-            if(document.getElementById("tel").value.length > 2) {
+            if(document.getElementById("tel").value.length == 12 && document.getElementById("tel").value.match(/[0-9]/gi) != null && document.getElementById("tel").value.includes("+", 0) == true) {
                 document.getElementById("tel").classList.remove('is-invalid')
                 document.getElementById("tel").classList.add('is-valid')
                 ok++
@@ -176,6 +176,7 @@
                 document.getElementById("tel").value = ""
                 no++
             }
+        
 
 
             if(document.getElementById("address-1").value.length > 2) {
@@ -202,7 +203,7 @@
             }
 
 
-            if(document.getElementById("zip").value.length > 2) {
+            if(document.getElementById("zip").value.length == 5 && /^\d+$/.test(document.getElementById("zip").value) == true) {
                 document.getElementById("zip").classList.remove('is-invalid')
                 document.getElementById("zip").classList.add('is-valid')
                 ok++
@@ -249,7 +250,7 @@
                 form_array.push(form1)
                 form_array.push(form2)
                 form = {"product_id": param[1], "order": form_array}
-                postData(`https://api.mercurycloud.fr/api/order-form?uuid=${getCookie("uuid")}&token=${getCookie("token")}` , form).then(data => {
+                postData(`https://api.mercurycloud.fr/api/services/order-form?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, form).then(data => {
                     console.log(data)
                     if (data.error == false) {
                         nextBtnFunction(1);

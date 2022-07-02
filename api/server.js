@@ -10,6 +10,7 @@ const req = require('express/lib/request');
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const app = express();
+const config = require("./config.json")
 
 function logger(msg) {
   let date_ob = new Date();;
@@ -28,13 +29,12 @@ function logger(msg) {
 
 const PORT = 400
 var ipInfo = ""
-const pterodactyl_api_key = "ptla_28BCpHTsEFDr80yyNU4WLsdkSbGwxnT5kqFuzEHjx81"
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : '192.168.20.22',
-  user     : 'mercurycloud_api',
-  password : 'r6z14kKL2tFDaU6G',
-  database : 'mercurycloud_api'
+  host     : config.mysql_host,
+  user     : config.mysql_usr,
+  password : config.mysql_passwd,
+  database : config.mysql_db
 });
 
 logger(`   
@@ -62,22 +62,38 @@ connection.connect(function(err) {
     bodyParser.json();
   });
 
-  app.use('/api/mc-products', require('./routes/mc-products.js'));
+  // index //
+  app.use('/api/', require('./routes/index.js'));
+
+  // products //
+  app.use('/api/products/mc-product-info', require('./routes/products/mc-product-info.js'));
+  app.use('/api/products/mc-products', require('./routes/products/mc-products.js'));
+  app.use('/api/products/create-product', require('./routes/products/create-product.js'));
+  app.use('/api/products/delete-product', require('./routes/products/delete-product.js'));
+
+  // users //
+  app.use('/api/users/create-user', require('./routes/users/create-user.js'));
+  app.use('/api/users/login-user', require('./routes/users/login-user.js'));
+  app.use('/api/users/users-list', require('./routes/users/users-list.js'));
+  app.use('/api/users/user-info', require('./routes/users/user-info.js'));
+  app.use('/api/users/username-exist', require('./routes/users/username-exist.js'));
+  app.use('/api/users/mail-exist', require('./routes/users/mail-exist.js'));
+  app.use('/api/users/delete-user', require('./routes/users/delete-user.js'));
+
+  // services //
+  app.use('/api/services/order-form', require('./routes/services/order-form.js'));
 
 
-  app.use('/', require('./routes/index.js'));
-  app.use('/api/order-form', require('./routes/order-form.js'));
-  app.use('/api/create-user', require('./routes/create-user.js'));
-  app.use('/api/login-user', require('./routes/login-user.js'));
-  app.use('/api/create-product', require('./routes/create-product.js'));
-  app.use('/api/delete-product', require('./routes/delete-product.js'));
 
   app.listen(PORT, () =>
      logger(` [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !`)
   );
 });
 
+exports.uuid = uuid
+exports.fetch = fetch
 exports.crypto = crypto
+exports.bcrypt = bcrypt
 exports.parser = bodyParser
 exports.logger = logger
 exports.con = connection

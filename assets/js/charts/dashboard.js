@@ -21,7 +21,7 @@
     return response.json()
   }
 
-  fetch(`https://api.mercurycloud.fr/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+  fetch(`https://api.mercurycloud.fr/api/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
   .then(function (response) {
     return response.json();
   })
