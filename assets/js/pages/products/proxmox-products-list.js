@@ -15,7 +15,7 @@ async function deleteData(url = '', data = {}) {
     return response.json()
 }
 
-fetch(`https://api.mercurycloud.fr/api/products/mc-products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+fetch(`https://api.mercurycloud.fr/api/products/proxmox-products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
 .then(function (response) {
   return response.json();
 })
@@ -40,7 +40,7 @@ fetch(`https://api.mercurycloud.fr/api/products/mc-products?uuid=${getCookie("uu
                         </svg>                                                                  
                     </span>
                 </a>
-                    <a class="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="" data-original-title="Modifier" href="/dashboard/products/mc-product-edit.html?id=${myJson.products[i].id}">
+                    <a class="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="" data-original-title="Modifier" href="/dashboard/products/proxmox-product-edit.html?id=${myJson.products[i].id}">
                     <span class="btn-inner">
                         <svg width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
                             <path opacity="0.4" d="M19.9927 18.9534H14.2984C13.7429 18.9534 13.291 19.4124 13.291 19.9767C13.291 20.5422 13.7429 21.0001 14.2984 21.0001H19.9927C20.5483 21.0001 21.0001 20.5422 21.0001 19.9767C21.0001 19.4124 20.5483 18.9534 19.9927 18.9534Z" fill="currentColor"></path>                                
@@ -68,7 +68,7 @@ fetch(`https://api.mercurycloud.fr/api/products/mc-products?uuid=${getCookie("uu
 })
 
 function delete_product(id) {
-    deleteData(`https://api.mercurycloud.fr/api/products/delete-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, {"id": id}).then(data => {
+    deleteData(`https://api.mercurycloud.fr/api/products/proxmox-delete-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, {"id": id}).then(data => {
         console.log(data)
         if (data.error == false) {
             window.location.reload()

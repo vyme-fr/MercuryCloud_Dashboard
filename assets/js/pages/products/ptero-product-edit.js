@@ -11,7 +11,7 @@ async function postData(url = '', data = {}) {
 
 const params = new URLSearchParams(window.location.search)
 for (const param of params) {
-    fetch(`https://api.mercurycloud.fr/api/products/mc-product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${param[1]}`)
+    fetch(`https://api.mercurycloud.fr/api/products/ptero-product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${param[1]}`)
     .then(function (response) {
         return response.json();
     })
@@ -320,7 +320,7 @@ function update_product() {
         postData(`https://api.mercurycloud.fr/api/products/create-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
-                window.location.replace("/dashboard/products/mc-products-list.html")
+                window.location.replace("/dashboard/products/ptero-products-list.html")
             } else {
                 console.log('[ERROR] ' + data);
                 location.href = "../errors/error500.html";

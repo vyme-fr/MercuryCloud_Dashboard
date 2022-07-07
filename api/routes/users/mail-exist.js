@@ -1,6 +1,6 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/mail-exist route loaded !")
+server.logger(" [INFO] /api/users/mail-exist route loaded !")
 
 
 router.get('', function (req, res) {

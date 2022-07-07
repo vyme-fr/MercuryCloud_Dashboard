@@ -9,6 +9,32 @@ async function postData(url = '', data = {}) {
     return response.json()
 }
 
+const params = new URLSearchParams(window.location.search)
+for (const param of params) {
+    fetch(`https://api.mercurycloud.fr/api/products/ptero-product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${param[1]}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        document.getElementById("title").innerHTML = `Mercury Cloud | Edition du produit Minecraft ${myJson.name}`
+        document.getElementById('name').value = myJson.name
+        document.getElementById('description').value = myJson.description
+        document.getElementById('price').value = myJson.price
+        document.getElementById('cpu').value = myJson.cpu
+        document.getElementById('cpu_pinning').value = myJson.cpu_pinning
+        document.getElementById('ram').value = myJson.ram
+        document.getElementById('disk').value = myJson.disk
+        document.getElementById('swap').value = myJson.swap
+        document.getElementById('io').value = myJson.io
+        document.getElementById('startup_command').value = myJson.startup_command
+        document.getElementById('egg').value = myJson.egg
+        update_eggs()
+        for (let i=0; i < myJson.env.length; i++) {
+            document.getElementById('env_' + (i + 1)).value = myJson.env[i]
+        }
+    })  
+}
+
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -150,7 +176,7 @@ function update_eggs() {
     }
 }
 
-function create_product() {
+function update_product() {
     var ok = 0
     var no = 0
     if(document.getElementById('name').value.length > 0) {
@@ -289,14 +315,17 @@ function create_product() {
             "startup_command": document.getElementById("startup_command").value,
             "env": env_vars_json
         }
+
+        /*
         postData(`https://api.mercurycloud.fr/api/products/create-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
-                window.location.replace("/dashboard/products/mc-products-list.html")
+                window.location.replace("/dashboard/products/ptero-products-list.html")
             } else {
                 console.log('[ERROR] ' + data);
                 location.href = "../errors/error500.html";
             }
         })    
+        */
     }
 }

@@ -1,3 +1,5 @@
 USER : uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts
 MC_SERVICES : id, uuid, product_id, suspend
-MC_PRODUCTS : id, name, description, price, cpu, cpu_pinning, ram, disk	swap, io, egg, startup_command, env	
+MC_PRODUCTS : id, name, description, price, cpu, cpu_pinning, ram, disk, swap, io, egg, startup_command, env	
+PROXMOX_PRODUCTS : id, name, description, price, template_vmid, cores, ram, storage, disk_size, add_conf
+PROXMOX_SERVICES : id, uuid, product_id, suspend, ci_password, ci_user

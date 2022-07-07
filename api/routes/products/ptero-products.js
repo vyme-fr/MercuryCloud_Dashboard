@@ -1,6 +1,6 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/users/users route loaded !")
+server.logger(" [INFO] /api/products/ptero-products route loaded !")
 
 router.get('', function (req, res) {
   ipInfo = server.ip(req);
@@ -12,24 +12,20 @@ router.get('', function (req, res) {
       return res.json({'error': true, 'code': 404})
     } else {
       if (result[0].token === req.query.token) {
-        var sql = `SELECT * FROM users`;
+        var sql = `SELECT * FROM mc_products`;
         server.con.query(sql, function (err, result) {
             if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-            users = []
+            products = []
             for(var i= 0; i < result.length; i++)
             {
-              users.push({
-                "uuid": result[i].uuid,
-                "username": result[i].username,
-                "mail": result[i].mail,
-                "balance": result[i].balance,
-                "tickets": result[i].tickets,
-                "services": result[i].services,
-                "suspended_services": result[i].suspended_services,
-                "alerts": result[i].alerts
+              products.push({
+                "id": result[i].id,
+                "name": result[i].name,
+                "description": result[i].description,
+                "price": result[i].price
               })
             }
-            return res.json({'error': false, 'users': users})
+            return res.json({'error': false, 'products': products})
           });
       } else {
         return res.json({'error': true, 'code': 403})

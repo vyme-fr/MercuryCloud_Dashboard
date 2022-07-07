@@ -1,6 +1,6 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/mc-product-info route loaded !")
+server.logger(" [INFO] /api/products/ptero-product-info route loaded !")
 
 
 router.get('', function (req, res) {

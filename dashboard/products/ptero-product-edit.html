@@ -28,7 +28,7 @@
       }
       </style>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Mercury Cloud | Création produits Minecraft</title>
+      <title id="title">Mercury Cloud | Edition du produit Pterodactyl</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
@@ -153,7 +153,7 @@
                         </a>
                         <ul class="sub-nav collapse" id="sidebar-user" data-bs-parent="#sidebar-menu">
                             <li class="nav-item">
-                                <a class="nav-link active" href="../../dashboard/products/mc-products-list.html">
+                                <a class="nav-link active" href="../../dashboard/products/ptero-products-list.html">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -162,8 +162,19 @@
                                         </svg>
                                     </i>
                                     <i class="sidenav-mini-icon"> U </i>
-                                    <span class="item-name">Produits Minecraft</span>
+                                    <span class="item-name">Produits Pterodactyl</span>
                                 </a>
+                                <a class="nav-link" href="../../dashboard/products/proxmox-products-list.html">
+                                  <i class="icon">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                          <g>
+                                          <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                          </g>
+                                      </svg>
+                                  </i>
+                                  <i class="sidenav-mini-icon"> U </i>
+                                  <span class="item-name">Produits Proxmox</span>
+                              </a>
                             </li>
                         </ul>
                     </li>
@@ -439,7 +450,7 @@
                <div class="card">
                   <div class="card-header d-flex justify-content-between">
                      <div class="header-title">
-                        <h4 class="card-title">Créer un nouveau produit Minecraft</h4>
+                        <h4 class="card-title">Créer un nouveau produit Pterodactyl</h4>
                      </div>
                   </div>
                   <div class="card-body">
@@ -539,7 +550,7 @@
                                 <input type="text" class="form-control" id="env_2" value="bungeecord.jar">
                             </div>
                         </div>
-                        <button onclick="create_product()" class="btn btn-primary">Ajouter</button>
+                        <button onclick="update_product()" class="btn btn-primary">Ajouter</button>
                      </div>
                   </div>
                </div>
@@ -771,7 +782,7 @@
     <!-- Form Wizard Script -->
     <script src="../../assets/js/plugins/form-wizard.js"></script>
 
-    <script src="../../assets/js/pages/products/mc-product-create.js"></script>
+    <script src="../../assets/js/pages/products/ptero-product-edit.js"></script>
 
     
     <!-- AOS Animation Plugin-->

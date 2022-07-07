@@ -1,7 +1,7 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/delete-product route loaded !")
+server.logger(" [INFO] /api/products/ptero-delete-product route loaded !")
 
 router.delete('', jsonParser, function (req, res) {
     ipInfo = server.ip(req);

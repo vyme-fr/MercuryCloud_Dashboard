@@ -2,7 +2,7 @@ var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
 const config = require('../../config.json')
-server.logger(" [INFO] /api/order-form route loaded !")
+server.logger(" [INFO] /api/services/order-form route loaded !")
 
 router.post('', jsonParser, function (req, res) {
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
@@ -54,7 +54,7 @@ router.post('', jsonParser, function (req, res) {
 
             server.logger(JSON.stringify(data))
           
-            server.fetch("https://panel.mercurycloud.fr/api/application/servers", {
+            server.fetch(config.pterodactyl_url + "/api/application/servers", {
               "method": "POST",
               "headers": {
                 "Accept": "application/json",

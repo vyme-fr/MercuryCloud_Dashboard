@@ -1,14 +1,14 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/login-user route loaded !")
+server.logger(" [INFO] /api/users/login-user route loaded !")
 
 router.post('', jsonParser, function (req, res) {
     var sql = `SELECT password FROM users WHERE mail = '${req.body.mail}'`;
     server.con.query(sql, function (err, result) {
       if (err) throw err;
       if (result.length == 0) {
-        res.json({'error': true, 'code': 404})
+        return res.json({'error': true, 'code': 404})
       } else {
         server.bcrypt.compare(req.body.password, result[0].password, function(err, result) {
           if (result === true) {
@@ -23,7 +23,6 @@ router.post('', jsonParser, function (req, res) {
         });
       }
     });
-    server.logger(req.body)
   })
 
 module.exports = router;

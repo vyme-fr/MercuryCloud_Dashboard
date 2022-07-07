@@ -1,7 +1,7 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/create-product route loaded !")
+server.logger(" [INFO] /api/products/ptero-create-product route loaded !")
 
 router.post('', jsonParser, function (req, res) {
     ipInfo = server.ip(req);

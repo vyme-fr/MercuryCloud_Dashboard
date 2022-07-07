@@ -28,7 +28,7 @@
       }
       </style>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Mercury Cloud | Création utilisateur</title>
+      <title>Mercury Cloud | Création produits Proxmox</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
@@ -51,8 +51,6 @@
       
       <!-- RTL Css -->
       <link rel="stylesheet" href="../../assets/css/rtl.min.css"/>
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
       
   </head>
   <body class="  ">
@@ -124,7 +122,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="../../dashboard/users/users-list.html">
+                      <a class="nav-link " href="../../dashboard/users/users-list.html">
                           <i class="icon">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
                                   <path d="M11.9488 14.54C8.49884 14.54 5.58789 15.1038 5.58789 17.2795C5.58789 19.4562 8.51765 20.0001 11.9488 20.0001C15.3988 20.0001 18.3098 19.4364 18.3098 17.2606C18.3098 15.084 15.38 14.54 11.9488 14.54Z" fill="currentColor"></path>                                
@@ -163,10 +161,10 @@
                                             </g>
                                         </svg>
                                     </i>
-                                    <i class="sidenav-mini-icon"></i>
+                                    <i class="sidenav-mini-icon"> U </i>
                                     <span class="item-name">Produits Pterodactyl</span>
                                 </a>
-                                <a class="nav-link" href="../../dashboard/products/proxmox-products-list.html">
+                                <a class="nav-link active" href="../../dashboard/products/proxmox-products-list.html">
                                   <i class="icon">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                           <g>
@@ -452,10 +450,11 @@
                <div class="card">
                   <div class="card-header d-flex justify-content-between">
                      <div class="header-title">
-                        <h4 class="card-title">Créer un nouvel utilisateur</h4>
+                        <h4 class="card-title">Créer un nouveau produit Proxmox</h4>
                      </div>
                   </div>
                   <div class="card-body">
+                     <form>
                         <div class="form-group">
                            <div class="profile-img-edit position-relative">
                               <img src="../../assets/images/avatars/01.png" alt="profile-pic" class="theme-color-default-img profile-pic rounded avatar-100">
@@ -473,21 +472,19 @@
                            </div>
                         </div>
                         <div class="form-group">
-                          <label class="form-label" for="username-input">Nom d'utilisateur *</label>
-                          <input class="form-control" id="username-input" placeholder="Nom d'utilisateur">
-                          <div class="d-flex" id="username-toast">
-                          </div>
+                           <label class="form-label" for="name">Nom :</label>
+                           <input type="text" class="form-control" id="name" placeholder="Nom">
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="mail">Addresse mail *</label>
-                            <input class="form-control" id="mail" placeholder="Addresse mail">
+                            <label class="form-label" for="desc">Description :</label>
+                            <input type="text" class="form-control" id="description" placeholder="Description">
                         </div>
-                        <div class="d-flex" id="mail-toast">
+                        <label class="form-label" for="price">Prix :</label>
+                        <div class="input-group">
+                            <input type="number" min="0.01" step="0.01" class="form-control" id="price" placeholder="Prix">
+                            <span class="input-group-text">€</span>
                         </div>
-                        <div class="form-group">
-                          <label class="form-label" for="password">Mot de passe *</label>
-                          <input type="password" class="form-control" id="password" placeholder="Mot de passe">
-                      </div>
+                     </form>
                   </div>
                </div>
             </div>
@@ -495,267 +492,47 @@
                <div class="card">
                   <div class="card-header d-flex justify-content-between">
                      <div class="header-title">
-                        <h4 class="card-title">Information personelles sur l'utilisateur</h4>
+                        <h4 class="card-title">Information sur le produit</h4>
                      </div>
                   </div>
                   <div class="card-body">
                      <div class="new-user-info">
                         <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Prénom *</label>
-                                  <input id="first-name" type="text" class="form-control" name="fname" placeholder="Prénom" />
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Nom *</label>
-                                  <input id="last-name" type="text" class="form-control" name="lname" placeholder="Nom" />
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Téléphone *</label>
-                                  <input id="tel" type="text" class="form-control" name="phno_2" placeholder="Téléphone (Format international ex: +33122334455)" />
-                              </div>
-                          </div>
-                          <div class="col-7">
-                              <h3 class="mb-4">Adresse de facturation:</h3>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Adresse *</label>
-                                  <input id="address-1" type="text" class="form-control" name="phno_2" placeholder="Adresse" />
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Adresse 2 (Optionnel)</label>
-                                  <input id="address-2" type="text" class="form-control" name="phno_2" placeholder="Adresse 2 (Optionnel)" />
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Ville *</label>
-                                  <input id="city" type="text" class="form-control" name="phno_2" placeholder="Ville" />
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Code postal *</label>
-                                  <input id="zip" type="text" class="form-control" name="phno_2" placeholder="Code postal" />
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Pays</label>
-                                  <select id="country" class="form-select mb-3 shadow-none">
-                                      <option selected="" value="0">--</option>
-                                      <option value="1">Afghanistan</option>
-                                      <option value="2">Albania</option>
-                                      <option value="3">Algeria</option>
-                                      <option value="4">Andorra</option>
-                                      <option value="5">Angola</option>
-                                      <option value="6">Antigua & Deps</option>
-                                      <option value="7">Argentina</option>
-                                      <option value="8">Armenia</option>
-                                      <option value="9">Australia</option>
-                                      <option value="10">Austria</option>
-                                      <option value="11">Azerbaijan</option>
-                                      <option value="12">Bahamas</option>
-                                      <option value="13">Bahrain</option>
-                                      <option value="14">Bangladesh</option>
-                                      <option value="15">Barbados</option>
-                                      <option value="16">Belarus</option>
-                                      <option value="17">Belgium</option>
-                                      <option value="18">Belize</option>
-                                      <option value="19">Benin</option>
-                                      <option value="20">Bhutan</option>
-                                      <option value="21">Bolivia</option>
-                                      <option value="22">Bosnia Herzegovina</option>
-                                      <option value="23">Botswana</option>
-                                      <option value="24">Brazil</option>
-                                      <option value="25">Brunei</option>
-                                      <option value="26">Bulgaria</option>
-                                      <option value="27">Burkina</option>
-                                      <option value="28">Burundi</option>
-                                      <option value="29">Cambodia</option>
-                                      <option value="30">Cameroon</option>
-                                      <option value="31">Canada</option>
-                                      <option value="32">Cape Verde</option>
-                                      <option value="33">Central African Rep</option>
-                                      <option value="34">Chad</option>
-                                      <option value="35">Chile</option>
-                                      <option value="36">China</option>
-                                      <option value="37">Colombia</option>
-                                      <option value="38">Comoros</option>
-                                      <option value="39">Congo</option>
-                                      <option value="40">Congo {Democratic Rep}</option>
-                                      <option value="41">Costa Rica</option>
-                                      <option value="42">Croatia</option>
-                                      <option value="43">Cuba</option>
-                                      <option value="44">Cyprus</option>
-                                      <option value="45">Czech Republic</option>
-                                      <option value="46">Denmark</option>
-                                      <option value="47">Djibouti</option>
-                                      <option value="48">Dominica</option>
-                                      <option value="49">Dominican Republic</option>
-                                      <option value="50">East Timor</option>
-                                      <option value="51">Ecuador</option>
-                                      <option value="52">Egypt</option>
-                                      <option value="53">El Salvador</option>
-                                      <option value="54">Equatorial Guinea</option>
-                                      <option value="55">Eritrea</option>
-                                      <option value="56">Estonia</option>
-                                      <option value="57">Ethiopia</option>
-                                      <option value="58">Fiji</option>
-                                      <option value="59">Finland</option>
-                                      <option value="60">France</option>
-                                      <option value="61">Gabon</option>
-                                      <option value="62">Gambia</option>
-                                      <option value="63">Georgia</option>
-                                      <option value="64">Germany</option>
-                                      <option value="65">Ghana</option>
-                                      <option value="66">Greece</option>
-                                      <option value="67">Grenada</option>
-                                      <option value="68">Guatemala</option>
-                                      <option value="69">Guinea</option>
-                                      <option value="70">Guinea-Bissau</option>
-                                      <option value="71">Guyana</option>
-                                      <option value="72">Haiti</option>
-                                      <option value="73">Honduras</option>
-                                      <option value="74">Hungary</option>
-                                      <option value="75">Iceland</option>
-                                      <option value="76">India</option>
-                                      <option value="77">Indonesia</option>
-                                      <option value="78">Iran</option>
-                                      <option value="79">Iraq</option>
-                                      <option value="80">Ireland {Republic}</option>
-                                      <option value="81">Israel</option>
-                                      <option value="82">Italy</option>
-                                      <option value="83">Ivory Coast</option>
-                                      <option value="84">Jamaica</option>
-                                      <option value="85">Japan</option>
-                                      <option value="86">Jordan</option>
-                                      <option value="87">Kazakhstan</option>
-                                      <option value="88">Kenya</option>
-                                      <option value="89">Kiribati</option>
-                                      <option value="90">Korea North</option>
-                                      <option value="91">Korea South</option>
-                                      <option value="92">Kosovo</option>
-                                      <option value="93">Kuwait</option>
-                                      <option value="94">Kyrgyzstan</option>
-                                      <option value="95">Laos</option>
-                                      <option value="96">Latvia</option>
-                                      <option value="97">Lebanon</option>
-                                      <option value="98">Lesotho</option>
-                                      <option value="99">Liberia</option>
-                                      <option value="100">Libya</option>
-                                      <option value="101">Liechtenstein</option>
-                                      <option value="102">Lithuania</option>
-                                      <option value="103">Luxembourg</option>
-                                      <option value="104">Macedonia</option>
-                                      <option value="105">Madagascar</option>
-                                      <option value="106">Malawi</option>
-                                      <option value="107">Malaysia</option>
-                                      <option value="108">Maldives</option>
-                                      <option value="109">Mali</option>
-                                      <option value="110">Malta</option>
-                                      <option value="111">Marshall Islands</option>
-                                      <option value="112">Mauritania</option>
-                                      <option value="113">Mauritius</option>
-                                      <option value="114">Mexico</option>
-                                      <option value="115">Micronesia</option>
-                                      <option value="116">Moldova</option>
-                                      <option value="117">Monaco</option>
-                                      <option value="118">Mongolia</option>
-                                      <option value="119">Montenegro</option>
-                                      <option value="120">Morocco</option>
-                                      <option value="121">Mozambique</option>
-                                      <option value="122">Myanmar, {Burma}</option>
-                                      <option value="123">Namibia</option>
-                                      <option value="124">Nauru</option>
-                                      <option value="125">Nepal</option>
-                                      <option value="126">Netherlands</option>
-                                      <option value="127">New Zealand</option>
-                                      <option value="128">Nicaragua</option>
-                                      <option value="129">Niger</option>
-                                      <option value="130">Nigeria</option>
-                                      <option value="131">Norway</option>
-                                      <option value="132">Oman</option>
-                                      <option value="133">Pakistan</option>
-                                      <option value="134">Palau</option>
-                                      <option value="135">Panama</option>
-                                      <option value="136">Papua New Guinea</option>
-                                      <option value="137">Paraguay</option>
-                                      <option value="138">Peru</option>
-                                      <option value="139">Philippines</option>
-                                      <option value="140">Poland</option>
-                                      <option value="141">Portugal</option>
-                                      <option value="142">Qatar</option>
-                                      <option value="143">Romania</option>
-                                      <option value="144">Russian Federation</option>
-                                      <option value="145">Rwanda</option>
-                                      <option value="146">St Kitts & Nevis</option>
-                                      <option value="147">St Lucia</option>
-                                      <option value="148">Saint Vincent & the Grenadines</option>
-                                      <option value="149">Samoa</option>
-                                      <option value="150">San Marino</option>
-                                      <option value="151">Sao Tome & Principe</option>
-                                      <option value="152">Saudi Arabia</option>
-                                      <option value="153">Senegal</option>
-                                      <option value="154">Serbia</option>
-                                      <option value="155">Seychelles</option>
-                                      <option value="156">Sierra Leone</option>
-                                      <option value="157">Singapore</option>
-                                      <option value="158">Slovakia</option>
-                                      <option value="159">Slovenia</option>
-                                      <option value="160">Solomon Islands</option>
-                                      <option value="161">Somalia</option>
-                                      <option value="162">South Africa</option>
-                                      <option value="163">Spain</option>
-                                      <option value="164">Sri Lanka</option>
-                                      <option value="165">Sudan</option>
-                                      <option value="166">Suriname</option>
-                                      <option value="167">Swaziland</option>
-                                      <option value="168">Sweden</option>
-                                      <option value="169">Switzerland</option>
-                                      <option value="170">Syria</option>
-                                      <option value="171">Taiwan</option>
-                                      <option value="172">Tajikistan</option>
-                                      <option value="173">Tanzania</option>
-                                      <option value="174">Thailand</option>
-                                      <option value="175">Togo</option>
-                                      <option value="176">Tonga</option>
-                                      <option value="177">Trinidad & Tobago</option>
-                                      <option value="178">Tunisia</option>
-                                      <option value="179">Turkey</option>
-                                      <option value="180">Turkmenistan</option>
-                                      <option value="181">Tuvalu</option>
-                                      <option value="182">Uganda</option>
-                                      <option value="183">Ukraine</option>
-                                      <option value="184">United Arab Emirates</option>
-                                      <option value="185">United Kingdom</option>
-                                      <option value="186">United States</option>
-                                      <option value="187">Uruguay</option>
-                                      <option value="188">Uzbekistan</option>
-                                      <option value="189">Vanuatu</option>
-                                      <option value="190">Vatican City</option>
-                                      <option value="191">Venezuela</option>
-                                      <option value="192">Vietnam</option>
-                                      <option value="193">Yemen</option>
-                                      <option value="194">Zambia</option>
-                                      <option value="195">Zimbabwe</option>
-                                  </select>   
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label class="form-label">Province *</label>
-                                  <input id="state" type="text" class="form-control" name="phno_2" placeholder="Province" />
-                              </div>
-                          </div>
-                        <button onclick="create_user()" class="btn btn-primary">Ajouter</button>
+                          <div class="form-group col-sm-6">
+                            <label class="form-label">Noeud :</label>
+                            <select name="type" onchange="update_node()" class="selectpicker form-control" id="nodes" data-style="py-0">
+                               <option value="0">API Loading...</option>
+                            </select>
+                         </div>
+                         <div class="form-group col-sm-6">
+                          <label class="form-label">VM Template :</label>
+                          <select name="type" class="selectpicker form-control" id="template_vm" data-style="py-0">
+                             <option value="0">Veuillez choisir un noeud avant !</option>
+                          </select>
+                       </div>
+                         <div class="form-group col-md-6">
+                          <label class="form-label" for="cores">Coeurs :</label>
+                          <input type="number" min="1" step="1" class="form-control" id="cores" placeholder="Coeurs"">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="form-label" for="ram">RAM :</label>
+                          <input type="number" min="1" step="1" class="form-control" id="ram" placeholder="RAM (Mo)">
+                       </div>
+                       <div class="form-group col-sm-6">
+                        <label class="form-label">Stockage :</label>
+                        <select name="type" class="selectpicker form-control" id="storage" data-style="py-0">
+                           <option value="0">Veuillez choisir un noeud avant !</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                         <label class="form-label" for="disk_size">Taille de disque :</label>
+                         <input type="number" min="1" step="1" class="form-control" id="disk_size" placeholder="Taille de disque (Mo)">
+                      </div>
+                      <div class="form-group col-md-12">
+                         <label class="form-label" for="add_conf">Configuration Supplémentaire :</label>
+                         <input type="text" id="add_conf" class="form-control" placeholder="Configuration Supplémentaire (Configuration QEMU supplémentaire)">
+                      </div>
+                      <button onclick="create_product()" class="btn btn-primary">Ajouter</button>
                      </div>
                   </div>
                </div>
@@ -983,11 +760,11 @@
     
     <!-- Slider-tab Script -->
     <script src="../../assets/js/plugins/slider-tabs.js"></script>
+    
+    <!-- Form Wizard Script -->
+    <script src="../../assets/js/plugins/form-wizard.js"></script>
 
-    <script src="../../assets/js/pages/users/create-user.js"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="../../assets/js/pages/products/proxmox-product-create.js"></script>
 
     
     <!-- AOS Animation Plugin-->

@@ -1,7 +1,7 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/create-user route loaded !")
+server.logger(" [INFO] /api/users/create-user route loaded !")
 
 router.post('', jsonParser, function (req, res) {
   server.bcrypt.hash(req.body.password, 10, function(err, hash) {

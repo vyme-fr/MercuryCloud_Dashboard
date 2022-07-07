@@ -1,6 +1,6 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/username-exist route loaded !")
+server.logger(" [INFO] /api/users/username-exist route loaded !")
 
 
 router.get('', function (req, res) {
