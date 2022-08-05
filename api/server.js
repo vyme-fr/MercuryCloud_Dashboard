@@ -9,9 +9,9 @@ const req = require('express/lib/request');
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const app = express();
+const nodemailer = require("nodemailer");
 const config = require("./config.json")
 const fetch = require('cross-fetch');
-
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
@@ -42,6 +42,16 @@ var connection = mysql.createConnection({
   database : config.mysql_db
 });
 
+exports.uuid = uuid
+exports.fetch = fetch
+exports.crypto = crypto
+exports.bcrypt = bcrypt
+exports.parser = bodyParser
+exports.logger = logger
+exports.con = connection
+exports.ip = getIP
+exports.httpsAgent = httpsAgent
+
 logger(`   
 
 
@@ -55,7 +65,7 @@ logger(`
 connection.connect(function(err) {
   if (err) {
     logger(` [ERROR] Database error !\n  ${err.stack}`);
-    return;
+    process.exit(1);
   }
   logger(` [INFO] Database succefull connected ! (${connection.threadId})`);
 
@@ -72,8 +82,17 @@ connection.connect(function(err) {
     exports.proxmox_ticket = proxmox_ticket
     exports.proxmox_CSRFPreventionToken = proxmox_CSRFPreventionToken
     logger(" [INFO] Proxmox API loaded ! (" + data.data.username + ")");
-
-    
+    let mail_transporter = nodemailer.createTransport({
+      host: config.smtp_host,
+      port: config.smtp_port,
+      secure: config.smtp_ssl,
+      auth: {
+        user: config.smtp_username,
+        pass: config.smtp_pswd
+      }
+    })
+    exports.mail_transporter = mail_transporter
+    logger(" [INFO] SMTP Client loaded ! (" + config.smtp_host + ":" + config.smtp_port + ")");
     app.use((req, res, next) => {
       res.append('Access-Control-Allow-Origin', ['*']);
       res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -86,20 +105,15 @@ connection.connect(function(err) {
     app.use('/api/', require('./routes/index.js'));
   
     // products //
-    app.use('/api/products/ptero-product-info', require('./routes/products/ptero-product-info.js'));
-    app.use('/api/products/ptero-products', require('./routes/products/ptero-products.js'));
     app.use('/api/products/ptero-create-product', require('./routes/products/ptero-create-product.js'));
-    app.use('/api/products/ptero-delete-product', require('./routes/products/ptero-delete-product.js'));
-    app.use('/api/products/proxmox-product-info', require('./routes/products/proxmox-product-info.js'));
-    app.use('/api/products/proxmox-products', require('./routes/products/proxmox-products.js'));
     app.use('/api/products/proxmox-create-product', require('./routes/products/proxmox-create-product.js'));
-    app.use('/api/products/proxmox-delete-product', require('./routes/products/proxmox-delete-product.js'));
     app.use('/api/products/proxmox-qemu-list', require('./routes/products/proxmox-qemu-list.js'));
     app.use('/api/products/proxmox-nodes-list', require('./routes/products/proxmox-nodes-list.js'));
     app.use('/api/products/proxmox-storage-list', require('./routes/products/proxmox-storage-list.js'));
-
-
-
+    app.use('/api/products/delete-product', require('./routes/products/delete-product.js'));
+    app.use('/api/products/product-info', require('./routes/products/product-info.js'));
+    app.use('/api/products/products', require('./routes/products/products.js'));
+    app.use('/api/products/edit-product', require('./routes/products/edit-product.js'));
   
     // users //
     app.use('/api/users/create-user', require('./routes/users/create-user.js'));
@@ -109,25 +123,30 @@ connection.connect(function(err) {
     app.use('/api/users/username-exist', require('./routes/users/username-exist.js'));
     app.use('/api/users/mail-exist', require('./routes/users/mail-exist.js'));
     app.use('/api/users/delete-user', require('./routes/users/delete-user.js'));
-  
+    app.use('/api/users/edit-user', require('./routes/users/edit-user.js'));
+
+    // roles //
+    app.use('/api/roles/create-role', require('./routes/roles/create-role.js'));
+    app.use('/api/roles/delete-role', require('./routes/roles/delete-role.js'));
+    app.use('/api/roles/roles-list', require('./routes/roles/roles-list.js'));
+    app.use('/api/roles/role-info', require('./routes/roles/role-info.js'));
+    app.use('/api/roles/role-edit', require('./routes/roles/role-edit.js'));
+
+
     // services //
     app.use('/api/services/order-form', require('./routes/services/order-form.js'));
-  
+
+    // utils //
+    app.use('/api/utils/send-mail', require('./routes/utils/send-mail.js'));
+
+ //   const permissions_manager = require("./utils/permissions-manager")
+   // console.log(permissions_manager.has_permission("0a6d6d0f-07e8-436c-bf18-1c6cbf795589", "LISTPRODUCTS"))
+
     app.listen(PORT, () =>
-       logger(` [INFO] MercuryCloud API listening on https://api.mercurycloud.fr/ !`)
+       logger(` [INFO] MercuryCloud API listening on ${config.api_url} !`)
     );
-    })
-  .catch((error) => {
+  }).catch((error) => {
     logger(" [ERROR] Proxmox API error : "  + error);
+    process.exit(1);
   });
 });
-
-exports.uuid = uuid
-exports.fetch = fetch
-exports.crypto = crypto
-exports.bcrypt = bcrypt
-exports.parser = bodyParser
-exports.logger = logger
-exports.con = connection
-exports.ip = getIP
-exports.httpsAgent = httpsAgent

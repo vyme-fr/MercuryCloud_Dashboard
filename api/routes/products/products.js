@@ -1,10 +1,17 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/products/ptero-products route loaded !")
-
+const route_name = "/products/products"
+const permissions_manager = require("../../utils/permissions-manager.js")
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 router.get('', function (req, res) {
   ipInfo = server.ip(req);
-  server.logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
+    var forwardedIpsStr = req.header('x-forwarded-for');
+  var IP = '';
+
+  if (forwardedIpsStr) {
+     IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+  }
+  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) {server.logger(" [ERROR] Database error\n  " + err)};
@@ -12,7 +19,7 @@ router.get('', function (req, res) {
       return res.json({'error': true, 'code': 404})
     } else {
       if (result[0].token === req.query.token) {
-        var sql = `SELECT * FROM proxmox_products`;
+        var sql = `SELECT * FROM products`;
         server.con.query(sql, function (err, result) {
             if (err) {server.logger(" [ERROR] Database error\n  " + err)};
             products = []
@@ -20,18 +27,13 @@ router.get('', function (req, res) {
             {
               products.push({
                 "id": result[i].id,
+                "category": result[i].category,
                 "name": result[i].name,
                 "description": result[i].description,
-                "price": result[i].price,
-                "template_vmid": result[i].template_vmid,
-                "cores": result[i].cores,
-                "ram": result[i].ram,
-                "storage": result[i].storage,
-                "disk_size": result[i].disk_size,
-                "add_conf": result[i].add_conf,
+                "price": result[i].price
               })
             }
-            return res.json({'error': false, 'products': products})
+            return res.json({'error': false, 'data': products})
           });
       } else {
         return res.json({'error': true, 'code': 403})

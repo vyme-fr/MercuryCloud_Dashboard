@@ -255,19 +255,19 @@ function create_product() {
 
     if(ok == 9 && no == 0) {
 
-        var env_var_count = 2
+        var env_vars_count = 2
         var env_vars = []
         var env_vars_title = []
         var env_vars_json = `{`
-        if (document.getElementById("egg").value == 1) {env_var_count = 2, env_vars_title = ['BUNGEE_VERSION', 'SERVER_JARFILE']}
-        if (document.getElementById("egg").value == 2) {env_var_count = 2, env_vars_title = ['SERVER_JARFILE', 'VANILLA_VERSION']}
-        if (document.getElementById("egg").value == 3) {env_var_count = 4, env_vars_title = ['MINECRAFT_VERSION', 'SERVER_JARFILE', 'DL_PATH', 'BUILD_NUMBER']}
-        if (document.getElementById("egg").value == 4) {env_var_count = 4, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'BUILD_TYPE', 'FORGE_VERSION ']}
-        if (document.getElementById("egg").value == 5) {env_var_count = 2, env_vars_title = ['SPONGE_VERSION', 'SERVER_JARFILE']}
-        if (document.getElementById("egg").value == 6) {env_var_count = 3, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'FABRIC_VERSION']}
-        if (document.getElementById("egg").value == 7) {env_var_count = 6, env_vars_title = ['BEDROCK_VERSION', 'LD_LIBRARY_PATH', 'SERVERNAME', 'GAMEMODE', 'DIFFICULTY', 'CHEATS']}
-        if (document.getElementById("egg").value == 8) {env_var_count = 2, env_vars_title = ['GITHUB_PACKAGE', 'MATCH']}
-        for(var i= 1; i < env_var_count + 1; i++) {
+        if (document.getElementById("egg").value == 1) {env_vars_count = 2, env_vars_title = ['BUNGEE_VERSION', 'SERVER_JARFILE']}
+        if (document.getElementById("egg").value == 2) {env_vars_count = 2, env_vars_title = ['SERVER_JARFILE', 'VANILLA_VERSION']}
+        if (document.getElementById("egg").value == 3) {env_vars_count = 4, env_vars_title = ['MINECRAFT_VERSION', 'SERVER_JARFILE', 'DL_PATH', 'BUILD_NUMBER']}
+        if (document.getElementById("egg").value == 4) {env_vars_count = 4, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'BUILD_TYPE', 'FORGE_VERSION ']}
+        if (document.getElementById("egg").value == 5) {env_vars_count = 2, env_vars_title = ['SPONGE_VERSION', 'SERVER_JARFILE']}
+        if (document.getElementById("egg").value == 6) {env_vars_count = 3, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'FABRIC_VERSION']}
+        if (document.getElementById("egg").value == 7) {env_vars_count = 6, env_vars_title = ['BEDROCK_VERSION', 'LD_LIBRARY_PATH', 'SERVERNAME', 'GAMEMODE', 'DIFFICULTY', 'CHEATS']}
+        if (document.getElementById("egg").value == 8) {env_vars_count = 2, env_vars_title = ['GITHUB_PACKAGE', 'MATCH']}
+        for(var i= 1; i < env_vars_count + 1; i++) {
             env_vars.push(document.getElementById("env_" + i).value)
         }
         for(var i= 0; i < env_vars.length; i++) {

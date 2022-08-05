@@ -26,7 +26,7 @@ fetch(`https://api.mercurycloud.fr/api/products/proxmox-nodes-list?uuid=${getCoo
         <option value="${json.nodes[i].node}">${json.nodes[i].node}</option>
         `
     }
-    document.getElementById('nodes').innerHTML = nodes_html
+    document.getElementById('nodes').innerHTML =  '<option value="0">Veuillez choisir un noeud</option>' + nodes_html
 })
 
 function update_node() {
@@ -84,7 +84,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('price').value > 0) {
+    if(document.getElementById('price').value.length > 0) {
         document.getElementById('price').classList.remove('is-invalid')
         document.getElementById('price').classList.add('is-valid')
         ok++
@@ -102,18 +102,16 @@ function create_product() {
     } else {
         document.getElementById('nodes').classList.remove('is-valid')
         document.getElementById('nodes').classList.add('is-invalid')
-        document.getElementById('nodes').value = ""
         no++
     }
 
-    if(document.getElementById('template_vm').value.length > 1) {
+    if(document.getElementById('template_vm').value != 0) {
         document.getElementById('template_vm').classList.remove('is-invalid')
         document.getElementById('template_vm').classList.add('is-valid')
         ok++
     } else {
         document.getElementById('template_vm').classList.remove('is-valid')
         document.getElementById('template_vm').classList.add('is-invalid')
-        document.getElementById('template_vm').value = ""
         no++
     }
 
@@ -139,14 +137,13 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('storage').value.length > 0) {
+    if(document.getElementById('storage').value != 0) {
         document.getElementById('storage').classList.remove('is-invalid')
         document.getElementById('storage').classList.add('is-valid')
         ok++
     } else {
         document.getElementById('storage').classList.remove('is-valid')
         document.getElementById('storage').classList.add('is-invalid')
-        document.getElementById('storage').value = ""
         no++
     }
 

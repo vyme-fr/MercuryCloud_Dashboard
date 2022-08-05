@@ -1,3 +1,5 @@
+document.querySelector('body').classList.add('dark')
+
 async function postData(url = '', data = {}) {
   const response = await fetch(url, {
     method: 'POST',
@@ -25,5 +27,8 @@ function connect() {
             document.getElementById("password").value = ""
             document.getElementById("message").innerHTML = "Mot de passe ou email invalide !"
         }
-    });
+    }).catch(error => {
+      console.log(" [ERROR] API post error " + error)
+      window.location.replace("/dashboard/errors/error500.html")
+    })
 }

@@ -1,23 +1,41 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/products/ptero-create-product route loaded !")
+const route_name = "/products/ptero-create-product"
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.post('', jsonParser, function (req, res) {
-    ipInfo = server.ip(req);
-    server.logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
-    var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
-    server.con.query(sql, function (err, result) {
-      if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-      if (result.length == 0) {
-        return res.json({'error': true, 'code': 404})
-      } else {
-        if (result[0].token === req.query.token) {
-          var sql = `INSERT INTO mc_products (id, name, description, price, cpu, cpu_pinning, ram, disk, swap, io, egg, startup_command, env) VALUES('${server.crypto.randomBytes(3).toString('hex')}', '${req.body.name}', '${req.body.description}', '${req.body.price}', '${req.body.cpu}', '${req.body.cpu_pinning}', '${req.body.ram}', '${req.body.disk}', '${req.body.swap}', '${req.body.io}', '${req.body.egg}', '${req.body.startup_command}', '${req.body.env}')`;
+  ipInfo = server.ip(req);
+    var forwardedIpsStr = req.header('x-forwarded-for');
+  var IP = '';
+
+  if (forwardedIpsStr) {
+     IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+  }
+  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
+  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  server.con.query(sql, function (err, result) {
+    if (err) {server.logger(" [ERROR] Database error\n  " + err)};
+    if (result.length == 0) {
+      return res.json({'error': true, 'code': 404})
+    } else {
+      if (result[0].token === req.query.token) {
+        configuration = {
+          'cpu': req.body.cpu,
+          'cpu_pinning': req.body.cpu_pinning,
+          'ram': req.body.ram,
+          'disk': req.body.disk,
+          'swap': req.body.swap,
+          'io': req.body.io,
+          'egg': req.body.egg,
+          'startup_command': req.body.startup_command,
+          'env': JSON.parse(req.body.env)
+        } 
+        var sql = `INSERT INTO products (id, category, name, description, price, configuration) VALUES('${server.crypto.randomBytes(3).toString('hex')}', 'pterodactyl', '${req.body.name}', '${req.body.description}', '${req.body.price}', '${JSON.stringify(configuration)}')`;
           server.con.query(sql, function (err, result) {
               if (err) {server.logger(" [ERROR] Database error\n  " + err)};
           });
-          server.logger(" [DEBUG] Product " + toString(req.body.name) + " created !")
+          server.logger(" [DEBUG] Product " + req.body.name + " created from " + IP + " !") 
           return res.json({"error": false, "response": "OK"});
         } else {
           return res.json({'error': true, 'code': 403})

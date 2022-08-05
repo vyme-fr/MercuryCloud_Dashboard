@@ -6,7 +6,26 @@
         const parts = value.split(`; ${name}=`);
         if (parts.length === 2) return parts.pop().split(';').shift();
     }
-
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('id')) {
+        fetch(`https://api.mercurycloud.fr/api/products/product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${url.searchParams.get('id')}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json)
+            if (json.error === false) {
+                if (json.data.id == 404) {
+                    window.location.replace("/dashboard/errors/error404.html");
+                }
+            } else {
+            window.location.replace("/dashboard/errors/error500.html");
+            }
+        })
+    } else {
+        window.location.replace("/dashboard/errors/error404.html");
+    }
+    
     async function postData(url = '', data = {}) {
         const response = await fetch(url, {
           method: 'POST',
@@ -244,36 +263,31 @@
             }
         }
         if (currentTab == 2) {
-            const params = new URLSearchParams(window.location.search)
-            for (const param of params) {
-                var form_array = []
-                form_array.push(form1)
-                form_array.push(form2)
-                form = {"product_id": param[1], "order": form_array}
-                postData(`https://api.mercurycloud.fr/api/services/order-form?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, form).then(data => {
-                    console.log(data)
-                    if (data.error == false) {
-                        nextBtnFunction(1);
+            form = {"product_id": url.searchParams.get('id'), "srv_info": form1, "user_info": form2}
+            console.log(form)
+            postData(`https://api.mercurycloud.fr/api/services/order-form?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, form).then(data => {
+                console.log(data)
+                if (data.error == false) {
+                    nextBtnFunction(1);
+                } else {
+                    if (data.code == 403) {
+                        console.log('[ERROR] ' + data);
+                        window.location.replace("/dashboard/auth/sign-in.html");
                     } else {
-                        if (data.code == 403) {
+                        if (data.code == 404) {
                             console.log('[ERROR] ' + data);
                             window.location.replace("/dashboard/auth/sign-in.html");
                         } else {
-                            if (data.code == 404) {
-                                console.log('[ERROR] ' + data);
-                                window.location.replace("/dashboard/auth/sign-in.html");
-                            } else {
-                                window.location.replace("/dashboard/errors/error500.html");    
-                            }
+                            window.location.replace("/dashboard/errors/error500.html");    
                         }
                     }
-                })    
-            }
+                }
+            })
         }
     })
 });
 
-const prebtn= document.querySelectorAll('.previous')
+const prebtn = document.querySelectorAll('.previous')
     Array.from(prebtn, (pbtn) => {
     pbtn.addEventListener('click',function()
     {

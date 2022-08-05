@@ -18,7 +18,7 @@ router.delete('', jsonParser, function (req, res) {
           server.con.query(sql, function (err, result) {
               if (err) {server.logger(" [ERROR] Database error\n  " + err), error = true, response = "Database error"};
           });
-          server.logger(" [DEBUG] User " + toString(req.body.user_uuid) + " deleted by " + toString(req.query.uuid) + " !")
+          server.logger(" [DEBUG] User " + req.body.user_uuid + " deleted by " + req.query.uuid + " !")
           return res.json({"error": error, "response": response});
         } else {
           return res.json({'error': true, 'code': 403})

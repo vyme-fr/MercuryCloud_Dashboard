@@ -1,4 +1,5 @@
 {
+    "api_url": "https://api.mercurycloud.fr",
     "pterodactyl_url": "https://panel.mercurycloud.fr",
     "pterodactyl_api_key": "ptla_28BCpHTsEFDr80yyNU4WLsdkSbGwxnT5kqFuzEHjx81",
     "proxmox_url": "https://192.168.2.3:8006",
@@ -7,5 +8,10 @@
     "mysql_host": "192.168.2.5",
     "mysql_db": "mercurycloud_api",
     "mysql_usr": "mercurycloud_api",
-    "mysql_passwd": "r6z14kKL2tFDaU6G"
+    "mysql_passwd": "r6z14kKL2tFDaU6G",
+    "smtp_host": "mail.arkia-groupe.fr",
+    "smtp_port": 465,
+    "smtp_ssl": true,
+    "smtp_username": "noreply@mercurycloud.fr",
+    "smtp_pswd": "&G2lloq74&"
 }

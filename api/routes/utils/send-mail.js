@@ -1,12 +1,12 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/products/ptero-delete-product route loaded !")
+const config = require('../../config.json');
+const route_name = "/utils/send-mail"
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 
-router.delete('', jsonParser, function (req, res) {
+router.post('', jsonParser, function (req, res) {
     ipInfo = server.ip(req);
-    var response = "OK"
-    var error = false
     server.logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
     var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
     server.con.query(sql, function (err, result) {
@@ -15,17 +15,19 @@ router.delete('', jsonParser, function (req, res) {
         return res.json({'error': true, 'code': 404})
       } else {
         if (result[0].token === req.query.token) {
-          var sql = `DELETE FROM mc_products WHERE id='${req.body.id}'`;
-          server.con.query(sql, function (err, result) {
-              if (err) {server.logger(" [ERROR] Database error\n  " + err), error = true, response = "Database error"};
-          });
-          server.logger(" [DEBUG] Product " + toString(req.body.id) + " deleted !")
-          return res.json({"error": error, "response": response});
+          server.mail_transporter.sendMail({
+            from: config.smtp_username,
+            to: req.body.to,
+            subject: req.body.subject,
+            html: req.body.message,
+          })
+          server.logger(" [DEBUG] Email to " + req.body.to + " from " + config.smtp_username + " sent !")
+          return res.json({"error": false, "response": "OK"});
         } else {
           return res.json({'error': true, 'code': 403})
         }
-      }
-    });
-  })
+    }
+})
+})
 
 module.exports = router;

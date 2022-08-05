@@ -1,10 +1,17 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/products/ptero-products route loaded !")
+const route_name = "/roles/roles-list"
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
   ipInfo = server.ip(req);
-  server.logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
+    var forwardedIpsStr = req.header('x-forwarded-for');
+  var IP = '';
+
+  if (forwardedIpsStr) {
+     IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+  }
+  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) {server.logger(" [ERROR] Database error\n  " + err)};
@@ -12,20 +19,18 @@ router.get('', function (req, res) {
       return res.json({'error': true, 'code': 404})
     } else {
       if (result[0].token === req.query.token) {
-        var sql = `SELECT * FROM mc_products`;
+        var sql = `SELECT * FROM roles`;
         server.con.query(sql, function (err, result) {
             if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-            products = []
+            roles = []
             for(var i= 0; i < result.length; i++)
             {
-              products.push({
+                roles.push({
                 "id": result[i].id,
-                "name": result[i].name,
-                "description": result[i].description,
-                "price": result[i].price
+                "name": result[i].name
               })
             }
-            return res.json({'error': false, 'products': products})
+            return res.json({'error': false, 'roles': roles})
           });
       } else {
         return res.json({'error': true, 'code': 403})

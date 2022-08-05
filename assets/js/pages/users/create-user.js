@@ -15,6 +15,17 @@ async function postData(url = '', data = {}) {
     return response.json()
 }
 
+fetch(`https://api.mercurycloud.fr/api/roles/roles-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+.then(function (response) {
+    return response.json();
+}).then(function (json) {
+    var roles_select = `<option selected="" value="0">--</option>`
+    for (let i = 0; i < json.roles.length; i++) {
+        roles_select  = roles_select + `<option value="${json.roles[i].id}">${json.roles[i].name}</option>`
+    }
+    document.getElementById("roles-select").innerHTML = roles_select
+})
+
 function create_user() {
     var ok = 0
     var no = 0
@@ -26,6 +37,17 @@ function create_user() {
         document.getElementById("first-name").classList.remove('is-valid')
         document.getElementById("first-name").classList.add('is-invalid')
         document.getElementById("first-name").value = ""
+        no++
+    }
+
+    if(document.getElementById("roles-select").value != 0) {
+        document.getElementById("roles-select").classList.remove('is-invalid')
+        document.getElementById("roles-select").classList.add('is-valid')
+        ok++
+    } else {
+        document.getElementById("roles-select").classList.remove('is-valid')
+        document.getElementById("roles-select").classList.add('is-invalid')
+        document.getElementById("roles-select").value = ""
         no++
     }
 
@@ -182,19 +204,27 @@ function create_user() {
         no++
     }   
 
-    console.log("ok " + ok + " no " + no)
-
-    if(ok == 11 && no == 0) {       
+    if(ok == 10 && no == 0) {       
         body = {
             "username": document.getElementById("username-input").value,
             "mail": document.getElementById("mail").value,
+            "role": document.getElementById("roles-select").value,
             "password": document.getElementById("password").value,
+            "first_name": document.getElementById("first-name").value,
+            "last_name": document.getElementById("last-name").value,
+            "tel": document.getElementById("tel").value,
+            "address_1": document.getElementById("address-1").value,
+            "address_2": document.getElementById("address-2").value,
+            "city": document.getElementById("city").value,
+            "zip": document.getElementById("zip").value,
+            "country": document.getElementById("country").value,
+            "state": document.getElementById("state").value
         }
         postData(`https://api.mercurycloud.fr/api/users/create-user?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             if (data.error == false) {
                 window.location.replace("/dashboard/users/users-list.html")
             } else {
-                console.log('[ERROR] ' + data);
+                console.log('[ERROR] ' + data.msg);
                 location.href = "../errors/error500.html";
             }
         })    

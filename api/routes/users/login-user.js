@@ -1,7 +1,8 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
-server.logger(" [INFO] /api/users/login-user route loaded !")
+const route_name = "/users/login-user"
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.post('', jsonParser, function (req, res) {
     var sql = `SELECT password FROM users WHERE mail = '${req.body.mail}'`;

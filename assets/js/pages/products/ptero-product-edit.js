@@ -9,36 +9,52 @@ async function postData(url = '', data = {}) {
     return response.json()
 }
 
-const params = new URLSearchParams(window.location.search)
-for (const param of params) {
-    fetch(`https://api.mercurycloud.fr/api/products/ptero-product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${param[1]}`)
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+var id_string = ""
+var category_string = ""
+const url = new URL(window.location.href);
+if (url.searchParams.get('id')) {
+    fetch(`https://api.mercurycloud.fr/api/products/product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${url.searchParams.get('id')}`)
     .then(function (response) {
         return response.json();
     })
-    .then(function (myJson) {
-        document.getElementById("title").innerHTML = `Mercury Cloud | Edition du produit Minecraft ${myJson.name}`
-        document.getElementById('name').value = myJson.name
-        document.getElementById('description').value = myJson.description
-        document.getElementById('price').value = myJson.price
-        document.getElementById('cpu').value = myJson.cpu
-        document.getElementById('cpu_pinning').value = myJson.cpu_pinning
-        document.getElementById('ram').value = myJson.ram
-        document.getElementById('disk').value = myJson.disk
-        document.getElementById('swap').value = myJson.swap
-        document.getElementById('io').value = myJson.io
-        document.getElementById('startup_command').value = myJson.startup_command
-        document.getElementById('egg').value = myJson.egg
-        update_eggs()
-        for (let i=0; i < myJson.env.length; i++) {
-            document.getElementById('env_' + (i + 1)).value = myJson.env[i]
+    .then(function (json) {
+        console.log(json)
+        if (json.error === false) {
+            if (json.data.id == 404) {
+                window.location.replace("/dashboard/errors/error404.html");
+            } else {
+                document.getElementById("title").innerHTML = `Mercury Cloud | Edition du produit Pterodactyl ${json.data.name}`
+                document.getElementById("product-title").innerHTML = `Edition du produit ${json.data.name}`
+                document.getElementById('name').value = json.data.name
+                document.getElementById('description').value = json.data.description
+                document.getElementById('price').value = json.data.price
+                document.getElementById('cpu').value = json.data.cpu
+                document.getElementById('cpu_pinning').value = json.data.cpu_pinning
+                document.getElementById('ram').value = json.data.ram
+                document.getElementById('disk').value = json.data.disk
+                document.getElementById('swap').value = json.data.swap
+                document.getElementById('io').value = json.data.io
+                document.getElementById('startup_command').value = json.data.startup_command
+                document.getElementById('egg').value = json.data.egg
+                update_eggs()
+                for (let i=0; i < json.data.env.length; i++) {
+                    document.getElementById('env_' + (i + 1)).value = json.data.env[i]
+                }
+                id_string = json.data.id
+                category_string = json.data.category
+            }
+        } else {
+         // window.location.replace("/dashboard/errors/error500.html");
         }
-    })  
-}
-
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
+    })
+} else {
+    window.location.replace("/dashboard/errors/error404.html");
 }
 
 function update_eggs() {
@@ -176,7 +192,7 @@ function update_eggs() {
     }
 }
 
-function update_product() {
+function save_product() {
     var ok = 0
     var no = 0
     if(document.getElementById('name').value.length > 0) {
@@ -302,6 +318,8 @@ function update_product() {
             if (i == env_vars.length - 1) {env_vars_json = env_vars_json + "}"}
         }
         body = {
+            "id": id_string,
+            "category": category_string,
             "name": document.getElementById("name").value,
             "description": document.getElementById("description").value,
             "price": document.getElementById("price").value,
@@ -316,16 +334,16 @@ function update_product() {
             "env": env_vars_json
         }
 
-        /*
-        postData(`https://api.mercurycloud.fr/api/products/create-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+        
+        postData(`https://api.mercurycloud.fr/api/products/edit-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
-                window.location.replace("/dashboard/products/ptero-products-list.html")
+                window.location.reload()
             } else {
                 console.log('[ERROR] ' + data);
                 location.href = "../errors/error500.html";
             }
         })    
-        */
+        
     }
 }

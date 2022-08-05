@@ -1,7 +1,7 @@
 var router = require('express').Router();
 const server = require('../../server.js')
-server.logger(" [INFO] /api/users/username-exist route loaded !")
-
+const route_name = "/users/usernale-exist"
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
     ipInfo = server.ip(req);

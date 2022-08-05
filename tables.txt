@@ -1,5 +1,37 @@
 USER : uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts
-MC_SERVICES : id, uuid, product_id, suspend
-MC_PRODUCTS : id, name, description, price, cpu, cpu_pinning, ram, disk, swap, io, egg, startup_command, env	
-PROXMOX_PRODUCTS : id, name, description, price, template_vmid, cores, ram, storage, disk_size, add_conf
-PROXMOX_SERVICES : id, uuid, product_id, suspend, ci_password, ci_user
+PRODUCTS : id, category, name, description, price, configuration
+ROLE : id, name, permissions
+
+CONFIGURATION PTERO :
+{
+    'cpu': '',
+    'cpu_pinning': '',
+    'ram': '',
+    'disk': '',
+    'swap': '',
+    'io': '',
+    'egg': '',
+    'startup_command': '',
+    'env': ''
+} 
+
+CONFIGURATION PROXMOX :
+{
+    'node': '',
+    'template_vmid': '',
+    'cores': '',
+    'ram': '',
+    'storage': '',
+    'disk_size': '',
+    'add_conf': ''
+} 
+
+ORDER-FORM :
+{
+    "cycle": '',
+    "srv_name": '',
+    "srv_type": 1,
+    "srv_nest": 2,
+    "db_sup": '',
+    "bkp_sup": ''
+}

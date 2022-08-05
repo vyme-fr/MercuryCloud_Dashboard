@@ -1,6 +1,7 @@
 var router = require('express').Router();
-const server = require('../server.js')
-server.logger(" [INFO] /api/##### route loaded !")
+const server = require('../../server.js')
+const route_name = "/#####"
+server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 
 

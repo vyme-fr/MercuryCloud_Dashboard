@@ -1,6 +1,8 @@
 
 (function (jQuery) {
   "use strict";
+  document.querySelector('body').classList.add('dark')
+
   var cpu = []
   var ram = []
 
@@ -25,59 +27,59 @@
   .then(function (response) {
     return response.json();
   })
-  .then(function (myJson) {
-    if (myJson.error === false) {
+  .then(function (json) {
+    if (json.error === false) {
 
-      document.getElementById("hello").innerHTML = "Bonjour " + myJson.username + " !"
-      document.getElementById("username").innerHTML = myJson.username
-      document.getElementById("solde").innerHTML = myJson.counters[0]
-      document.getElementById("cost_per_monts").innerHTML = myJson.counters[1]
-      document.getElementById("services").innerHTML = myJson.counters[2]
-      document.getElementById("tickets").innerHTML = myJson.counters[3]
-      document.getElementById("services_suspended").innerHTML = myJson.counters[4]
-      document.getElementById("alerts").innerHTML = myJson.counters[5]
+      document.getElementById("hello").innerHTML = "Bonjour " + json.username + " !"
+      document.getElementById("username").innerHTML = json.username
+      document.getElementById("solde").innerHTML = json.counters[0]
+      document.getElementById("cost_per_monts").innerHTML = json.counters[1]
+      document.getElementById("services").innerHTML = json.counters[2]
+      document.getElementById("tickets").innerHTML = json.counters[3]
+      document.getElementById("services_suspended").innerHTML = json.counters[4]
+      document.getElementById("alerts").innerHTML = json.counters[5]
       var invoiced_table = ""
       var color = "#39EE30"
-      for (let i = 0; i < myJson.invoices_table.length; i++) {
-        if (myJson.invoices_table[i].status == "Terminé") {color = "#28B463"}
-        if (myJson.invoices_table[i].status == "En Attente") {color = "#E67E22"}
-        if (myJson.invoices_table[i].status == "Remboursé") {color = "#2874A6"}
+      for (let i = 0; i < json.invoices_table.length; i++) {
+        if (json.invoices_table[i].status == "Terminé") {color = "#28B463"}
+        if (json.invoices_table[i].status == "En Attente") {color = "#E67E22"}
+        if (json.invoices_table[i].status == "Remboursé") {color = "#2874A6"}
 
         invoiced_table = invoiced_table + `
         <tr>
         <td>
            <div class="d-flex align-items-center">
               <img class="rounded bg-soft-primary img-fluid avatar-40 me-3" src="../assets/images/shapes/01.png" alt="profile">
-              <h6>${myJson.invoices_table[i].name}</h6>
+              <h6>${json.invoices_table[i].name}</h6>
            </div>
         </td>
         <td>
-           <p id="invoice_date">${myJson.invoices_table[i].date}</p>
+           <p id="invoice_date">${json.invoices_table[i].date}</p>
         </td>
-        <td>${myJson.invoices_table[i].price}€</td>
+        <td>${json.invoices_table[i].price}€</td>
         <td>
            <div class="mb-2 d-flex align-items-center">
-              <h6 style="color:${color};">${myJson.invoices_table[i].status}</h6>
+              <h6 style="color:${color};">${json.invoices_table[i].status}</h6>
            </div>
         </td>
      </tr>`    
       }
       document.getElementById("invoices_table").innerHTML = invoiced_table
       var activitys = ""
-      for (let i = 0; i < myJson.activity.length; i++) {
+      for (let i = 0; i < json.activity.length; i++) {
         activitys = activitys + `
         <div class="mb-2  d-flex profile-media align-items-top">
             <div class="mt-1 profile-dots-pills border-primary"></div>
             <div class="ms-4">
-              <h6 class="mb-1 ">${myJson.activity[i].name}</h6>
-              <span class="mb-0">${myJson.activity[i].date}</span>
+              <h6 class="mb-1 ">${json.activity[i].name}</h6>
+              <span class="mb-0">${json.activity[i].date}</span>
             </div>
         </div>`    
       }
   
       document.getElementById("activity_card").innerHTML = activitys
-      cpu = myJson.stats_array.CPU
-      ram = myJson.stats_array.RAM
+      cpu = json.stats_array.CPU
+      ram = json.stats_array.RAM
       if (document.querySelectorAll('#myChart').length) {
         const options = {
           series: [55, 75],
@@ -338,5 +340,8 @@
     } else {
        window.location.replace("/dashboard/auth/sign-in.html");
     }
+  }).catch(error => {
+    console.log(" [ERROR] API fetch error " + error)
+    // window.location.replace("/dashboard/errors/error500.html")
   })
 })(jQuery)
