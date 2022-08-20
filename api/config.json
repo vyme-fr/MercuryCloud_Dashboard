@@ -5,7 +5,7 @@
     "proxmox_url": "https://192.168.2.3:8006",
     "proxmox_user": "API@pve",
     "proxmox_passwd": "G2lloq74",
-    "mysql_host": "192.168.2.5",
+    "mysql_host": "192.168.2.39",
     "mysql_db": "mercurycloud_api",
     "mysql_usr": "mercurycloud_api",
     "mysql_passwd": "r6z14kKL2tFDaU6G",

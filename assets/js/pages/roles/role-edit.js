@@ -31,11 +31,13 @@ if (url.searchParams.get('id')) {
                 document.getElementById("title").innerHTML = `Mercury Cloud | Edition du rôle ${json.data.name}`
                 document.getElementById("role-title").innerHTML = `Edition du rôle ${json.data.name}`
                 document.getElementById("role-name").value = json.data.name
-                const role_permissions = json.data.permissions.split(",");
-                for (let i = 0; i < role_permissions.length; ++i) {
-                    document.getElementById(role_permissions[i]).checked = true
+                if (json.data.permissions != "NONE") {
+                    const role_permissions = json.data.permissions.split(",");
+                    for (let i = 0; i < role_permissions.length; ++i) {
+                        document.getElementById(role_permissions[i]).checked = true
+                    }
+                    admin_click()
                 }
-                admin_click()
                 role_id = json.data.id
             }
         } else {

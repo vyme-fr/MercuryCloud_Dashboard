@@ -28,10 +28,7 @@ fetch(`https://api.mercurycloud.fr/api/users/users-list?uuid=${getCookie("uuid")
             <td>${json.users[i].uuid}</td>
             <td>${json.users[i].username}</td>
             <td>${json.users[i].mail}</td>
-            <td>${json.users[i].balance}€</td>
-            <td>${json.users[i].tickets}</td>
-            <td>${json.users[i].services}</td>
-            <td>${json.users[i].alerts}</td>
+            <td>${json.users[i].role}</td>
             <td><span class="badge bg-primary">Actif</span></td>
             <td>
             <div class="flex align-items-center list-user-action">

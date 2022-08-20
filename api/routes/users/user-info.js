@@ -24,26 +24,32 @@ router.get('', function (req, res) {
             if (id == "") {return res.json({'error': true, 'msg': "User id query is required", "code": 102})}
             var sql = `SELECT * FROM users WHERE uuid = '${id}'`;
             server.con.query(sql, function (err, result) {
-                if (err) {server.logger(" [ERROR] Database error\n  " + err)};
+              if (err) {server.logger(" [ERROR] Database error\n  " + err)};
                 if (result.length > 0) {
+                  var sql = `SELECT * FROM roles WHERE id = '${result[0].role}'`;
+                  server.con.query(sql, function (err, result1) {
+                    if (err) {server.logger(" [ERROR] Database error\n  " + err)};
                     return res.json({
-                        'error': false,
-                        'data': {
-                          'uuid': result[0].uuid,
-                          'username':  result[0].username,
-                          'mail':  result[0].mail,
-                          'role': result[0].role,
-                          'first_name':  result[0].first_name,
-                          'last_name':  result[0].last_name,
-                          'tel':  result[0].tel,
-                          'address_1':  result[0].address_1,
-                          'address_2':  result[0].address_2,
-                          'city':  result[0].city,
-                          'zip':  result[0].zip,
-                          'country':  result[0].country,
-                          'state':  result[0].state
-                        }
-                      })
+                      'error': false,
+                      'data': {
+                        'uuid': result[0].uuid,
+                        'username':  result[0].username,
+                        'mail':  result[0].mail,
+                        'role': result[0].role,
+                        'role_name': result1[0].name,
+                        'permissions': result1[0].permissions,
+                        'first_name':  result[0].first_name,
+                        'last_name':  result[0].last_name,
+                        'tel':  result[0].tel,
+                        'address_1':  result[0].address_1,
+                        'address_2':  result[0].address_2,
+                        'city':  result[0].city,
+                        'zip':  result[0].zip,
+                        'country':  result[0].country,
+                        'state':  result[0].state
+                      }
+                    })
+                  })
                 } else {
                     return res.json({
                       'error': false,

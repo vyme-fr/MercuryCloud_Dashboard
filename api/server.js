@@ -12,9 +12,27 @@ const app = express();
 const nodemailer = require("nodemailer");
 const config = require("./config.json")
 const fetch = require('cross-fetch');
+const rateLimit = require('express-rate-limit')
+var sqlinjection = require('./utils/sql-injection');
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
+const limiter = rateLimit({
+	windowMs: 2 * 60 * 1000,
+	max: 30,
+	standardHeaders: true,
+	legacyHeaders: false,
+  handler: (request, response) => {
+    var forwardedIpsStr = request.header('x-forwarded-for');
+    var IP = '';
+  
+    if (forwardedIpsStr) {
+       IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+    }
+    logger(" [DEBUG] " + IP + " rate limit !")
+    return response.json({"error": true, "code": 429, "msg": "Your IP has been rate limit! This incident will be reported to the administrators."})
+  }
+})
 
 
 function logger(msg) {
@@ -100,6 +118,9 @@ connection.connect(function(err) {
       next();
       bodyParser.json();
     });
+
+    app.use(limiter)
+    app.use(sqlinjection);
   
     // index //
     app.use('/api/', require('./routes/index.js'));
@@ -138,9 +159,6 @@ connection.connect(function(err) {
 
     // utils //
     app.use('/api/utils/send-mail', require('./routes/utils/send-mail.js'));
-
- //   const permissions_manager = require("./utils/permissions-manager")
-   // console.log(permissions_manager.has_permission("0a6d6d0f-07e8-436c-bf18-1c6cbf795589", "LISTPRODUCTS"))
 
     app.listen(PORT, () =>
        logger(` [INFO] MercuryCloud API listening on ${config.api_url} !`)

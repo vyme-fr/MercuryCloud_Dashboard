@@ -21,7 +21,7 @@ router.post('', jsonParser, function (req, res) {
       if (result[0].token === req.query.token) {
         var permissions = ''
         if (req.body.permissions.length < 1) {
-          permissions = "NONE, NONE"
+          permissions = "NONE"
         } else {
           permissions = req.body.permissions
         }
