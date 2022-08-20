@@ -13,12 +13,11 @@ const nodemailer = require("nodemailer");
 const config = require("./config.json")
 const fetch = require('cross-fetch');
 const rateLimit = require('express-rate-limit')
-var sqlinjection = require('./utils/sql-injection');
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
 const limiter = rateLimit({
-	windowMs: 2 * 60 * 1000,
+	windowMs: 4 * 60 * 1000,
 	max: 30,
 	standardHeaders: true,
 	legacyHeaders: false,
@@ -119,8 +118,8 @@ connection.connect(function(err) {
       bodyParser.json();
     });
 
-    app.use(limiter)
-    app.use(sqlinjection);
+    app.use(require('./utils/rate-limit'));
+    app.use(require('./utils/sql-injection'));
   
     // index //
     app.use('/api/', require('./routes/index.js'));

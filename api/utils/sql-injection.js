@@ -94,3 +94,4 @@ function middleware(req, res, next) {
 }
 
 module.exports = middleware;
+server.logger(" [INFO] SQL Injection protect loaded !")

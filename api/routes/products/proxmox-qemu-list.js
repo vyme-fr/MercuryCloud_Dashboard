@@ -32,7 +32,7 @@ router.get('', function (req, res) {
                 return response.json()
             })
             .then(data => {
-                return res.json({'error': false, 'vms': data.data})            
+              return res.json({'error': false, 'vms': data.data})            
             })
             .catch(err => {
                 server.logger(" [ERROR] Proxmox API Error " + err)

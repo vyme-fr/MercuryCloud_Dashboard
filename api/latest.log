@@ -25846,3 +25846,1852 @@ Require stack:
 [2022-08-20 16:59:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
 [2022-08-20 17:01:45]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
 [2022-08-20 17:02:03]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:39]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:17:39]  [INFO] Database succefull connected ! (58666)
+[2022-08-20 19:17:39]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:17:39]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:17:39]  [INFO] /api/ route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:17:39]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:17:39]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:17:45]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:17:45]  [INFO] Database succefull connected ! (58667)
+[2022-08-20 19:17:45]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:17:45]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:17:45]  [INFO] /api/ route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:17:45]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:17:45]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:17:47]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:48]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:48]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:52]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:52]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:55]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:55]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:57]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:57]  [DEBUG] GET /api/products/proxmox-nodes-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:58]  [DEBUG] GET /api/products/product-info from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:58]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:17:58]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:02]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:02]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:04]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:04]  [DEBUG] GET /api/products/proxmox-nodes-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:04]  [DEBUG] GET /api/products/product-info from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:04]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:04]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:07]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:07]  [DEBUG] GET /api/products/proxmox-nodes-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:07]  [DEBUG] GET /api/products/product-info from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:07]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:07]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:14]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:14]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:25]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:30]  [DEBUG] 86.253.41.196 rate limit !
+[2022-08-20 19:18:33]  [DEBUG] 86.253.41.196 rate limit !
+[2022-08-20 19:18:36]  [DEBUG] 86.253.41.196 rate limit !
+[2022-08-20 19:18:56]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:18:56]  [INFO] Database succefull connected ! (58671)
+[2022-08-20 19:18:56]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:18:56]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:18:56]  [INFO] /api/ route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:18:56]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:18:56]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:18:56]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:59]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:18:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:19:17]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:19:17]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:19:38]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:19:38]  [DEBUG] GET /api/products/proxmox-nodes-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:19:47]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:19:47]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:03]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:03]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:04]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:04]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:08]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:08]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:10]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:10]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:31]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:20:56]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:21:09]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:21:09]  [INFO] Database succefull connected ! (58681)
+[2022-08-20 19:21:10]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:21:10]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:21:10]  [INFO] /api/ route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:21:10]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:21:10]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:22:03]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:22:03]  [INFO] Database succefull connected ! (58685)
+[2022-08-20 19:22:06]  [ERROR] Proxmox API error : TypeError: Cannot read properties of null (reading 'ticket')
+[2022-08-20 19:22:43]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:22:43]  [INFO] Database succefull connected ! (58686)
+[2022-08-20 19:22:43]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:22:43]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:22:43]  [INFO] /api/ route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:22:43]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:22:43]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:22:50]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:22:51]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:22:52]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:22:52]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:25:12]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:25:12]  [INFO] Database succefull connected ! (58699)
+[2022-08-20 19:25:12]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:25:12]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:25:12]  [INFO] /api/ route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:25:12]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:25:12]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:25:12]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:25:14]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:27:14]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:27:14]  [INFO] Database succefull connected ! (58712)
+[2022-08-20 19:27:14]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:27:14]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:27:14]  [INFO] /api/ route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:27:14]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:27:14]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:27:15]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:27:21]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:27:21]  [INFO] Database succefull connected ! (58713)
+[2022-08-20 19:27:21]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:27:21]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:27:21]  [INFO] /api/ route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:27:21]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:27:21]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:27:23]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:27:29]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:27:33]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:27:38]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:27:43]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:05]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:15]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:28:15]  [INFO] Database succefull connected ! (58719)
+[2022-08-20 19:28:15]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:28:15]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:28:15]  [INFO] /api/ route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:28:15]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:28:15]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:28:24]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:24]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:25]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:27]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:27]  [DEBUG] GET /api/products/proxmox-nodes-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:27]  [DEBUG] GET /api/products/product-info from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:27]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:27]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:29]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:29]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:58]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:28:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:29:20]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:29:20]  [DEBUG] GET /api/products/proxmox-nodes-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:29:26]  [DEBUG] GET /api/products/proxmox-storage-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:29:26]  [DEBUG] GET /api/products/proxmox-qemu-list from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:29:32]  [DEBUG] GET /api/products/products from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:29:32]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 19:50:23]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:50:23]  [INFO] Database succefull connected ! (58819)
+[2022-08-20 19:50:23]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:50:23]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:50:23]  [INFO] /api/ route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:50:23]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:50:23]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:50:32]  [DEBUG] SQL injection from 86.253.41.196
+[2022-08-20 19:51:41]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:51:41]  [INFO] Database succefull connected ! (58823)
+[2022-08-20 19:51:41]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:51:41]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:51:41]  [INFO] SQL Injection protect loaded !
+[2022-08-20 19:51:41]  [INFO] /api/ route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:51:41]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:51:41]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:52:08]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:52:08]  [INFO] Database succefull connected ! (58827)
+[2022-08-20 19:52:08]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:52:08]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:52:08]  [INFO] Rate Limit protect loaded !
+[2022-08-20 19:52:08]  [INFO] SQL Injection protect loaded !
+[2022-08-20 19:52:08]  [INFO] /api/ route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:52:08]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:52:08]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:58:41]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:58:41]  [INFO] Database succefull connected ! (58856)
+[2022-08-20 19:58:41]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:58:41]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:58:41]  [INFO] Rate Limit protect loaded !
+[2022-08-20 19:58:41]  [INFO] SQL Injection protect loaded !
+[2022-08-20 19:58:41]  [INFO] /api/ route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:58:41]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:58:41]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:59:20]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:59:20]  [INFO] Database succefull connected ! (58860)
+[2022-08-20 19:59:20]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:59:20]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:59:20]  [INFO] Rate Limit protect loaded !
+[2022-08-20 19:59:20]  [INFO] SQL Injection protect loaded !
+[2022-08-20 19:59:20]  [INFO] /api/ route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:59:20]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:59:20]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 19:59:40]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 19:59:40]  [INFO] Database succefull connected ! (58861)
+[2022-08-20 19:59:40]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 19:59:40]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 19:59:40]  [INFO] Rate Limit protect loaded !
+[2022-08-20 19:59:40]  [INFO] SQL Injection protect loaded !
+[2022-08-20 19:59:40]  [INFO] /api/ route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/products route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 19:59:40]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 19:59:40]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:00:05]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:00:05]  [INFO] Database succefull connected ! (58866)
+[2022-08-20 20:00:05]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:00:05]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:00:05]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:00:05]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:00:05]  [INFO] /api/ route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:00:05]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:00:05]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:00:17]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:00:17]  [INFO] Database succefull connected ! (58867)
+[2022-08-20 20:00:17]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:00:17]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:00:17]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:00:17]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:00:17]  [INFO] /api/ route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:00:17]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:00:17]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:00:31]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:00:31]  [INFO] Database succefull connected ! (58868)
+[2022-08-20 20:00:31]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:00:31]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:00:31]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:00:31]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:00:31]  [INFO] /api/ route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:00:31]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:00:31]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:00:50]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:00:50]  [INFO] Database succefull connected ! (58869)
+[2022-08-20 20:00:50]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:00:50]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:00:50]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:00:50]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:00:50]  [INFO] /api/ route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:00:50]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:00:50]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:01:41]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:01:41]  [INFO] Database succefull connected ! (58873)
+[2022-08-20 20:01:41]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:01:41]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:01:41]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:01:41]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:01:41]  [INFO] /api/ route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:01:41]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:01:41]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:01:42]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:01:46]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:02:28]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:02:28]  [INFO] Database succefull connected ! (58877)
+[2022-08-20 20:02:28]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:02:28]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:02:28]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:02:28]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:02:28]  [INFO] /api/ route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:02:28]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:02:28]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:02:29]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:02:30]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:04:07]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:04:07]  [INFO] Database succefull connected ! (58884)
+[2022-08-20 20:04:07]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:04:07]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:04:07]  [ERROR] Proxmox API error : ReferenceError: readdirSync is not defined
+[2022-08-20 20:04:22]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:04:23]  [INFO] Database succefull connected ! (58887)
+[2022-08-20 20:04:23]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:04:23]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:04:23]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:04:23]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:04:23]  [INFO] /api/ route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:04:23]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:04:23]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:04:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:04:31]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:04:31]  [INFO] Database succefull connected ! (58888)
+[2022-08-20 20:04:31]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:04:31]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:04:31]  [ERROR] Proxmox API error : ReferenceError: rmSync is not defined
+[2022-08-20 20:04:40]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:04:40]  [INFO] Database succefull connected ! (58891)
+[2022-08-20 20:04:40]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:04:40]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:04:40]  [ERROR] Proxmox API error : ReferenceError: dir is not defined
+[2022-08-20 20:04:51]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:04:51]  [INFO] Database succefull connected ! (58892)
+[2022-08-20 20:04:52]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:04:52]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:04:52]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:04:52]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:04:52]  [INFO] /api/ route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:04:52]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:04:52]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:06:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:10:10]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:10:10]  [INFO] Database succefull connected ! (58920)
+[2022-08-20 20:10:10]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:10:10]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:10:10]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:10:10]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:10:10]  [INFO] /api/ route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:10:10]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:10:10]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:10:36]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:10:36]  [INFO] Database succefull connected ! (58922)
+[2022-08-20 20:10:36]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:10:36]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:10:36]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:10:36]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:10:36]  [INFO] /api/ route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:10:36]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:10:36]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:10:37]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:10:40]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:10:55]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:10:55]  [INFO] Database succefull connected ! (58924)
+[2022-08-20 20:10:55]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:10:55]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:10:55]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:10:55]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:10:55]  [INFO] /api/ route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:10:55]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:10:55]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:10:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:10:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:11:51]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:11:51]  [INFO] Database succefull connected ! (58931)
+[2022-08-20 20:11:51]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:11:51]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:11:51]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:11:51]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:11:51]  [INFO] /api/ route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:11:52]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:11:52]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:11:55]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:11:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:11:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:00]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:21]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:12:21]  [INFO] Database succefull connected ! (58935)
+[2022-08-20 20:12:21]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:12:21]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:12:21]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:12:21]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:12:21]  [INFO] /api/ route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:12:21]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:12:21]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:12:24]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:26]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:27]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:48]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:12:48]  [INFO] Database succefull connected ! (58937)
+[2022-08-20 20:12:48]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:12:48]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:12:48]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:12:48]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:12:48]  [INFO] /api/ route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:12:48]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:12:48]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 20:12:49]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:51]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:53]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:54]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:12:56]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 20:14:23]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 20:14:23]  [INFO] Database succefull connected ! (58948)
+[2022-08-20 20:14:23]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 20:14:23]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 20:14:23]  [INFO] Rate Limit protect loaded !
+[2022-08-20 20:14:23]  [INFO] SQL Injection protect loaded !
+[2022-08-20 20:14:23]  [INFO] /api/ route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/products route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 20:14:23]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 20:14:23]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 21:52:44]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:55:36]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 21:55:36]  [INFO] Database succefull connected ! (59590)
+[2022-08-20 21:55:36]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 21:55:36]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 21:55:36]  [INFO] Rate Limit protect loaded !
+[2022-08-20 21:55:36]  [INFO] SQL Injection protect loaded !
+[2022-08-20 21:55:36]  [INFO] /api/ route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/products route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 21:55:36]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 21:55:36]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 21:55:37]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:55:43]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:55:44]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:55:45]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:14]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 21:57:14]  [INFO] Database succefull connected ! (59599)
+[2022-08-20 21:57:15]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 21:57:15]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 21:57:15]  [INFO] Rate Limit protect loaded !
+[2022-08-20 21:57:15]  [INFO] SQL Injection protect loaded !
+[2022-08-20 21:57:15]  [INFO] /api/ route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/products route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 21:57:15]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 21:57:15]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 21:57:17]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:19]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:19]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:20]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:20]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:20]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:21]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:21]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:21]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:21]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:23]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:23]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:23]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:23]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:24]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:24]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:24]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:25]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:26]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:26]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:26]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:27]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:27]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:27]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 21:57:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:17]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 22:02:17]  [INFO] Database succefull connected ! (59619)
+[2022-08-20 22:02:17]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 22:02:17]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 22:02:17]  [INFO] Rate Limit protect loaded !
+[2022-08-20 22:02:17]  [INFO] SQL Injection protect loaded !
+[2022-08-20 22:02:17]  [INFO] /api/ route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/products route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 22:02:17]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 22:02:17]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 22:02:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:28]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:46]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 22:02:46]  [INFO] Database succefull connected ! (59624)
+[2022-08-20 22:02:46]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 22:02:46]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 22:02:46]  [INFO] Rate Limit protect loaded !
+[2022-08-20 22:02:46]  [INFO] SQL Injection protect loaded !
+[2022-08-20 22:02:46]  [INFO] /api/ route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/products route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 22:02:46]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 22:02:46]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 22:02:53]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:53]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:53]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:53]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:53]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:54]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:54]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:54]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:54]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:54]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:55]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:55]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:55]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:55]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:56]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:56]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:56]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:56]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:57]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:57]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:57]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:57]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:58]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:02:59]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:00]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:00]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:00]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:00]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:01]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:01]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:01]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:01]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:02]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:02]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:02]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:02]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:02]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:03]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:03]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:03]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:04]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:04]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:04]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:05]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:05]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:05]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:05]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:06]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:06]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:06]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:06]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:07]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:07]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:07]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:07]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:08]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:08]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:08]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:08]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:10]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:11]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:11]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:12]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:13]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:14]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:14]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:15]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:17]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:18]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:19]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:20]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:21]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:03:23]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 22:04:23]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:04:26]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:05:16]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 22:05:16]  [INFO] Database succefull connected ! (59640)
+[2022-08-20 22:05:16]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 22:05:16]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 22:05:16]  [INFO] Rate Limit protect loaded !
+[2022-08-20 22:05:16]  [INFO] SQL Injection protect loaded !
+[2022-08-20 22:05:16]  [INFO] /api/ route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/products route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 22:05:16]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 22:05:16]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 22:05:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:05:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:05:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:05:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:05:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:05:22]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:04]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 22:06:04]  [INFO] Database succefull connected ! (59644)
+[2022-08-20 22:06:04]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 22:06:04]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 22:06:04]  [INFO] Rate Limit protect loaded !
+[2022-08-20 22:06:04]  [INFO] SQL Injection protect loaded !
+[2022-08-20 22:06:04]  [INFO] /api/ route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/products route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 22:06:04]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 22:06:04]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 22:06:06]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:07]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:08]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:08]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:09]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:10]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:11]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:11]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:12]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:13]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:14]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:15]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 22:06:18]  [DEBUG] GET /api/ from 86.253.41.196 with uuid undefined
+[2022-08-20 23:34:28]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 23:34:28]  [INFO] Database succefull connected ! (60476)
+[2022-08-20 23:34:28]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 23:34:28]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 23:34:28]  [INFO] Rate Limit protect loaded !
+[2022-08-20 23:34:28]  [INFO] SQL Injection protect loaded !
+[2022-08-20 23:34:28]  [INFO] /api/ route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/products route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 23:34:28]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 23:34:28]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 23:34:51]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586
+[2022-08-20 23:35:10]    
+
+
+
+  ███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██╗   ██╗     ██████╗██╗      ██████╗ ██╗   ██╗██████╗      █████╗ ██████╗ ██╗
+  ████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗╚██╗ ██╔╝    ██╔════╝██║     ██╔═══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██║
+  ██╔████╔██║█████╗  ██████╔╝██║     ██║   ██║██████╔╝ ╚████╔╝     ██║     ██║     ██║   ██║██║   ██║██║  ██║    ███████║██████╔╝██║
+  ██║╚██╔╝██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗  ╚██╔╝      ██║     ██║     ██║   ██║██║   ██║██║  ██║    ██╔══██║██╔═══╝ ██║
+  ██║ ╚═╝ ██║███████╗██║  ██║╚██████╗╚██████╔╝██║  ██║   ██║       ╚██████╗███████╗╚██████╔╝╚██████╔╝██████╔╝    ██║  ██║██║     ██║
+  ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝     ╚═╝  ╚═╝╚═╝     ╚═╝
+[2022-08-20 23:35:10]  [INFO] Database succefull connected ! (60480)
+[2022-08-20 23:35:10]  [INFO] Proxmox API loaded ! (API@pve)
+[2022-08-20 23:35:10]  [INFO] SMTP Client loaded ! (mail.arkia-groupe.fr:465)
+[2022-08-20 23:35:10]  [INFO] Rate Limit protect loaded !
+[2022-08-20 23:35:10]  [INFO] SQL Injection protect loaded !
+[2022-08-20 23:35:10]  [INFO] /api/ route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/ptero-create-product route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/proxmox-create-product route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/proxmox-qemu-list route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/proxmox-nodes-list route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/proxmox-storage-list route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/delete-product route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/product-info route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/products route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/products/edit-product route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/create-user route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/login-user route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/users-list route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/user-info route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/usernale-exist route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/mail-exist route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/delete-user route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/users/edit-user route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/roles/create-role route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/roles/delete-role route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/roles/roles-list route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/roles/role-info route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/roles/edit-role route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/services/order-form route loaded !
+[2022-08-20 23:35:10]  [INFO] /api/utils/send-mail route loaded !
+[2022-08-20 23:35:10]  [INFO] MercuryCloud API listening on https://api.mercurycloud.fr !
+[2022-08-20 23:54:15]  [DEBUG] GET /api/ from 86.253.41.196 with uuid 0a6d6d0f-07e8-436c-bf18-1c6cbf795586

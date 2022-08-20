@@ -4,7 +4,7 @@
     "pterodactyl_api_key": "ptla_28BCpHTsEFDr80yyNU4WLsdkSbGwxnT5kqFuzEHjx81",
     "proxmox_url": "https://192.168.2.3:8006",
     "proxmox_user": "API@pve",
-    "proxmox_passwd": "G2lloq74",
+    "proxmox_passwd": "Pvf^!8mU65fCS2Zzkb6GX2$iHhE9wu38",
     "mysql_host": "192.168.2.39",
     "mysql_db": "mercurycloud_api",
     "mysql_usr": "mercurycloud_api",
@@ -13,5 +13,7 @@
     "smtp_port": 465,
     "smtp_ssl": true,
     "smtp_username": "noreply@mercurycloud.fr",
-    "smtp_pswd": "&G2lloq74&"
+    "smtp_pswd": "&G2lloq74&",
+    "rate_limit_time": 20,
+    "rate_limit_max_rate": 30
 }
