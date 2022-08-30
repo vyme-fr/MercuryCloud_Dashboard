@@ -1,6 +1,7 @@
 USER : uuid, username, mail, token, password, balance, tickets, services, suspend_services, alerts
 PRODUCTS : id, category, name, description, price, configuration
 ROLE : id, name, permissions
+SERVICES : id, name, product_id, price
 
 CONFIGURATION PTERO :
 {

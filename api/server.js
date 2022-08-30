@@ -16,23 +16,6 @@ const rateLimit = require('express-rate-limit')
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
-const limiter = rateLimit({
-	windowMs: 4 * 60 * 1000,
-	max: 30,
-	standardHeaders: true,
-	legacyHeaders: false,
-  handler: (request, response) => {
-    var forwardedIpsStr = request.header('x-forwarded-for');
-    var IP = '';
-  
-    if (forwardedIpsStr) {
-       IP = forwardedIps = forwardedIpsStr.split(',')[0];  
-    }
-    logger(" [DEBUG] " + IP + " rate limit !")
-    return response.json({"error": true, "code": 429, "msg": "Your IP has been rate limit! This incident will be reported to the administrators."})
-  }
-})
-
 
 function logger(msg) {
   let date_ob = new Date();;
@@ -48,6 +31,9 @@ function logger(msg) {
   console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg)
   fs.appendFileSync('latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
 }
+
+logger(" [INFO] The API is starting...")
+
 
 const PORT = 400
 var ipInfo = ""
@@ -119,7 +105,7 @@ connection.connect(function(err) {
     });
 
     app.use(require('./utils/rate-limit'));
-    app.use(require('./utils/sql-injection'));
+    // app.use(require('./utils/sql-injection'));
   
     // index //
     app.use('/api/', require('./routes/index.js'));
@@ -155,6 +141,8 @@ connection.connect(function(err) {
 
     // services //
     app.use('/api/services/order-form', require('./routes/services/order-form.js'));
+    app.use('/api/services/services', require('./routes/services/services.js'));
+    app.use('/api/services/delete-service', require('./routes/services/delete-service.js'));
 
     // utils //
     app.use('/api/utils/send-mail', require('./routes/utils/send-mail.js'));

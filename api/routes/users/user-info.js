@@ -1,6 +1,7 @@
 var router = require('express').Router();
 const server = require('../../server.js')
 const route_name = "/users/user-info"
+const permissions_manager = require("../../utils/permissions-manager")
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 
@@ -19,49 +20,58 @@ router.get('', function (req, res) {
         return res.json({'error': true, 'code': 404})
       } else {
         if (result[0].token == req.query.token) {
-            var id = req.query.id
-            if (id == undefined) {return res.json({'error': true, 'msg': "User id query is required", "code": 101})}
-            if (id == "") {return res.json({'error': true, 'msg': "User id query is required", "code": 102})}
-            var sql = `SELECT * FROM users WHERE uuid = '${id}'`;
-            server.con.query(sql, function (err, result) {
-              if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-                if (result.length > 0) {
-                  var sql = `SELECT * FROM roles WHERE id = '${result[0].role}'`;
-                  server.con.query(sql, function (err, result1) {
-                    if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-                    return res.json({
-                      'error': false,
-                      'data': {
-                        'uuid': result[0].uuid,
-                        'username':  result[0].username,
-                        'mail':  result[0].mail,
-                        'role': result[0].role,
-                        'role_name': result1[0].name,
-                        'permissions': result1[0].permissions,
-                        'first_name':  result[0].first_name,
-                        'last_name':  result[0].last_name,
-                        'tel':  result[0].tel,
-                        'address_1':  result[0].address_1,
-                        'address_2':  result[0].address_2,
-                        'city':  result[0].city,
-                        'zip':  result[0].zip,
-                        'country':  result[0].country,
-                        'state':  result[0].state
-                      }
+          permissions_manager.has_permission(req.query.uuid, "LISTUSERS").then(function(result) {
+            if (result) {
+              var id = req.query.id
+              if (id == undefined) {return res.json({'error': true, 'msg': "User id query is required", "code": 101})}
+              if (id == "") {return res.json({'error': true, 'msg': "User id query is required", "code": 102})}
+              var sql = `SELECT * FROM users WHERE uuid = '${id}'`;
+              server.con.query(sql, function (err, result) {
+                if (err) {server.logger(" [ERROR] Database error\n  " + err)};
+                  if (result.length > 0) {
+                    var sql = `SELECT * FROM roles WHERE id = '${result[0].role}'`;
+                    server.con.query(sql, function (err, result1) {
+                      if (err) {server.logger(" [ERROR] Database error\n  " + err)};
+                      return res.json({
+                        'error': false,
+                        'data': {
+                          'uuid': result[0].uuid,
+                          'username':  result[0].username,
+                          'mail':  result[0].mail,
+                          'role': result[0].role,
+                          'role_name': result1[0].name,
+                          'permissions': result1[0].permissions,
+                          'first_name':  result[0].first_name,
+                          'last_name':  result[0].last_name,
+                          'tel':  result[0].tel,
+                          'address_1':  result[0].address_1,
+                          'address_2':  result[0].address_2,
+                          'city':  result[0].city,
+                          'zip':  result[0].zip,
+                          'country':  result[0].country,
+                          'state':  result[0].state
+                        }
+                      })
                     })
-                  })
-                } else {
-                    return res.json({
-                      'error': false,
-                      'data': {
-                        'uuid': 404
-                      }
-                    })
-                  }
-                });
+                  } else {
+                      return res.json({
+                        'error': false,
+                        'data': {
+                          'uuid': 404
+                        }
+                      })
+                    }
+                  });
             } else {
-                return res.json({'error': true, 'code': 403})
+              return res.json({
+                "error": true,
+                "code": 403
+              })
             }
+          })
+          } else {
+              return res.json({'error': true, 'code': 403})
+          }
         }
     });
 })

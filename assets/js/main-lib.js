@@ -1,9 +1,6 @@
-/*
-* Version: 1.2.0
-* Template: Hope-Ui - Responsive Bootstrap 5 Admin Dashboard Template
-* Author: iqonic.design
-* Design and Developed by: iqonic.design
-* NOTE: This file contains the script for initialize & listener Template.
+/*!
+* Author: Savalet from MercuryCloud
+* Author Website: mercurycloud.fr
 */
 
 /*----------------------------------------------

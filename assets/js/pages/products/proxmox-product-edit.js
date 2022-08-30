@@ -14,6 +14,8 @@ function getCookie(name) {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
+var id_string = ""
+var category_string = ""
 
 fetch(`https://api.mercurycloud.fr/api/products/proxmox-nodes-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
 .then(function (response) {
@@ -27,8 +29,6 @@ fetch(`https://api.mercurycloud.fr/api/products/proxmox-nodes-list?uuid=${getCoo
         `
     }
     document.getElementById('nodes').innerHTML =  '<option value="0">Veuillez choisir un noeud</option>' + nodes_html
-    var id_string = ""
-    var category_string = ""
     const url = new URL(window.location.href);
     if (url.searchParams.get('id')) {
         fetch(`https://api.mercurycloud.fr/api/products/product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${url.searchParams.get('id')}`)
@@ -243,8 +243,12 @@ function save_product() {
             if (data.error == false) {
                 window.location.reload()
             } else {
-                console.log('[ERROR] ' + data);
-                location.href = "../errors/error500.html";
+                console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
+                if (data.code == 403) {
+                    location.href = "../errors/error403.html"
+                } else {
+                    location.href = "../errors/error500.html"
+                }
             }
         })    
     }

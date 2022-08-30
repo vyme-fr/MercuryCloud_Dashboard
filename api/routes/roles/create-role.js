@@ -2,6 +2,7 @@ var router = require('express').Router();
 const server = require('../../server.js')
 var jsonParser = server.parser.json()
 const route_name = "/roles/create-role"
+const permissions_manager = require("../../utils/permissions-manager")
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.post('', jsonParser, function (req, res) {
@@ -19,18 +20,27 @@ router.post('', jsonParser, function (req, res) {
       return res.json({'error': true, 'code': 404})
     } else {
       if (result[0].token === req.query.token) {
-        var permissions = ''
-        if (req.body.permissions.length < 1) {
-          permissions = "NONE"
-        } else {
-          permissions = req.body.permissions
-        }
-        var sql = `INSERT INTO roles (id, name, permissions) VALUES('${server.crypto.randomBytes(3).toString('hex')}', '${req.body.name}', '${permissions}')`;
-        server.con.query(sql, function (err, result) {
-            if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-        });
-        server.logger(" [DEBUG] Role " + req.body.name + " created from " + IP + " !") 
-        return res.json({"error": false, "response": "OK"});
+        permissions_manager.has_permission(req.query.uuid, "CREATEROLE").then(function(result) {
+          if (result) {
+            var permissions = ''
+            if (req.body.permissions.length < 1) {
+              permissions = "NONE"
+            } else {
+              permissions = req.body.permissions
+            }
+            var sql = `INSERT INTO roles (id, name, permissions) VALUES('${server.crypto.randomBytes(3).toString('hex')}', '${req.body.name}', '${permissions}')`;
+            server.con.query(sql, function (err, result) {
+                if (err) {server.logger(" [ERROR] Database error\n  " + err)};
+            });
+            server.logger(" [DEBUG] Role " + req.body.name + " created from " + IP + " !") 
+            return res.json({"error": false, "response": "OK"});
+          } else {
+            return res.json({
+              "error": true,
+              "code": 403
+            })
+          }
+        })
       } else {
         return res.json({'error': true, 'code': 403})
       }

@@ -62,13 +62,140 @@
                 "db_sup": document.getElementById("db-sup").value,
                 "bkp_sup": document.getElementById("bkp-sup").value
             }
-            document.getElementById("account").classList.add("done");
-            document.getElementById("personal").classList.add("active");
-            document.getElementById("personal").classList.remove("done");
-            document.getElementById("payment").classList.remove("active");
-            document.getElementById("payment").classList.remove("done");
-            document.getElementById("confirm").classList.remove("done");
-            document.getElementById("confirm").classList.remove("active");
+            fetch(`https://api.mercurycloud.fr/api/users/user-info?uuid=${getCookie('uuid')}&token=${getCookie('token')}&id=${getCookie('uuid')}`)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (json) {
+                console.log(json)
+                if (json.error === false) {
+                    document.getElementById("first-name").value = json.data.first_name
+                    document.getElementById("last-name").value = json.data.last_name
+                    document.getElementById("mail").value = json.data.mail
+                    document.getElementById("tel").value = json.data.tel
+                    document.getElementById("address-1").value = json.data.address_1
+                    document.getElementById("address-2").value = json.data.address_2
+                    document.getElementById("city").value = json.data.city
+                    document.getElementById("zip").value = json.data.zip
+                    document.getElementById("country").value = json.data.country
+                    document.getElementById("state").value = json.data.state
+                }
+                document.getElementById("account").classList.add("done");
+                document.getElementById("personal").classList.add("active");
+                document.getElementById("personal").classList.remove("done");
+                document.getElementById("payment").classList.remove("active");
+                document.getElementById("payment").classList.remove("done");
+                document.getElementById("confirm").classList.remove("done");
+                document.getElementById("confirm").classList.remove("active");
+                if(document.getElementById("first-name").value.length > 2) {
+                    document.getElementById("first-name").classList.remove('is-invalid')
+                    document.getElementById("first-name").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("first-name").classList.remove('is-valid')
+                    document.getElementById("first-name").classList.add('is-invalid')
+                    document.getElementById("first-name").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("last-name").value.length > 2) {
+                    document.getElementById("last-name").classList.remove('is-invalid')
+                    document.getElementById("last-name").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("last-name").classList.remove('is-valid')
+                    document.getElementById("last-name").classList.add('is-invalid')
+                    document.getElementById("last-name").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("mail").value.length > 2) {
+                    document.getElementById("mail").classList.remove('is-invalid')
+                    document.getElementById("mail").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("mail").classList.remove('is-valid')
+                    document.getElementById("mail").classList.add('is-invalid')
+                    document.getElementById("mail").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("tel").value.length == 12 && document.getElementById("tel").value.match(/[0-9]/gi) != null && document.getElementById("tel").value.includes("+", 0) == true) {
+                    document.getElementById("tel").classList.remove('is-invalid')
+                    document.getElementById("tel").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("tel").classList.remove('is-valid')
+                    document.getElementById("tel").classList.add('is-invalid')
+                    document.getElementById("tel").value = ""
+                    
+                }
+            
+    
+    
+                if(document.getElementById("address-1").value.length > 2) {
+                    document.getElementById("address-1").classList.remove('is-invalid')
+                    document.getElementById("address-1").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("address-1").classList.remove('is-valid')
+                    document.getElementById("address-1").classList.add('is-invalid')
+                    document.getElementById("address-1").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("city").value.length > 2) {
+                    document.getElementById("city").classList.remove('is-invalid')
+                    document.getElementById("city").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("city").classList.remove('is-valid')
+                    document.getElementById("city").classList.add('is-invalid')
+                    document.getElementById("city").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("zip").value.length == 5 && /^\d+$/.test(document.getElementById("zip").value) == true) {
+                    document.getElementById("zip").classList.remove('is-invalid')
+                    document.getElementById("zip").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("zip").classList.remove('is-valid')
+                    document.getElementById("zip").classList.add('is-invalid')
+                    document.getElementById("zip").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("country").value > 0) {
+                    document.getElementById("country").classList.remove('is-invalid')
+                    document.getElementById("country").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("country").classList.remove('is-valid')
+                    document.getElementById("country").classList.add('is-invalid')
+                    document.getElementById("country").value = ""
+                    
+                }
+    
+    
+                if(document.getElementById("state").value.length > 2) {
+                    document.getElementById("state").classList.remove('is-invalid')
+                    document.getElementById("state").classList.add('is-valid')
+                    
+                } else {
+                    document.getElementById("state").classList.remove('is-valid')
+                    document.getElementById("state").classList.add('is-invalid')
+                    document.getElementById("state").value = ""
+                    
+                }
+                
+            })
         }
         if(n==2){
             form2 = {
@@ -89,6 +216,7 @@
             document.getElementById("payment").classList.remove("done");
             document.getElementById("confirm").classList.remove("done");
             document.getElementById("confirm").classList.remove("active");
+
         }
         if(n==3){
             document.getElementById("account").classList.add("done");

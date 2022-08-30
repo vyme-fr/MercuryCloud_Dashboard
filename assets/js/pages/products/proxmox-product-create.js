@@ -178,8 +178,12 @@ function create_product() {
             if (data.error == false) {
                 window.location.replace("/dashboard/products/proxmox-products-list.html")
             } else {
-                console.log('[ERROR] ' + data);
-                location.href = "../errors/error500.html";
+                console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
+                if (data.code == 403) {
+                    location.href = "../errors/error403.html"
+                } else {
+                    location.href = "../errors/error500.html"
+                }
             }
         })    
     }

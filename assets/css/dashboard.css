@@ -1,11 +1,7 @@
 @charset "UTF-8";
 /*!
-* Version: 1.2.0
-* Template: Hope-Ui - Responsive Bootstrap 5 Admin Dashboard Template
-* Author: iqonic.design
-* Design and Developed by: iqonic.design
-* NOTE: This file contains the styling for Template.
-*
+* Author: Savalet from MercuryCloud
+* Author Website: mercurycloud.fr
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 :focus {
@@ -68,6 +64,24 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #8A92A6;
   --bs-body-bg: #F5F6FA;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+      
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 6px;
+}
+       
+::-webkit-scrollbar-thumb {
+  background: #333b55; 
+  border-radius: 6px;
+}
+      
+::-webkit-scrollbar-thumb:hover {
+  background: #22273867; 
 }
 
 *,

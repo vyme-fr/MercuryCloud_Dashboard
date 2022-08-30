@@ -14,6 +14,6 @@
     "smtp_ssl": true,
     "smtp_username": "noreply@mercurycloud.fr",
     "smtp_pswd": "&G2lloq74&",
-    "rate_limit_time": 20,
-    "rate_limit_max_rate": 30
+    "rate_limit_time": 60,
+    "rate_limit_max_rate": 60
 }

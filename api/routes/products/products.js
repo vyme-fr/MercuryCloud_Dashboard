@@ -11,35 +11,24 @@ router.get('', function (req, res) {
   if (forwardedIpsStr) {
      IP = forwardedIps = forwardedIpsStr.split(',')[0];  
   }
-  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP)
+  var sql = `SELECT * FROM products`;
   server.con.query(sql, function (err, result) {
-    if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-    if (result.length == 0) {
-      return res.json({'error': true, 'code': 404})
-    } else {
-      if (result[0].token === req.query.token) {
-        var sql = `SELECT * FROM products`;
-        server.con.query(sql, function (err, result) {
-            if (err) {server.logger(" [ERROR] Database error\n  " + err)};
-            products = []
-            for(var i= 0; i < result.length; i++)
-            {
-              products.push({
-                "id": result[i].id,
-                "category": result[i].category,
-                "name": result[i].name,
-                "description": result[i].description,
-                "price": result[i].price
-              })
-            }
-            return res.json({'error': false, 'data': products})
-          });
-      } else {
-        return res.json({'error': true, 'code': 403})
+      if (err) {server.logger(" [ERROR] Database error\n  " + err)};
+      products = []
+      for(var i= 0; i < result.length; i++)
+      {
+        products.push({
+          "id": result[i].id,
+          "category": result[i].category,
+          "name": result[i].name,
+          "description": result[i].description,
+          "price": result[i].price,
+          "configuration": JSON.parse(result[i].configuration)
+        })
       }
-    }
-  });
+      return res.json({'error': false, 'data': products})
+    });
 })
 
 module.exports = router;

@@ -33,7 +33,7 @@ fetch(`https://api.mercurycloud.fr/api/products/products?uuid=${getCookie("uuid"
                 <td><span class="badge bg-primary">Actif</span></td>
                 <td>
                 <div class="flex align-items-center list-user-action">
-                    <a class="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="" data-original-title="Créer" href="/dashboard/form/form-wizard.html?id=${json.data[i].id}">
+                    <a class="btn btn-sm btn-icon btn-success" data-toggle="tooltip" data-placement="top" title="" data-original-title="Créer" href="/dashboard/products/order-form.html?id=${json.data[i].id}">
                         <span class="btn-inner">
                             <svg width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
                                 <path opacity="0.4" d="M16.6667 2H7.33333C3.92889 2 2 3.92889 2 7.33333V16.6667C2 20.0622 3.92 22 7.33333 22H16.6667C20.0711 22 22 20.0622 22 16.6667V7.33333C22 3.92889 20.0711 2 16.6667 2Z" fill="currentColor"></path>                                
@@ -75,8 +75,12 @@ function delete_product(id) {
         if (data.error == false) {
             window.location.reload()
         } else {
-            console.log('[ERROR] ' + data);
-            location.href = "../errors/error500.html";
+            console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
+            if (data.code == 403) {
+                location.href = "../errors/error403.html"
+            } else {
+                location.href = "../errors/error500.html"
+            }
         }
     })    
 }

@@ -3,6 +3,7 @@ const server = require('../../server.js')
 const config = require('../../config.json');
 const { response } = require('express');
 const route_name = "/products/proxmox-storage-list"
+const permissions_manager = require("../../utils/permissions-manager.js")
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
@@ -21,23 +22,32 @@ router.get('', function (req, res) {
         return res.json({'error': true, 'code': 404})
       } else {
         if (result[0].token === req.query.token) {
-            server.fetch(`${config.proxmox_url}/api2/json/nodes/${req.query.node}/storage`, {
+          permissions_manager.has_permission(req.query.uuid, "LISTPRODUCTS").then(function(result) {
+            if (result) {
+              server.fetch(`${config.proxmox_url}/api2/json/nodes/${req.query.node}/storage`, {
                 "method": "GET",
                 "headers": {
                     "CSRFPreventionToken": server.proxmox_CSRFPreventionToken,
                     "Cookie": "PVEAuthCookie=" + server.proxmox_ticket
                 },
                 "agent": server.httpsAgent
-            }).then(response => {
+              }).then(response => {
                 return response.json()
-            })
-            .then(data => {
+              })
+              .then(data => {
                 return res.json({'error': false, 'storage': data.data})            
-            })
-            .catch(err => {
+              })
+              .catch(err => {
                 server.logger(" [ERROR] Proxmox API Error " + err)
                 return res.json({"error": true, "code": 1000, "msg": err})
-            });
+              });
+            } else {
+              return res.json({
+                "error": true,
+                "code": 403
+              })
+            }
+          })
         } else {
           return res.json({'error': true, 'code': 403})
         }

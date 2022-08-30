@@ -49,7 +49,7 @@ if (url.searchParams.get('id')) {
 }
 
 function admin_click() {
-    const unchecked_array = ["VIEWADMINPANEL", "LISTUSERS", "CREATEUSER", "DELETEUSER", "EDTIUSER", "LISTROLES", "CREATEROLE", "DELETEROLE", "EDITROLE", "LISTPRODUCTS", "CREATEPRODUCT", "DELETEPRODUCT", "EDITPRODUCT"]
+    const unchecked_array = ["VIEWADMINPANEL", "LISTUSERS", "CREATEUSER", "DELETEUSER", "EDTIUSER", "LISTROLES", "CREATEROLE", "DELETEROLE", "EDITROLE", "LISTPRODUCTS", "CREATEPRODUCT", "DELETEPRODUCT", "EDITPRODUCT", "LISTSERVICES", "CREATESERVICE", "DELETESERVICE", "EDITSERVICE"]
     if (document.getElementById("ADMIN").checked) {
         for (let i = 0; i < unchecked_array.length; ++i) {
             document.getElementById(unchecked_array[i]).setAttribute("disabled", "")
@@ -77,7 +77,7 @@ function save_role() {
 
     if(ok == 1 && no == 0) {    
         var permissions = []
-        const permissions_array = ["ADMIN", "VIEWADMINPANEL", "LISTUSERS", "CREATEUSER", "DELETEUSER", "EDTIUSER", "LISTROLES", "CREATEROLE", "DELETEROLE", "EDITROLE", "LISTPRODUCTS", "CREATEPRODUCT", "DELETEPRODUCT", "EDITPRODUCT"]
+        const permissions_array = ["ADMIN", "VIEWADMINPANEL", "LISTUSERS", "CREATEUSER", "DELETEUSER", "EDTIUSER", "LISTROLES", "CREATEROLE", "DELETEROLE", "EDITROLE", "LISTPRODUCTS", "CREATEPRODUCT", "DELETEPRODUCT", "EDITPRODUCT", "LISTSERVICES", "CREATESERVICE", "DELETESERVICE", "EDITSERVICE"]
         if (document.getElementById("ADMIN").checked) {
             permissions.push("ADMIN")
         } else {
@@ -98,8 +98,12 @@ function save_role() {
             if (data.error == false) {
                 window.location.reload()
             } else {
-                console.log('[ERROR] ' + data.msg);
-                location.href = "../errors/error500.html";
+                console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
+                if (data.code == 403) {
+                    location.href = "../errors/error403.html"
+                } else {
+                    location.href = "../errors/error500.html"
+                }
             }
         })  
     }

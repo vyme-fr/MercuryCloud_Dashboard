@@ -3,6 +3,7 @@ const server = require('../../server.js')
 const config = require('../../config.json');
 const { response } = require('express');
 const route_name = "/products/proxmox-qemu-list"
+const permissions_manager = require("../../utils/permissions-manager.js")
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
@@ -21,7 +22,9 @@ router.get('', function (req, res) {
         return res.json({'error': true, 'code': 404})
       } else {
         if (result[0].token === req.query.token) {
-            server.fetch(`${config.proxmox_url}/api2/json/nodes/${req.query.node}/qemu`, {
+          permissions_manager.has_permission(req.query.uuid, "LISTPRODUCTS").then(function(result) {
+            if (result) {
+              server.fetch(`${config.proxmox_url}/api2/json/nodes/${req.query.node}/qemu`, {
                 "method": "GET",
                 "headers": {
                     "CSRFPreventionToken": server.proxmox_CSRFPreventionToken,
@@ -38,6 +41,13 @@ router.get('', function (req, res) {
                 server.logger(" [ERROR] Proxmox API Error " + err)
                 return res.json({"error": true, "code": 1000, "msg": err})
             });
+            } else {
+              return res.json({
+                "error": true,
+                "code": 403
+              })
+            }
+          })
         } else {
           return res.json({'error': true, 'code': 403})
         }
