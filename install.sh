@@ -145,7 +145,7 @@ install_debian_based() {
     fi
     
     printf "${menu}Retrieving dashboard files...${normal} "
-    if wget -q -O /var/www/dashboard/mercurycloud-dashboard.zip https://url.mercurycloud.fr/installzip >/dev/null; then
+    if wget -q -O /var/www/dashboard/mercurycloud-dashboard.zip https://github.com/SavaletDev/MercuryCloud_Dashboard/releases/download/latest/MercuryCloud_Dashboard.zip >/dev/null; then
         printf "${fgreen}done\n${normal}"
     else
         printf "${fgred}Dashboard files retrieving failed! Stopping the installation.\n${normal}"
@@ -213,15 +213,7 @@ install_debian_based() {
         printf "${fgred}Config file creation failed! Stopping the installation.\n${normal}"
         exit
     fi
-  
-    printf "${menu}Retrieving MySQL dump file...${normal} "
-    if wget -q -O /var/www/dashboard/mysql_dump.sql https://url.mercurycloud.fr/mysqldump >/dev/null; then
-        printf "${fgreen}done\n${normal}"
-    else
-        printf "${fgred}MySQL dump file retrieving failed! Stopping the installation.\n${normal}"
-        exit
-    fi
-
+    
     printf "${menu}Create an populate MySQL tables...${normal} "
     if mysql --host="${mysql_host}" --user="${mysql_usr}" --password="${mysql_passwd}" --database="${mysql_db}" < /var/www/dashboard/mysql_dump.sql >/dev/null; then
         printf "${fgreen}done\n${normal}"
