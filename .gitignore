@@ -1,2 +1,6 @@
 api/node_modules
+api/package-lock.json
+api/logs/*
 api/utils/rate-limit-windows/*
+api/config.json
+dev_files/

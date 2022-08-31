@@ -4,18 +4,25 @@ var getIP = require('ipware')().get_ip;
 const fs = require('fs')
 var crypto = require("crypto");
 const uuid = require('uuid');
-const request = require('request');
-const req = require('express/lib/request');
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const app = express();
 const nodemailer = require("nodemailer");
 const config = require("./config.json")
 const fetch = require('cross-fetch');
-const rateLimit = require('express-rate-limit')
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
+
+let start_date = new Date();;
+let date = ("0" + start_date.getDate()).slice(-2);
+let month = ("0" + (start_date.getMonth() + 1)).slice(-2);
+let year = start_date.getFullYear();
+let hours = start_date.getHours();
+let minutes = start_date.getMinutes();
+if (hours < 10) {hours = "0" + hours}
+if (minutes < 10) {minutes = "0" + minutes}
+const start_time = year + "-" + month + "-" + date + "-" + hours + ":" + minutes
 
 function logger(msg) {
   let date_ob = new Date();;
@@ -29,14 +36,12 @@ function logger(msg) {
   if (hours < 10) {hours = "0" + hours}
   if (minutes < 10) {minutes = "0" + minutes}
   console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg)
-  fs.appendFileSync('latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
+  fs.appendFileSync('logs/' + start_time + '.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
 }
 
 logger(" [INFO] The API is starting...")
 
-
 const PORT = 400
-var ipInfo = ""
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : config.mysql_host,
