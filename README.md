@@ -1,6 +1,6 @@
 # **Mercurycloud Dashboard**
 
-![dashboard](https://dash.mercurycloud.fr/assets/images/dashboard.png)
+![dashboard](https://cdn.mercurycloud.fr/TaWe3/MUDihiZa18.png/raw)
 
 This dashboard brings a whole new version of self-hosting. This project brings several possibilities like connecting a Pterodactyl or Proxmox API to manage your services for you and your customers. A simple payment system based on PayPal and others allows you to manage your customers' invoices, payments and late payments, by suspending their services automatically in the event of delay.
 
