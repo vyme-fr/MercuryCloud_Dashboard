@@ -8,7 +8,7 @@ This dashboard brings a whole new version of self-hosting. This project brings s
 ### One line installation:
 #### Just execute this line in your terminal:
 ```
-wget -O install.sh https://url.mercurycloud.fr/installsh && bash install.sh
+wget -O install.sh https://raw.githubusercontent.com/SavaletDev/MercuryCloud_Dashboard/main/install.sh && bash install.sh
 ```
 #### Supported systems:
  - Debian (9-11)
