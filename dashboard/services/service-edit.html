@@ -3,36 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <style>
-    /* width */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 1px grey;
-      border-radius: 6px;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #333b55;
-      border-radius: 6px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #22273867;
-    }
-
-    #price-card {
-      display: flex;
-      flex: 1;
-    }
-  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Mercury Cloud | VPS</title>
+  <title id="title">Mercury Cloud | Edition d'un service</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
@@ -56,6 +29,8 @@
   <!-- RTL Css -->
   <link rel="stylesheet" href="../../assets/css/rtl.min.css" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
 </head>
 
 <body class="  ">
@@ -71,16 +46,7 @@
     <div class="sidebar-header d-flex align-items-center justify-content-start">
       <a href="../../dashboard/index.html" class="navbar-brand">
         <!--Logo start-->
-        <svg width="30" class="" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="-0.757324" y="19.2427" width="28" height="4" rx="2" transform="rotate(-45 -0.757324 19.2427)"
-            fill="currentColor" />
-          <rect x="7.72803" y="27.728" width="28" height="4" rx="2" transform="rotate(-45 7.72803 27.728)"
-            fill="currentColor" />
-          <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)"
-            fill="currentColor" />
-          <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)"
-            fill="currentColor" />
-        </svg>
+        <img src="../../assets/images/icon_flat.png" width="35" height="35" alt="Icon">
         <!--logo End-->
         <h4 class="logo-title">Mercury Cloud</h4>
       </a>
@@ -106,7 +72,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/dashboard/index.html">
+            <a class="nav-link " aria-current="page" href="../../dashboard/index.html">
               <i class="icon">
                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.4"
@@ -162,7 +128,7 @@
             </a>
             <ul class="sub-nav collapse" id="sidebar-pricings" data-bs-parent="#sidebar-menu">
               <li class="nav-item">
-                <a id="vps-pricings" class="nav-link active" href="/dashboard/products/vps-pricings.html">
+                <a id="vps-pricings" class="nav-link" href="/dashboard/products/vps-pricings.html">
                   <i class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                       <g>
@@ -191,7 +157,6 @@
             <hr class="hr-horizontal">
           </li>
           <div id="admin_navbar">
-
           </div>
         </ul>
         <!-- Sidebar Menu End -->
@@ -206,16 +171,7 @@
         <div class="container-fluid navbar-inner">
           <a href="../../dashboard/index.html" class="navbar-brand">
             <!--Logo start-->
-            <svg width="30" class="text-primary" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="-0.757324" y="19.2427" width="28" height="4" rx="2" transform="rotate(-45 -0.757324 19.2427)"
-                fill="currentColor" />
-              <rect x="7.72803" y="27.728" width="28" height="4" rx="2" transform="rotate(-45 7.72803 27.728)"
-                fill="currentColor" />
-              <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)"
-                fill="currentColor" />
-              <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)"
-                fill="currentColor" />
-            </svg>
+            <img src="../../assets/images/icon_flat.png" width="35" height="35" alt="Icon">
             <!--logo End-->
             <h4 class="logo-title">Mercury Cloud</h4>
           </a>
@@ -505,26 +461,118 @@
         <div class="iq-header-img">
           <img src="../../assets/images/dashboard/top-header.png" alt="header"
             class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX">
+          <img src="../../assets/images/dashboard/top-header1.png" alt="header"
+            class="theme-color-purple-img img-fluid w-100 h-100 animated-scaleX">
+          <img src="../../assets/images/dashboard/top-header2.png" alt="header"
+            class="theme-color-blue-img img-fluid w-100 h-100 animated-scaleX">
+          <img src="../../assets/images/dashboard/top-header3.png" alt="header"
+            class="theme-color-green-img img-fluid w-100 h-100 animated-scaleX">
+          <img src="../../assets/images/dashboard/top-header4.png" alt="header"
+            class="theme-color-yellow-img img-fluid w-100 h-100 animated-scaleX">
+          <img src="../../assets/images/dashboard/top-header5.png" alt="header"
+            class="theme-color-pink-img img-fluid w-100 h-100 animated-scaleX">
         </div>
       </div> <!-- Nav Header Component End -->
       <!--Nav End-->
     </div>
     <div class="conatiner-fluid content-inner mt-n5 py-0">
-      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="check" viewBox="0 0 16 16">
-          <title>Check</title>
-          <path
-            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
-          </path>
-        </symbol>
-      </svg>
+      <div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-4">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                  <h4 id="service-title" class="card-title">Edition d'un service</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="profile-img-edit position-relative">
+                    <img src="../../assets/images/avatars/01.png" alt="profile-pic"
+                      class="theme-color-default-img profile-pic rounded avatar-100">
+                    <img src="../../assets/images/avatars/avtar_1.png" alt="profile-pic"
+                      class="theme-color-purple-img profile-pic rounded avatar-100">
+                    <img src="../../assets/images/avatars/avtar_2.png" alt="profile-pic"
+                      class="theme-color-blue-img profile-pic rounded avatar-100">
+                    <img src="../../assets/images/avatars/avtar_4.png" alt="profile-pic"
+                      class="theme-color-green-img profile-pic rounded avatar-100">
+                    <img src="../../assets/images/avatars/avtar_5.png" alt="profile-pic"
+                      class="theme-color-yellow-img profile-pic rounded avatar-100">
+                    <img src="../../assets/images/avatars/avtar_3.png" alt="profile-pic"
+                      class="theme-color-pink-img profile-pic rounded avatar-100">
+                    <div class="upload-icone bg-primary">
+                      <svg class="upload-button" width="14" height="14" viewBox="0 0 24 24">
+                        <path fill="#ffffff"
+                          d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" />
+                      </svg>
+                      <input class="file-upload" type="file" accept="image/*">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="name">Nom *</label>
+                  <input class="form-control" id="name" placeholder="Nom">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Utilisateur propriétaire *</label>
+                  <select id="uuid-list" class="form-select mb-3 shadow-none">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="price">Prix *</label>
+                  <div class="input-group">
+                    <input type="number" min="0.01" step="0.01" class="form-control" id="price" placeholder="Prix">
+                    <span class="input-group-text">€</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Produit *</label>
+                  <select id="products" onchange="update_product()" class="form-select mb-3 shadow-none">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="statut">Status *</label>
+                  <select id="statut" class="form-select mb-3 shadow-none">
+                    <option value="ative">Actif</option>
+                    <option value="installing">Installation...</option>
+                    <option value="suspended">Suspendu</option>
+                  </select>
+                </div>
 
-      <div class="row iq-star-inserted row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 mt-5 text-center" id="pricings">
+                <button onclick="save_service()" class="btn btn-primary col-md-12">Enregistrer</button>
 
-
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-8">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                  <h4 class="card-title">Historique des interventions</h4>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table id="user-list-table" class="table table-striped" role="grid">
+                    <thead>
+                      <tr class="ligth">
+                        <th>Heure</th>
+                        <th>Utilisateur</th>
+                        <th>IP</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="service-logs-table">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
+
   </main>
 
 
@@ -547,7 +595,10 @@
   <!-- Slider-tab Script -->
   <script src="../../assets/js/plugins/slider-tabs.js"></script>
 
-  <script src="../../assets/js/pages/products/pricings.js"></script>
+  <script src="../../assets/js/pages/services/service-edit.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
 
   <!-- AOS Animation Plugin-->
 

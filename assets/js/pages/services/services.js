@@ -1,37 +1,36 @@
 function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
 async function deleteData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-    return response.json()
+  const response = await fetch(url, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+  return response.json()
 }
 
 fetch(`https://api.mercurycloud.fr/api/services/services?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
-.then(function (response) {
-  return response.json();
-})
-.then(function (json) {
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (json) {
     if (json.error === false) {
       list = ``
-      for(var i= 0; i < json.data.length; i++) {
+      for (var i = 0; i < json.data.length; i++) {
         statut = ''
-        if (json.data[i].statut == "installing") {statut = '<span class="badge bg-primary">Installation...</span>'}
-        if (json.data[i].statut == "started") {statut = '<span class="badge bg-success">Démarré</span>'}
-        if (json.data[i].statut == "stopped") {statut = '<span class="badge bg-secondary">Stoppé</span>'}
-        if (json.data[i].statut == "suspended") {statut = '<span class="badge bg-danger">Suspendu</span>'}
+        if (json.data[i].statut == "installing") { statut = '<span class="badge bg-primary">Installation...</span>' }
+        if (json.data[i].statut == "active") { statut = '<span class="badge bg-success">Actif</span>' }
+        if (json.data[i].statut == "suspended") { statut = '<span class="badge bg-danger">Suspendu</span>' }
         list = list + `
         <tr>
             <td>${json.data[i].id}</td>
-            <td>${json.data[i].name}</td>
+            <td><a href="/dashboard/services/service-game.html?id=${json.data[i].id}">${json.data[i].name}</a></td>
             <td>${json.data[i].uuid}</td>
             <td>${json.data[i].product_id}</td>
             <td>${json.data[i].price}€</td>
@@ -62,22 +61,22 @@ fetch(`https://api.mercurycloud.fr/api/services/services?uuid=${getCookie("uuid"
       }
       document.getElementById("services-table").innerHTML = list
     } else {
-       window.location.replace("/dashboard/errors/error500.html");
+      window.location.replace("/dashboard/errors/error500.html");
     }
   })
 
 function delete_product(id) {
-    deleteData(`https://api.mercurycloud.fr/api/services/delete-service?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, {"id": id}).then(data => {
-        console.log(data)
-        if (data.error == false) {
-            window.location.reload()
-        } else {
-            console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
-            if (data.code == 403) {
-                location.href = "../errors/error403.html"
-            } else {
-                location.href = "../errors/error500.html"
-            }
-        }
-    })    
+  deleteData(`https://api.mercurycloud.fr/api/services/delete-service?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, { "id": id }).then(data => {
+    console.log(data)
+    if (data.error == false) {
+      window.location.reload()
+    } else {
+      console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
+      if (data.code == 403) {
+        location.href = "../errors/error403.html"
+      } else {
+        location.href = "../errors/error500.html"
+      }
+    }
+  })
 }
