@@ -252,7 +252,7 @@ if (url.searchParams.get('id')) {
                             document.getElementById("restart-button").classList.remove("disabled")
                             document.getElementById("stop-button").classList.remove("disabled")
                             document.getElementById("kill-button").classList.remove("disabled")
-                            term.writeUtf8("Votre serveur est démarrer.\r\n")
+                            term.writeUtf8("Votre serveur est démarré.\r\n")
                         }
                         if (data_parse.args[0] == "stopping") {
                             document.getElementById("restart-button").classList.add("disabled")
@@ -317,12 +317,19 @@ if (url.searchParams.get('id')) {
                     }
                 });
 
+                var commands_history = []
                 var terminal_input = document.getElementById("terminal-input");
-
-                terminal_input.addEventListener("keypress", function (event) {
+                terminal_input.addEventListener("keydown", function (event) {
                     if (event.key === "Enter") {
                         socket.send(`{"event":"send command","args":["${terminal_input.value}"]}`);
+                        commands_history.push(terminal_input.value)
+                        if (commands_history.length > 100) { commands_history.shift() }
                         terminal_input.value = ""
+                    }
+                    if (event.key === "ArrowUp") {
+                        if (commands_history[commands_history.length - 1] != undefined) {
+                            terminal_input.value = commands_history[commands_history.length - 1]
+                        }
                     }
                 });
 
