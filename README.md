@@ -19,6 +19,7 @@ wget -O install.sh https://raw.githubusercontent.com/SavaletDev/MercuryCloud_Das
 ### **And a lot of other features in TODO list:**
  - [x] A modern design
  - [x] Easy connection to different APIs ([Pterodactyl](https://pterodactyl.io/), [Proxmox](https://www.proxmox.com/), [Bind9](https://www.isc.org/bind/), [Crater](https://craterapp.com/))
+ - [x] DNS System
  - [x] Automatic mailing
  - [x] Announcement system
  - [x] Maintenance and intervention system
