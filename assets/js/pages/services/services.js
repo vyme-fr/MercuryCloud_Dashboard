@@ -38,7 +38,7 @@ fetch(`https://api.mercurycloud.fr/api/services/services?uuid=${getCookie("uuid"
             <td>
             <div class="flex align-items-center list-user-action">
 
-            <a class="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="" data-original-title="Modifier" href="/dashboard/services/service-edit.html?id=${json.data[i].id}">
+            <a class="btn btn-sm btn-icon btn-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Modifier" href="/dashboard/services/service-edit.html?id=${json.data[i].id}">
               <span class="btn-inner">
                    <svg width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
                       <path opacity="0.4" d="M19.9927 18.9534H14.2984C13.7429 18.9534 13.291 19.4124 13.291 19.9767C13.291 20.5422 13.7429 21.0001 14.2984 21.0001H19.9927C20.5483 21.0001 21.0001 20.5422 21.0001 19.9767C21.0001 19.4124 20.5483 18.9534 19.9927 18.9534Z" fill="currentColor"></path>                                

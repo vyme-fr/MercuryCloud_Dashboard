@@ -28736,7 +28736,25 @@ pre[class*=language-] {
   padding: 11px 30px;
 }
 
-.console-card {
-  height: 600px;
-  width: 100%;
+.img-padding {
+  border-radius: 25px;
+  background: #231F33;
+  padding: 20px;
+  width: 75px;
+  height: 75px;
+}
+
+input.disabled {
+  pointer-events: none;
+  color: #AAA;
+  background: #F5F5F5;
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

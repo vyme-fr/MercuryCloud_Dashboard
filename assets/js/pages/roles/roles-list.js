@@ -6,30 +6,30 @@ function getCookie(name) {
 
 async function deleteData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
 
 fetch(`https://api.mercurycloud.fr/api/roles/roles-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
-.then(function (response) {
-  return response.json();
-})
-.then(function (json) {
-  if (json.error === false) {
-    list = ``
-    for(var i= 0; i < json.roles.length; i++) {
-        list = list + `
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        if (json.error === false) {
+            list = ``
+            for (var i = 0; i < json.roles.length; i++) {
+                list = list + `
         <tr>
             <td>${json.roles[i].id}</td>
             <td>${json.roles[i].name}</td>
             <td>
             <div class="flex align-items-center list-user-action">
-                <a class="btn btn-sm btn-icon btn-warning" data-toggle="tooltip" data-placement="top" title="" data-original-title="Modifier" href="/dashboard/roles/role-edit.html?id=${json.roles[i].id}">
+                <a class="btn btn-sm btn-icon btn-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Modifier" href="/dashboard/roles/role-edit.html?id=${json.roles[i].id}">
                     <span class="btn-inner">
                         <svg width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
                             <path opacity="0.4" d="M19.9927 18.9534H14.2984C13.7429 18.9534 13.291 19.4124 13.291 19.9767C13.291 20.5422 13.7429 21.0001 14.2984 21.0001H19.9927C20.5483 21.0001 21.0001 20.5422 21.0001 19.9767C21.0001 19.4124 20.5483 18.9534 19.9927 18.9534Z" fill="currentColor"></path>                                
@@ -49,15 +49,15 @@ fetch(`https://api.mercurycloud.fr/api/roles/roles-list?uuid=${getCookie("uuid")
             </div>
             </td>
         </tr>`
-    }
-    document.getElementById("roles-table").innerHTML = list
-  } else {
-     window.location.replace("/dashboard/errors/error500.html");
-  }
-})
+            }
+            document.getElementById("roles-table").innerHTML = list
+        } else {
+            window.location.replace("/dashboard/errors/error500.html");
+        }
+    })
 
 function delete_role(id) {
-    deleteData(`https://api.mercurycloud.fr/api/roles/delete-role?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, {"id": id}).then(data => {
+    deleteData(`https://api.mercurycloud.fr/api/roles/delete-role?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, { "id": id }).then(data => {
         console.log(data)
         if (data.error == false) {
             window.location.reload()
@@ -69,5 +69,5 @@ function delete_role(id) {
                 location.href = "../errors/error500.html"
             }
         }
-    })    
+    })
 }

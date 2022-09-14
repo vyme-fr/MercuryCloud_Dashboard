@@ -3,30 +3,21 @@
 
 <head>
    <meta charset="utf-8">
-
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <title>Mercury Cloud | Gestion d'un service game</title>
-
    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
-
    <link rel="stylesheet" href="../../assets/css/core/libs.min.css" />
-
    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css" />
-
    <link rel="stylesheet" href="../../assets/css/dashboard.css?v=1.2.0" />
-
    <link rel="stylesheet" href="../../assets/css/custom.min.css?v=1.2.0" />
-
    <link rel="stylesheet" href="../../assets/css/dark.min.css" />
-
    <link rel="stylesheet" href="../../assets/css/customizer.min.css" />
-
    <link rel="stylesheet" href="../../assets/css/rtl.min.css" />
-
    <link rel="stylesheet" href="../../assets/css/xterm.css" />
    <script src="../../assets/js/xterm.js"></script>
    <script src="../../assets/js/xterm-addon-fit.js"></script>
-
+   <script src="../../assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+   <script src="../../assets/js/ace/theme-nord_dark.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body class="  ">
@@ -44,7 +35,7 @@
             <!--Logo start-->
             <img src="../../assets/images/icon_flat.png" width="35" height="35" alt="Icon">
             <!--logo End-->
-            <h4 class="logo-title">Mercury Cloud</h4>
+            <h4 class="logo-title not-selectable">Mercury Cloud</h4>
          </a>
          <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
             <i class="icon">
@@ -190,7 +181,7 @@
                            stroke-linecap="round" stroke-linejoin="round"></path>
                      </svg>
                   </span>
-                  <input type="search" class="form-control" placeholder="Search...">
+                  <input type="search" class="form-control not-selectable" placeholder="Search...">
                </div>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -379,24 +370,24 @@
                         <a class="py-0 nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                            <img src="../../assets/images/avatars/01.png" alt="User-Profile"
-                              class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded">
+                              class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded not-selectable">
                            <img src="../../assets/images/avatars/avtar_1.png" alt="User-Profile"
-                              class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded">
+                              class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded not-selectable">
                            <img src="../../assets/images/avatars/avtar_2.png" alt="User-Profile"
-                              class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded">
+                              class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded not-selectable">
                            <img src="../../assets/images/avatars/avtar_4.png" alt="User-Profile"
-                              class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded">
+                              class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded not-selectable">
                            <img src="../../assets/images/avatars/avtar_5.png" alt="User-Profile"
-                              class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded">
+                              class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded not-selectable">
                            <img src="../../assets/images/avatars/avtar_3.png" alt="User-Profile"
-                              class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded">
+                              class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded not-selectable">
                            <div class="caption ms-3 d-none d-md-block ">
-                              <h6 id="username" class="mb-0 caption-title"></h6>
+                              <h6 id="username" class="mb-0 caption-title not-selectable"></h6>
                            </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                           <li><a class="dropdown-item" href="">Profile</a></li>
-                           <li><a class="dropdown-item" href="">Paramètes</a></li>
+                           <li><a class="dropdown-item not-selectable" href="">Profile</a></li>
+                           <li><a class="dropdown-item not-selectable" href="">Paramètes</a></li>
                            <li>
                               <hr class="dropdown-divider">
                            </li>
@@ -415,8 +406,8 @@
                   <div class="col-md-12">
                      <div class="flex-wrap d-flex justify-content-between align-items-center">
                         <div>
-                           <h1 id="hello"></h1>
-                           <p>Bienvenue dans votre tableau de bord Mercury Cloud.</p>
+                           <h1 class="not-selectable" id="hello"></h1>
+                           <p class="not-selectable">Bienvenue dans votre tableau de bord Mercury Cloud.</p>
                         </div>
                         <div>
                            <a href="" class="btn btn-link btn-soft-light">
@@ -437,7 +428,7 @@
             </div>
             <div class="iq-header-img">
                <img src="../../assets/images/dashboard/top-header.png" alt="header"
-                  class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX">
+                  class="theme-color-default-img img-fluid w-100 h-100 animated-scaleX not-selectable">
             </div>
          </div> <!-- Nav Header Component End -->
          <!--Nav End-->
@@ -484,13 +475,13 @@
                               </svg>
                            </div>
                            <div>
-                              <span>CPU</span>
+                              <span class="not-selectable">CPU</span>
                            </div>
                         </div>
-                        <div class="text-center">
-                           <h2 class="counter" id="cpu-counter"></h2>
+                        <div class="text-center not-selectable">
+                           <h2 class="counter not-selectable" id="cpu-counter"></h2>
                            <div>
-                              <span></span>
+                              <span>100% par coeur utilisé</span>
                            </div>
                         </div>
                      </div>
@@ -549,13 +540,13 @@
                               </svg>
                            </div>
                            <div>
-                              <span>RAM</span>
+                              <span class="not-selectable">RAM</span>
                            </div>
                         </div>
-                        <div class="text-center">
-                           <h2 class="counter" id="ram-counter"></h2>
+                        <div class="text-center not-selectable">
+                           <h2 class="counter not-selectable" id="ram-counter"></h2>
                            <div>
-                              <span></span>
+                              <span id="ram-counter-span"></span>
                            </div>
                         </div>
                      </div>
@@ -577,13 +568,13 @@
                               </svg>
                            </div>
                            <div>
-                              <span>Utilisation Disque</span>
+                              <span class="not-selectable">Utilisation Disque</span>
                            </div>
                         </div>
-                        <div class="text-center">
-                           <h2 class="counter" id="disk-counter"></h2>
+                        <div class="text-center not-selectable">
+                           <h2 class="counter not-selectable" id="disk-counter"></h2>
                            <div>
-                              <span></span>
+                              <span id="disk-counter-span"></span>
                            </div>
                         </div>
                      </div>
@@ -611,13 +602,14 @@
                               </svg>
                            </div>
                            <div>
-                              <span>Trafic réseau</span>
+                              <span class="not-selectable">Trafic réseau</span>
                            </div>
                         </div>
-                        <div class="text-center">
-                           <h2 class="counter" id="net-counter"></h2>
+                        <div class="text-center not-selectable">
+                           <h2 class="counter not-selectable" id="net-counter"></h2>
                            <div>
-                              <span></span>
+                              <span id="net-counter-span">
+                              </span>
                            </div>
                         </div>
                      </div>
@@ -649,13 +641,101 @@
                      <div id="net-chart"></div>
                   </div>
                </div>
-               <div class="col-lg-12">
-                  <div class="card">
-                     <div class="card-body">
-                        <div id="terminal" class="console-card"></div>
-                        <div class="mb-3">
-                           <input class="form-control form-control-sm" type="text" placeholder="Tapez une commande »"
-                              aria-label=".form-control-sm example" id="terminal-input">
+               <div class="bd-example">
+                  <ul class="nav nav-pills" data-toggle="slider-tab" id="myTab" role="tablist">
+                     <li class="nav-item" role="presentation">
+                        <button class="nav-link active not-selectable" id="home-tab" data-bs-toggle="tab"
+                           data-bs-target="#pills-home1" type="button" role="tab" aria-controls="home"
+                           aria-selected="true">Terminal</button>
+                     </li>
+                     <li class="nav-item not-selectable" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#pills-profile1"
+                           type="button" role="tab" aria-controls="profile" aria-selected="false">Explorateur de
+                           fichiers</button>
+                     </li>
+                     <li class="nav-item not-selectable" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#pills-contact1"
+                           type="button" role="tab" aria-controls="contact" aria-selected="false">Paramètres</button>
+                     </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                     <div class="tab-pane fade show active" id="pills-home1" role="tabpanel"
+                        aria-labelledby="pills-home-tab1">
+                        <div class="col-lg-12">
+                           <div class="card">
+                              <div class="card-body">
+                                 <div id="terminal" class="console-card"></div>
+                                 <div class="mb-3">
+                                    <input class="form-control form-control-sm" type="text"
+                                       placeholder="Tapez une commande »" aria-label=".form-control-sm example"
+                                       id="terminal-input">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="pills-profile1" role="tabpanel"
+                        aria-labelledby="pills-profile-tab1">
+                        <div class="row">
+                           <div class="col-lg-9">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <nav aria-label="breadcrumb">
+                                       <ol class="breadcrumb" id="files-explorer-nav">
+                                       </ol>
+                                    </nav>
+                                    <button onclick="back.pop(); load_files(back[back.length - 1])" id="back-button"
+                                       class="btn btn-primary col-md-2">Retour</button>
+                                    <div class="list-group" id="files-explorer">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-xl-3 col-lg-4">
+                              <div class="card">
+                                 <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                       <h4 id="file-title" class="card-title">Explorateur de Fichiers</h4>
+                                    </div>
+                                 </div>
+                                 <div class="card-body">
+                                    <div class="form-group">
+                                       <div class="profile-img-edit position-relative img-padding" id="file-image">
+                                          <svg width="123" viewBox="0 0 80 80" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path opacity="0.4"
+                                                d="M16.8843 5.11485H13.9413C13.2081 5.11969 12.512 4.79355 12.0474 4.22751L11.0782 2.88762C10.6214 2.31661 9.9253 1.98894 9.19321 2.00028H7.11261C3.37819 2.00028 2.00001 4.19201 2.00001 7.91884V11.9474C1.99536 12.3904 21.9956 12.3898 21.9969 11.9474V10.7761C22.0147 7.04924 20.6721 5.11485 16.8843 5.11485Z"
+                                                fill="currentColor"></path>
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M20.8321 6.54353C21.1521 6.91761 21.3993 7.34793 21.5612 7.81243C21.8798 8.76711 22.0273 9.77037 21.9969 10.7761V16.0292C21.9956 16.4717 21.963 16.9135 21.8991 17.3513C21.7775 18.1241 21.5057 18.8656 21.0989 19.5342C20.9119 19.8571 20.6849 20.1553 20.4231 20.4215C19.2383 21.5089 17.665 22.0749 16.0574 21.9921H7.93061C6.32049 22.0743 4.74462 21.5086 3.55601 20.4215C3.2974 20.1547 3.07337 19.8566 2.88915 19.5342C2.48475 18.8661 2.21869 18.1238 2.1067 17.3513C2.03549 16.9142 1.99981 16.4721 2 16.0292V10.7761C1.99983 10.3374 2.02357 9.89902 2.07113 9.46288C2.08113 9.38636 2.09614 9.31109 2.11098 9.23659C2.13573 9.11241 2.16005 8.99038 2.16005 8.86836C2.25031 8.34204 2.41496 7.83116 2.64908 7.35101C3.34261 5.86916 4.76525 5.11492 7.09481 5.11492H16.8754C18.1802 5.01401 19.4753 5.4068 20.5032 6.21522C20.6215 6.3156 20.7316 6.4254 20.8321 6.54353ZM6.97033 15.5412H17.0355H17.0533C17.2741 15.5507 17.4896 15.4717 17.6517 15.3217C17.8137 15.1716 17.9088 14.963 17.9157 14.7425C17.9282 14.5487 17.8644 14.3577 17.7379 14.2101C17.5924 14.0118 17.3618 13.8935 17.1155 13.8907H6.97033C6.51365 13.8907 6.14343 14.2602 6.14343 14.7159C6.14343 15.1717 6.51365 15.5412 6.97033 15.5412Z"
+                                                fill="currentColor"></path>
+                                          </svg>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="form-label" for="name">Nom :</label>
+                                       <input class="form-control" id="file-name" placeholder="Nom du fichier">
+                                    </div>
+                                    <button onclick="save_file()" class="btn btn-primary col-md-12"
+                                       id="save-file-btn">Enregistrer</button>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="tab-pane fade" id="pills-contact1" role="tabpanel"
+                        aria-labelledby="pills-contact-tab1">
+                        <div class="row">
+                           <div class="col-lg-9">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <div id="editor">some text</div>
+
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
