@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
 
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Mercury Cloud | Gestion d'un service game</title>
    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
    <link rel="stylesheet" href="../../assets/css/core/libs.min.css" />
@@ -17,7 +18,6 @@
    <script src="../../assets/js/xterm.js"></script>
    <script src="../../assets/js/xterm-addon-fit.js"></script>
    <script src="../../assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-   <script src="../../assets/js/ace/theme-nord_dark.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body class="  ">
@@ -679,15 +679,205 @@
                         <div class="row">
                            <div class="col-lg-9">
                               <div class="card">
-                                 <div class="card-body">
+                                 <div class="card-body" id="editor-body">
                                     <nav aria-label="breadcrumb">
                                        <ol class="breadcrumb" id="files-explorer-nav">
                                        </ol>
                                     </nav>
-                                    <button onclick="back.pop(); load_files(back[back.length - 1])" id="back-button"
+                                    <div class="list-group" id="files-explorer-div">
+                                    </div>
+                                    <button
+                                       onclick='document.getElementById("back-button").classList.add("disabled"); document.getElementById("back-button").innerHTML = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>`; back.pop(); load_files(back[back.length - 1]); document.getElementById("back-button").classList.remove("disabled"); document.getElementById("back-button").innerHTML = `Retour`'
+                                       id="back-button" class="btn btn-primary col-md-2">Retour</button>
+                                    <p></p>
+                                    <button onclick="editor_back()" id="editor-back-button"
                                        class="btn btn-primary col-md-2">Retour</button>
                                     <div class="list-group" id="files-explorer">
                                     </div>
+                                    <button onclick="save_file_content()" class="btn btn-primary col-md-2"
+                                       id="save-filecontent-btn">Enregistrer</button>
+                                    <p></p>
+                                    <div id="editor" style="height: 500px; width: 100%"></div>
+                                    <p></p>
+                                    <select id="editor-mode" onchange=' editor.session.setMode("ace/mode/" +
+                                       document.getElementById("editor-mode").value.toLowerCase())'
+                                       class="form-select mb-2 shadow-none">
+                                       <option value="JavaScript">JavaScript</option>
+                                       <option value="ABAP">ABAP</option>
+                                       <option value="ABC">ABC</option>
+                                       <option value="ActionScript">ActionScript</option>
+                                       <option value="ADA">ADA</option>
+                                       <option value="Alda">Alda</option>
+                                       <option value="Apache Conf">Apache Conf</option>
+                                       <option value="Apex">Apex</option>
+                                       <option value="AQL">AQL</option>
+                                       <option value="AsciiDoc">AsciiDoc</option>
+                                       <option value="ASL">ASL</option>
+                                       <option value="Assembly x86">Assembly x86</option>
+                                       <option value="AutoHotkey / AutoIt">AutoHot.. / AutoIt</option>
+                                       <option value="BatchFile">BatchFile</option>
+                                       <option value="C_cpp">C et C++</option>
+                                       <option value="C#">C#</option>
+                                       <option value="C9 Search Results">C9 Search Results</option>
+                                       <option value="Cirru">Cirru</option>
+                                       <option value="Clojure">Clojure</option>
+                                       <option value="Cobol">Cobol</option>
+                                       <option value="CoffeeScript">CoffeeScript</option>
+                                       <option value="ColdFusion">ColdFusion</option>
+                                       <option value="Crystal">Crystal</option>
+                                       <option value="Csound">Csound</option>
+                                       <option value="Csound Document">Csound Document</option>
+                                       <option value="Csound Score">Csound Score</option>
+                                       <option value="CSS">CSS</option>
+                                       <option value="Curly">Curly</option>
+                                       <option value="D">D</option>
+                                       <option value="Dart">Dart</option>
+                                       <option value="Diff">Diff</option>
+                                       <option value="Django">Django</option>
+                                       <option value="Dockerfile">Dockerfile</option>
+                                       <option value="Dot">Dot</option>
+                                       <option value="Drools">Drools</option>
+                                       <option value="Edifact">Edifact</option>
+                                       <option value="Eiffel">Eiffel</option>
+                                       <option value="EJS">EJS</option>
+                                       <option value="Elixir">Elixir</option>
+                                       <option value="Elm">Elm</option>
+                                       <option value="Erlang">Erlang</option>
+                                       <option value="Forth">Forth</option>
+                                       <option value="Fortran">Fortran</option>
+                                       <option value="FreeMarker">FreeMarker</option>
+                                       <option value="FSharp">FSharp</option>
+                                       <option value="FSL">FSL</option>
+                                       <option value="Gcode">Gcode</option>
+                                       <option value="Gherkin">Gherkin</option>
+                                       <option value="Gitignore">Gitignore</option>
+                                       <option value="Glsl">Glsl</option>
+                                       <option value="Go">Go</option>
+                                       <option value="Gobstones">Gobstones</option>
+                                       <option value="GraphQLSchema">GraphQLSchema</option>
+                                       <option value="Groovy">Groovy</option>
+                                       <option value="HAML">HAML</option>
+                                       <option value="Handlebars">Handlebars</option>
+                                       <option value="Haskell">Haskell</option>
+                                       <option value="Haskell Cabal">Haskell Cabal</option>
+                                       <option value="haXe">haXe</option>
+                                       <option value="Hjson">Hjson</option>
+                                       <option value="HTML">HTML</option>
+                                       <option value="HTML (Elixir)">HTML (Elixir)</option>
+                                       <option value="HTML (Ruby)">HTML (Ruby)</option>
+                                       <option value="INI">INI</option>
+                                       <option value="Io">Io</option>
+                                       <option value="Ion">Ion</option>
+                                       <option value="Jack">Jack</option>
+                                       <option value="Jade">Jade</option>
+                                       <option value="Java">Java</option>
+                                       <option value="JSON">JSON</option>
+                                       <option value="JSON5">JSON5</option>
+                                       <option value="JSONiq">JSONiq</option>
+                                       <option value="JSP">JSP</option>
+                                       <option value="JSSM">JSSM</option>
+                                       <option value="JSX">JSX</option>
+                                       <option value="Julia">Julia</option>
+                                       <option value="Kotlin">Kotlin</option>
+                                       <option value="LaTeX">LaTeX</option>
+                                       <option value="Latte">Latte</option>
+                                       <option value="LESS">LESS</option>
+                                       <option value="Liquid">Liquid</option>
+                                       <option value="Lisp">Lisp</option>
+                                       <option value="LiveScript">LiveScript</option>
+                                       <option value="Log">Log</option>
+                                       <option value="LogiQL">LogiQL</option>
+                                       <option value="LSL">LSL</option>
+                                       <option value="Lua">Lua</option>
+                                       <option value="LuaPage">LuaPage</option>
+                                       <option value="Lucene">Lucene</option>
+                                       <option value="Makefile">Makefile</option>
+                                       <option value="Markdown">Markdown</option>
+                                       <option value="Mask">Mask</option>
+                                       <option value="MATLAB">MATLAB</option>
+                                       <option value="Maze">Maze</option>
+                                       <option value="MediaWiki">MediaWiki</option>
+                                       <option value="MEL">MEL</option>
+                                       <option value="MIPS">MIPS</option>
+                                       <option value="MIXAL">MIXAL</option>
+                                       <option value="MUSHCode">MUSHCode</option>
+                                       <option value="MySQL">MySQL</option>
+                                       <option value="Nginx">Nginx</option>
+                                       <option value="Nim">Nim</option>
+                                       <option value="Nix">Nix</option>
+                                       <option value="Nix">Nix</option>
+                                       <option value="NSIS">NSIS</option>
+                                       <option value="Nunjucks">Nunjucks</option>
+                                       <option value="Objective-C">Objective-C</option>
+                                       <option value="OCaml">OCaml</option>
+                                       <option value="PartiQL">PartiQL</option>
+                                       <option value="Pascal">Pascal</option>
+                                       <option value="Perl">Perl</option>
+                                       <option value="pgSQL">pgSQL</option>
+                                       <option value="PHP">PHP</option>
+                                       <option value="PHP (Blade Template)">PHP (Bl..Template)</option>
+                                       <option value="Pig">Pig</option>
+                                       <option value="Plain Text">Plain Text</option>
+                                       <option value="Powershell">Powershell</option>
+                                       <option value="Praat">Praat</option>
+                                       <option value="Prisma">Prisma</option>
+                                       <option value="Prolog">Prolog</option>
+                                       <option value="Properties">Properties</option>
+                                       <option value="Protobuf">Protobuf</option>
+                                       <option value="Puppet">Puppet</option>
+                                       <option value="Python">Python</option>
+                                       <option value="QML">QML</option>
+                                       <option value="R">R</option>
+                                       <option value="Raku">Raku</option>
+                                       <option value="Razor">Razor</option>
+                                       <option value="RDoc">RDoc</option>
+                                       <option value="Red">Red</option>
+                                       <option value="RHTML">RHTML</option>
+                                       <option value="Robot">Robot</option>
+                                       <option value="RST">RST</option>
+                                       <option value="Ruby">Ruby</option>
+                                       <option value="Rust">Rust</option>
+                                       <option value="SaC">SaC</option>
+                                       <option value="SASS">SASS</option>
+                                       <option value="SCAD">SCAD</option>
+                                       <option value="Scala">Scala</option>
+                                       <option value="Scheme">Scheme</option>
+                                       <option value="Scrypt">Scrypt</option>
+                                       <option value="SCSS">SCSS</option>
+                                       <option value="SH">SH</option>
+                                       <option value="SJS">SJS</option>
+                                       <option value="Slim">Slim</option>
+                                       <option value="Smarty">Smarty</option>
+                                       <option value="Smithy">Smithy</option>
+                                       <option value="snippets">snippets</option>
+                                       <option value="Soy Template">Soy Template</option>
+                                       <option value="Space">Space</option>
+                                       <option value="SQL">SQL</option>
+                                       <option value="SQLServer">SQLServer</option>
+                                       <option value="Stylus">Stylus</option>
+                                       <option value="SVG">SVG</option>
+                                       <option value="Swift">Swift</option>
+                                       <option value="Tcl">Tcl</option>
+                                       <option value="Terraform">Terraform</option>
+                                       <option value="Tex">Tex</option>
+                                       <option value="Text">Text</option>
+                                       <option value="Textile">Textile</option>
+                                       <option value="Toml">Toml</option>
+                                       <option value="TSX">TSX</option>
+                                       <option value="Twig">Twig</option>
+                                       <option value="Typescript">Typescript</option>
+                                       <option value="Vala">Vala</option>
+                                       <option value="VBScript">VBScript</option>
+                                       <option value="Velocity">Velocity</option>
+                                       <option value="Verilog">Verilog</option>
+                                       <option value="VHDL">VHDL</option>
+                                       <option value="Visualforce">Visualforce</option>
+                                       <option value="Wollok">Wollok</option>
+                                       <option value="XML">XML</option>
+                                       <option value="XQuery">XQuery</option>
+                                       <option value="YAML">YAML</option>
+                                       <option value="Zeek">Zeek</option>
+                                    </select>
                                  </div>
                               </div>
                            </div>
@@ -698,7 +888,7 @@
                                        <h4 id="file-title" class="card-title">Explorateur de Fichiers</h4>
                                     </div>
                                  </div>
-                                 <div class="card-body">
+                                 <div class="card-body" id="file-details">
                                     <div class="form-group">
                                        <div class="profile-img-edit position-relative img-padding" id="file-image">
                                           <svg width="123" viewBox="0 0 80 80" fill="none"
@@ -718,7 +908,6 @@
                                     </div>
                                     <button onclick="save_file()" class="btn btn-primary col-md-12"
                                        id="save-file-btn">Enregistrer</button>
-
                                  </div>
                               </div>
                            </div>
@@ -731,8 +920,6 @@
                            <div class="col-lg-9">
                               <div class="card">
                                  <div class="card-body">
-                                    <div id="editor">some text</div>
-
                                  </div>
                               </div>
                            </div>
@@ -757,7 +944,6 @@
    <!-- fslightbox Script -->
    <script src="../../assets/js/plugins/fslightbox.js"></script>
 
-   <script src="../../assets/js/pages/services/service-game.js"></script>
 
    <!-- Slider-tab Script -->
    <script src="../../assets/js/plugins/slider-tabs.js"></script>
@@ -769,6 +955,8 @@
    <!-- App Script -->
    <script src="../../assets/js/main-lib.js" defer></script>
    <script src="../../assets/js/charts/dashboard.js"></script>
+   <script type="text/javascript" src="../../assets/js/pages/services/service-game.js"></script>
+
 
 </body>
 

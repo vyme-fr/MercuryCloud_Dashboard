@@ -118,53 +118,50 @@ connection.connect(function (err) {
         next();
         bodyParser.json();
       });
-
       app.use(require('./utils/rate-limit'));
       // app.use(require('./utils/sql-injection'));
 
       // index //
-      app.use('/api/', require('./routes/index.js'));
+      app.use('/api/', require('./routes/index'));
 
       // products //
-      app.use('/api/products/ptero-create-product', require('./routes/products/ptero-create-product.js'));
-      app.use('/api/products/proxmox-create-product', require('./routes/products/proxmox-create-product.js'));
-      app.use('/api/products/proxmox-qemu-list', require('./routes/products/proxmox-qemu-list.js'));
-      app.use('/api/products/proxmox-nodes-list', require('./routes/products/proxmox-nodes-list.js'));
-      app.use('/api/products/proxmox-storage-list', require('./routes/products/proxmox-storage-list.js'));
-      app.use('/api/products/delete-product', require('./routes/products/delete-product.js'));
-      app.use('/api/products/product-info', require('./routes/products/product-info.js'));
-      app.use('/api/products/products', require('./routes/products/products.js'));
-      app.use('/api/products/edit-product', require('./routes/products/edit-product.js'));
+      app.use('/api/products/ptero-create-product', require('./routes/products/ptero-create-product'));
+      app.use('/api/products/proxmox-create-product', require('./routes/products/proxmox-create-product'));
+      app.use('/api/products/proxmox-qemu-list', require('./routes/products/proxmox-qemu-list'));
+      app.use('/api/products/proxmox-nodes-list', require('./routes/products/proxmox-nodes-list'));
+      app.use('/api/products/proxmox-storage-list', require('./routes/products/proxmox-storage-list'));
+      app.use('/api/products/delete-product', require('./routes/products/delete-product'));
+      app.use('/api/products/product-info', require('./routes/products/product-info'));
+      app.use('/api/products/products', require('./routes/products/products'));
+      app.use('/api/products/edit-product', require('./routes/products/edit-product'));
 
       // users //
-      app.use('/api/users/create-user', require('./routes/users/create-user.js'));
-      app.use('/api/users/login-user', require('./routes/users/login-user.js'));
-      app.use('/api/users/users-list', require('./routes/users/users-list.js'));
-      app.use('/api/users/user-info', require('./routes/users/user-info.js'));
-      app.use('/api/users/username-exist', require('./routes/users/username-exist.js'));
-      app.use('/api/users/mail-exist', require('./routes/users/mail-exist.js'));
-      app.use('/api/users/delete-user', require('./routes/users/delete-user.js'));
-      app.use('/api/users/edit-user', require('./routes/users/edit-user.js'));
+      app.use('/api/users/create-user', require('./routes/users/create-user'));
+      app.use('/api/users/login-user', require('./routes/users/login-user'));
+      app.use('/api/users/users-list', require('./routes/users/users-list'));
+      app.use('/api/users/user-info', require('./routes/users/user-info'));
+      app.use('/api/users/username-exist', require('./routes/users/username-exist'));
+      app.use('/api/users/mail-exist', require('./routes/users/mail-exist'));
+      app.use('/api/users/delete-user', require('./routes/users/delete-user'));
+      app.use('/api/users/edit-user', require('./routes/users/edit-user'));
 
       // roles //
-      app.use('/api/roles/create-role', require('./routes/roles/create-role.js'));
-      app.use('/api/roles/delete-role', require('./routes/roles/delete-role.js'));
-      app.use('/api/roles/roles-list', require('./routes/roles/roles-list.js'));
-      app.use('/api/roles/role-info', require('./routes/roles/role-info.js'));
-      app.use('/api/roles/role-edit', require('./routes/roles/role-edit.js'));
+      app.use('/api/roles/create-role', require('./routes/roles/create-role'));
+      app.use('/api/roles/delete-role', require('./routes/roles/delete-role'));
+      app.use('/api/roles/roles-list', require('./routes/roles/roles-list'));
+      app.use('/api/roles/role-info', require('./routes/roles/role-info'));
+      app.use('/api/roles/role-edit', require('./routes/roles/role-edit'));
 
 
       // services //
-      app.use('/api/services/order-form', require('./routes/services/order-form.js'));
-      app.use('/api/services/services', require('./routes/services/services.js'));
-      app.use('/api/services/delete-service', require('./routes/services/delete-service.js'));
-      app.use('/api/services/service-edit', require('./routes/services/service-edit.js'));
-      app.use('/api/services/service-info', require('./routes/services/service-info.js'));
-      app.use('/api/services/service-files', require('./routes/services/service-files.js'));
+      app.use('/api/services', require('./routes/services/services'));
+      app.use('/api/services/:service_name', require('./routes/services/infos/service-info'));
+      app.use('/api/services/:service_name/files', require('./routes/services/infos/files/service-files'));
+
 
 
       // utils //
-      app.use('/api/utils/send-mail', require('./routes/utils/send-mail.js'));
+      app.use('/api/utils/send-mail', require('./routes/utils/send-mail'));
 
       app.listen(PORT, () => {
         logger(` [INFO] MercuryCloud API listening on ${config.api_url} !`)

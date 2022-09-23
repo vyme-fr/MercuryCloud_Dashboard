@@ -1,8 +1,9 @@
-var router = require('express').Router();
-const server = require('../../server.js')
-const route_name = "/services/service-files"
-const permissions_manager = require("../../utils/permissions-manager")
-const config = require('../../config.json')
+var router = require('express').Router({ mergeParams: true });
+const server = require('../../../../server')
+const route_name = "/services/files"
+const textParser = server.parser.text()
+const permissions_manager = require("../../../../utils/permissions-manager")
+const config = require('../../../../config.json')
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
@@ -21,9 +22,9 @@ router.get('', function (req, res) {
             return res.json({ 'error': true, 'code': 404 })
         } else {
             if (result[0].token === req.query.token) {
-                var id = req.query.id
-                if (id == undefined) { return res.json({ 'error': true, 'msg': "Service id query is required", "code": 101 }) }
-                if (id == "") { return res.json({ 'error': true, 'msg': "Service id query is required", "code": 102 }) }
+                var id = req.params.service_name
+                if (id == undefined) { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 101 }) }
+                if (id == "") { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 102 }) }
                 var directory = req.query.directory
                 if (directory == undefined) { return res.json({ 'error': true, 'msg': "Directory query is required", "code": 101 }) }
                 if (directory == "") { return res.json({ 'error': true, 'msg': "Directory query is required", "code": 102 }) }

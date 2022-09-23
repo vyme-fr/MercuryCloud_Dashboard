@@ -32,3 +32,15 @@ function connect() {
     window.location.replace("/dashboard/errors/error500.html")
   })
 }
+
+document.getElementById("password").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    connect()
+  }
+});
+
+document.getElementById("email").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    connect()
+  }
+});

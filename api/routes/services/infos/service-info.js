@@ -1,8 +1,9 @@
-var router = require('express').Router();
-const server = require('../../server.js')
-const route_name = "/services/service-info"
-const permissions_manager = require("../../utils/permissions-manager")
-const config = require('../../config.json')
+var router = require('express').Router({ mergeParams: true });
+const server = require('../../../server')
+const route_name = "/services/:service_name"
+const jsonParser = server.parser.json()
+const permissions_manager = require("../../../utils/permissions-manager")
+const config = require('../../../config.json')
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
@@ -21,10 +22,9 @@ router.get('', function (req, res) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
       if (result[0].token === req.query.token) {
-        var id = req.query.id
-        if (id == undefined) { return res.json({ 'error': true, 'msg': "Service id query is required", "code": 101 }) }
-        if (id == "") { return res.json({ 'error': true, 'msg': "Service id query is required", "code": 102 }) }
-
+        var id = req.params.service_name
+        if (id == undefined) { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 101 }) }
+        if (id == "") { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 102 }) }
         var sql = `SELECT * FROM services WHERE id = '${id}'`;
         server.con.query(sql, function (err, result) {
           if (err) { server.logger(" [ERROR] Database error\n  " + err) };
@@ -162,6 +162,116 @@ router.get('', function (req, res) {
               'error': false, 'data': {
                 'id': 404
               }
+            })
+          }
+        })
+      } else {
+        return res.json({ 'error': true, 'code': 403 })
+      }
+    }
+  });
+})
+
+// EDIT //
+
+router.put('', jsonParser, function (req, res) {
+  ipInfo = server.ip(req);
+  var forwardedIpsStr = req.header('x-forwarded-for');
+  var IP = '';
+
+  if (forwardedIpsStr) {
+    IP = forwardedIps = forwardedIpsStr.split(',')[0];
+  }
+  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  server.con.query(sql, function (err, result) {
+    if (err) { server.logger(" [ERROR] Database error\n  " + err) };
+    if (result.length == 0) {
+      return res.json({ 'error': true, 'code': 404 })
+    } else {
+      if (result[0].token === req.query.token) {
+        permissions_manager.has_permission(req.query.uuid, "EDITSERVICE").then(function (result) {
+          if (result) {
+            var id = req.params.service_name
+            if (id == undefined) { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 101 }) }
+            if (id == "") { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 102 }) }
+            var sql = `SELECT * FROM services WHERE id = '${id}'`;
+            server.con.query(sql, function (err, result) {
+              var sql = `UPDATE services SET uuid = '${req.body.uuid}', name = '${req.body.name}', product_id = '${req.body.product_id}', price = '${req.body.price}', statut = '${req.body.statut}' WHERE id = '${req.body.id}';`;
+              server.con.query(sql, function (err) {
+                if (err) { server.logger(" [ERROR] Database error\n  " + err); return res.json({ "error": true, "msg": "Database error : " + err }) };
+              });
+              server.logger(" [DEBUG] Service " + req.body.name + " updated from " + IP + " with uuid " + req.query.uuid + " !")
+              if (result[0].name != req.body.name) { server.services_action_logger(req.body.id, req.query.uuid, IP, "Modification du nom du service " + result[0].name + " vers " + req.body.name) }
+              if (result[0].uuid != req.body.uuid) { server.services_action_logger(req.body.id, req.query.uuid, IP, "Modification du propriétaire du service " + result[0].name + " passant de " + result[0].uuid + " à " + req.body.uuid) }
+              if (result[0].product_id != req.body.product_id) { server.services_action_logger(req.body.id, req.query.uuid, IP, "Modification du produit du service " + result[0].name + " passant de " + result[0].product_id + " à " + req.body.product_id) }
+              if (result[0].price != req.body.price) { server.services_action_logger(req.body.id, req.query.uuid, IP, "Modification du prix du service " + result[0].name + " passant de " + result[0].price + " à " + req.body.price) }
+              if (result[0].statut != req.body.statut) { server.services_action_logger(req.body.id, req.query.uuid, IP, "Modification du status du service " + result[0].name + " passant de " + result[0].statut + " à " + req.body.statut) }
+              return res.json({ "error": false, "response": "OK" });
+            })
+          } else {
+            return res.json({
+              "error": true,
+              "code": 403
+            })
+          }
+        })
+
+      } else {
+        return res.json({ 'error': true, 'code': 403 })
+      }
+    }
+  });
+})
+
+// DELETE //
+
+router.delete('', jsonParser, function (req, res) {
+  ipInfo = server.ip(req);
+  var response = "OK"
+  var error = false
+  var forwardedIpsStr = req.header('x-forwarded-for');
+  var IP = '';
+
+  if (forwardedIpsStr) {
+    IP = forwardedIps = forwardedIpsStr.split(',')[0];
+  }
+  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  server.con.query(sql, function (err, result) {
+    if (err) { server.logger(" [ERROR] Database error\n  " + err) };
+    if (result.length == 0) {
+      return res.json({ 'error': true, 'code': 404 })
+    } else {
+      if (result[0].token === req.query.token) {
+        permissions_manager.has_permission(req.query.uuid, "DELETESERVICE").then(function (result) {
+          if (result) {
+            var id = req.params.service_name
+            if (id == undefined) { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 101 }) }
+            if (id == "") { return res.json({ 'error': true, 'msg': "Service id params is required", "code": 102 }) }
+            var sql = `SELECT * FROM services WHERE id = '${id}'`;
+            server.con.query(sql, function (err, result) {
+              if (err) { server.logger(" [ERROR] Database error\n  " + err), error = true, response = "Database error" };
+              if (result[0].category == 'pterodactyl') {
+                service_config = JSON.parse(result[0].configuration)
+                server.fetch(config.pterodactyl_url + "/api/application/servers/" + service_config.id, {
+                  "method": "DELETE",
+                  "headers": {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${config.pterodactyl_api_key}`,
+                  }
+                }).catch(err => { server.logger(" [ERROR] Pterodactyl API error : " + err); return res.json({ "error": true, "code": 503, "msg": "Pterodactyl API error : " + err }) })
+              }
+              var sql = `DELETE FROM services WHERE id='${id}'`;
+              server.con.query(sql, function (err) {
+                if (err) { server.logger(" [ERROR] Database error\n  " + err), error = true, response = "Database error" };
+              });
+              server.logger(" [DEBUG] Service " + id + " deleted from " + IP + " !")
+              return res.json({ "error": error, "response": response });
+            });
+          } else {
+            return res.json({
+              "error": true,
+              "code": 403
             })
           }
         })

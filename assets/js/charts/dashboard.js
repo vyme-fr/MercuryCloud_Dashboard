@@ -500,6 +500,6 @@
       // window.location.replace("/dashboard/errors/error500.html")
     })
 
-  console.log("%cCela ne se fait pas de fouiner partout =)", "color: white; font-style: bold; background-color: red;padding: 20px");
+  console.log("%cHého que fais tu là ?", "color: white; font-style: bold; background-color: red;padding: 20px");
   console.log("%cSi tu veux aider le développement du panel envoie moi un mail:\ncontact@mercurycloud.fr ou Savalet#8888 sur Discord.", "color: cyan;padding: 10px");
 })(jQuery)
