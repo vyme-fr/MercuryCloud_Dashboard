@@ -23,7 +23,7 @@
     return response.json()
   }
 
-  fetch(`https://api.mercurycloud.fr/api/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+  fetch(`https://dash.mercurycloud.fr:8000/api/?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
     .then(function (response) {
       return response.json();
     })

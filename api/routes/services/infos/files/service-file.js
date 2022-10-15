@@ -1,13 +1,19 @@
+var router = require('express').Router({ mergeParams: true });
+const server = require('../../../../server')
+const route_name = "/services/file"
+const textParser = server.parser.text()
+const permissions_manager = require("../../../../utils/permissions-manager")
+const config = require('../../../../config.json')
+server.logger(" [INFO] /api" + route_name + " route loaded !")
+
 // GET CONTENT //
 
 router.get('', function (req, res) {
     ipInfo = server.ip(req);
-    var forwardedIpsStr = req.header('x-forwarded-for');
-    var IP = '';
 
-    if (forwardedIpsStr) {
-        IP = forwardedIps = forwardedIpsStr.split(',')[0];
-    }
+    var IP = req.socket.remoteAddress;
+
+
     server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
     var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
     server.con.query(sql, function (err, result) {
@@ -87,12 +93,10 @@ router.get('', function (req, res) {
 
 router.put('', textParser, function (req, res) {
     ipInfo = server.ip(req);
-    var forwardedIpsStr = req.header('x-forwarded-for');
-    var IP = '';
 
-    if (forwardedIpsStr) {
-        IP = forwardedIps = forwardedIpsStr.split(',')[0];
-    }
+    var IP = req.socket.remoteAddress;
+
+
     server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
     var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
     server.con.query(sql, function (err, result) {
@@ -173,3 +177,5 @@ router.put('', textParser, function (req, res) {
         }
     });
 })
+
+module.exports = router;

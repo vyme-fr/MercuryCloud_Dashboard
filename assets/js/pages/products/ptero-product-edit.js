@@ -1,10 +1,10 @@
-async function postData(url = '', data = {}) {
+async function putData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
@@ -13,46 +13,45 @@ function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
-  }
+}
 
 var id_string = ""
 var category_string = ""
 const url = new URL(window.location.href);
 if (url.searchParams.get('id')) {
-    fetch(`https://api.mercurycloud.fr/api/products/product-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${url.searchParams.get('id')}`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        console.log(json)
-        if (json.error === false) {
-            if (json.data.id == 404) {
-                window.location.replace("/dashboard/errors/error404.html");
-            } else {
-                document.getElementById("title").innerHTML = `Mercury Cloud | Edition du produit Pterodactyl ${json.data.name}`
-                document.getElementById("product-title").innerHTML = `Edition du produit ${json.data.name}`
-                document.getElementById('name').value = json.data.name
-                document.getElementById('description').value = json.data.description
-                document.getElementById('price').value = json.data.price
-                document.getElementById('cpu').value = json.data.cpu
-                document.getElementById('cpu_pinning').value = json.data.cpu_pinning
-                document.getElementById('ram').value = json.data.ram
-                document.getElementById('disk').value = json.data.disk
-                document.getElementById('swap').value = json.data.swap
-                document.getElementById('io').value = json.data.io
-                document.getElementById('startup_command').value = json.data.startup_command
-                document.getElementById('egg').value = json.data.egg
-                update_eggs()
-                for (let i=0; i < json.data.env.length; i++) {
-                    document.getElementById('env_' + (i + 1)).value = json.data.env[i]
+    fetch(`https://dash.mercurycloud.fr:8000/api/products/${url.searchParams.get('id')}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            if (json.error === false) {
+                if (json.data.id == 404) {
+                    window.location.replace("/dashboard/errors/error404.html");
+                } else {
+                    document.getElementById("title").innerHTML = `Mercury Cloud | Edition du produit Pterodactyl ${json.data.name}`
+                    document.getElementById("product-title").innerHTML = `Edition du produit ${json.data.name}`
+                    document.getElementById('name').value = json.data.name
+                    document.getElementById('description').value = json.data.description
+                    document.getElementById('price').value = json.data.price
+                    document.getElementById('cpu').value = json.data.cpu
+                    document.getElementById('cpu_pinning').value = json.data.cpu_pinning
+                    document.getElementById('ram').value = json.data.ram
+                    document.getElementById('disk').value = json.data.disk
+                    document.getElementById('swap').value = json.data.swap
+                    document.getElementById('io').value = json.data.io
+                    document.getElementById('startup_command').value = json.data.startup_command
+                    document.getElementById('egg').value = json.data.egg
+                    update_eggs()
+                    for (let i = 0; i < json.data.env.length; i++) {
+                        document.getElementById('env_' + (i + 1)).value = json.data.env[i]
+                    }
+                    id_string = json.data.id
+                    category_string = json.data.category
                 }
-                id_string = json.data.id
-                category_string = json.data.category
+            } else {
+                // window.location.replace("/dashboard/errors/error500.html");
             }
-        } else {
-         // window.location.replace("/dashboard/errors/error500.html");
-        }
-    })
+        })
 } else {
     window.location.replace("/dashboard/errors/error404.html");
 }
@@ -195,7 +194,7 @@ function update_eggs() {
 function save_product() {
     var ok = 0
     var no = 0
-    if(document.getElementById('name').value.length > 0) {
+    if (document.getElementById('name').value.length > 0) {
         document.getElementById('name').classList.remove('is-invalid')
         document.getElementById('name').classList.add('is-valid')
         ok++
@@ -206,7 +205,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('description').value.length > 0) {
+    if (document.getElementById('description').value.length > 0) {
         document.getElementById('description').classList.remove('is-invalid')
         document.getElementById('description').classList.add('is-valid')
         ok++
@@ -217,7 +216,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('price').value.length > 0) {
+    if (document.getElementById('price').value.length > 0) {
         document.getElementById('price').classList.remove('is-invalid')
         document.getElementById('price').classList.add('is-valid')
         ok++
@@ -228,7 +227,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('cpu').value.length > 0) {
+    if (document.getElementById('cpu').value.length > 0) {
         document.getElementById('cpu').classList.remove('is-invalid')
         document.getElementById('cpu').classList.add('is-valid')
         ok++
@@ -239,7 +238,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('ram').value.length > 0) {
+    if (document.getElementById('ram').value.length > 0) {
         document.getElementById('ram').classList.remove('is-invalid')
         document.getElementById('ram').classList.add('is-valid')
         ok++
@@ -250,7 +249,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('disk').value.length > 0) {
+    if (document.getElementById('disk').value.length > 0) {
         document.getElementById('disk').classList.remove('is-invalid')
         document.getElementById('disk').classList.add('is-valid')
         ok++
@@ -261,7 +260,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('swap').value.length > 0) {
+    if (document.getElementById('swap').value.length > 0) {
         document.getElementById('swap').classList.remove('is-invalid')
         document.getElementById('swap').classList.add('is-valid')
         ok++
@@ -272,7 +271,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('io').value.length > 0) {
+    if (document.getElementById('io').value.length > 0) {
         document.getElementById('io').classList.remove('is-invalid')
         document.getElementById('io').classList.add('is-valid')
         ok++
@@ -283,7 +282,7 @@ function save_product() {
         no++
     }
 
-    if(document.getElementById('startup_command').value.length > 0) {
+    if (document.getElementById('startup_command').value.length > 0) {
         document.getElementById('startup_command').classList.remove('is-invalid')
         document.getElementById('startup_command').classList.add('is-valid')
         ok++
@@ -295,30 +294,29 @@ function save_product() {
     }
 
 
-    if(ok == 9 && no == 0) {
+    if (ok == 9 && no == 0) {
 
         var env_var_count = 2
         var env_vars = []
         var env_vars_title = []
         var env_vars_json = `{`
-        if (document.getElementById("egg").value == 1) {env_var_count = 2, env_vars_title = ['BUNGEE_VERSION', 'SERVER_JARFILE']}
-        if (document.getElementById("egg").value == 2) {env_var_count = 2, env_vars_title = ['SERVER_JARFILE', 'VANILLA_VERSION']}
-        if (document.getElementById("egg").value == 3) {env_var_count = 4, env_vars_title = ['MINECRAFT_VERSION', 'SERVER_JARFILE', 'DL_PATH', 'BUILD_NUMBER']}
-        if (document.getElementById("egg").value == 4) {env_var_count = 4, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'BUILD_TYPE', 'FORGE_VERSION ']}
-        if (document.getElementById("egg").value == 5) {env_var_count = 2, env_vars_title = ['SPONGE_VERSION', 'SERVER_JARFILE']}
-        if (document.getElementById("egg").value == 6) {env_var_count = 3, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'FABRIC_VERSION']}
-        if (document.getElementById("egg").value == 7) {env_var_count = 6, env_vars_title = ['BEDROCK_VERSION', 'LD_LIBRARY_PATH', 'SERVERNAME', 'GAMEMODE', 'DIFFICULTY', 'CHEATS']}
-        if (document.getElementById("egg").value == 8) {env_var_count = 2, env_vars_title = ['GITHUB_PACKAGE', 'MATCH']}
-        for(var i= 1; i < env_var_count + 1; i++) {
+        if (document.getElementById("egg").value == 1) { env_var_count = 2, env_vars_title = ['BUNGEE_VERSION', 'SERVER_JARFILE'] }
+        if (document.getElementById("egg").value == 2) { env_var_count = 2, env_vars_title = ['SERVER_JARFILE', 'VANILLA_VERSION'] }
+        if (document.getElementById("egg").value == 3) { env_var_count = 4, env_vars_title = ['MINECRAFT_VERSION', 'SERVER_JARFILE', 'DL_PATH', 'BUILD_NUMBER'] }
+        if (document.getElementById("egg").value == 4) { env_var_count = 4, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'BUILD_TYPE', 'FORGE_VERSION '] }
+        if (document.getElementById("egg").value == 5) { env_var_count = 2, env_vars_title = ['SPONGE_VERSION', 'SERVER_JARFILE'] }
+        if (document.getElementById("egg").value == 6) { env_var_count = 3, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'FABRIC_VERSION'] }
+        if (document.getElementById("egg").value == 7) { env_var_count = 6, env_vars_title = ['BEDROCK_VERSION', 'LD_LIBRARY_PATH', 'SERVERNAME', 'GAMEMODE', 'DIFFICULTY', 'CHEATS'] }
+        if (document.getElementById("egg").value == 8) { env_var_count = 2, env_vars_title = ['GITHUB_PACKAGE', 'MATCH'] }
+        for (var i = 1; i < env_var_count + 1; i++) {
             env_vars.push(document.getElementById("env_" + i).value)
         }
-        for(var i= 0; i < env_vars.length; i++) {
-            env_vars_json = env_vars_json + `"${env_vars_title[i]}": "${env_vars[i]}"` 
-            if (i < env_vars.length - 1) {env_vars_json = env_vars_json + ","}
-            if (i == env_vars.length - 1) {env_vars_json = env_vars_json + "}"}
+        for (var i = 0; i < env_vars.length; i++) {
+            env_vars_json = env_vars_json + `"${env_vars_title[i]}": "${env_vars[i]}"`
+            if (i < env_vars.length - 1) { env_vars_json = env_vars_json + "," }
+            if (i == env_vars.length - 1) { env_vars_json = env_vars_json + "}" }
         }
         body = {
-            "id": id_string,
             "category": category_string,
             "name": document.getElementById("name").value,
             "description": document.getElementById("description").value,
@@ -334,8 +332,8 @@ function save_product() {
             "env": env_vars_json
         }
 
-        
-        postData(`https://api.mercurycloud.fr/api/products/edit-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+
+        putData(`https://dash.mercurycloud.fr:8000/api/products/${id_string}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
                 window.location.reload()
@@ -347,7 +345,7 @@ function save_product() {
                     location.href = "../errors/error500.html"
                 }
             }
-        })    
-        
+        })
+
     }
 }

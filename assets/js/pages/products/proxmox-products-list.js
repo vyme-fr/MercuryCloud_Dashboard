@@ -15,7 +15,7 @@ async function deleteData(url = '', data = {}) {
     return response.json()
 }
 
-fetch(`https://api.mercurycloud.fr/api/products/products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+fetch(`https://dash.mercurycloud.fr:8000/api/products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
     .then(function (response) {
         return response.json();
     })
@@ -70,7 +70,7 @@ fetch(`https://api.mercurycloud.fr/api/products/products?uuid=${getCookie("uuid"
     })
 
 function delete_product(id) {
-    deleteData(`https://api.mercurycloud.fr/api/products/delete-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, { "id": id }).then(data => {
+    deleteData(`https://dash.mercurycloud.fr:8000/api/products/${id}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, {}).then(data => {
         console.log(data)
         if (data.error == false) {
             window.location.reload()

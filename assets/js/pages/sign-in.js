@@ -13,11 +13,9 @@ async function postData(url = '', data = {}) {
 
 function connect() {
   let data = {
-    'mail': document.getElementById("email").value,
     'password': document.getElementById("password").value
   }
-  postData('https://api.mercurycloud.fr/api/users/login-user', data).then(data => {
-    console.log(data)
+  postData(`https://dash.mercurycloud.fr:8000/api/users/${document.getElementById("email").value}/login`, data).then(data => {
     if (data.error == false) {
       document.cookie = `uuid=${data.uuid};max-age=604800; path=/;`
       document.cookie = `token=${data.token};max-age=604800; path=/;`

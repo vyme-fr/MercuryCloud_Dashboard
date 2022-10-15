@@ -15,7 +15,7 @@ async function deleteData(url = '', data = {}) {
     return response.json()
 }
 
-fetch(`https://api.mercurycloud.fr/api/roles/roles-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+fetch(`https://dash.mercurycloud.fr:8000/api/roles?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
     .then(function (response) {
         return response.json();
     })
@@ -57,7 +57,7 @@ fetch(`https://api.mercurycloud.fr/api/roles/roles-list?uuid=${getCookie("uuid")
     })
 
 function delete_role(id) {
-    deleteData(`https://api.mercurycloud.fr/api/roles/delete-role?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, { "id": id }).then(data => {
+    deleteData(`https://dash.mercurycloud.fr:8000/api/roles/${id}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, {}).then(data => {
         console.log(data)
         if (data.error == false) {
             window.location.reload()

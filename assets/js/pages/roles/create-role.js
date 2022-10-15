@@ -6,11 +6,11 @@ function getCookie(name) {
 
 async function postData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
@@ -31,7 +31,7 @@ function admin_click() {
 function create_role() {
     var ok = 0
     var no = 0
-    if(document.getElementById("role-name").value.length > 2) {
+    if (document.getElementById("role-name").value.length > 2) {
         document.getElementById("role-name").classList.remove('is-invalid')
         document.getElementById("role-name").classList.add('is-valid')
         ok++
@@ -42,7 +42,7 @@ function create_role() {
         no++
     }
 
-    if(ok == 1 && no == 0) {    
+    if (ok == 1 && no == 0) {
         var permissions = []
         const permissions_array = ["ADMIN", "VIEWADMINPANEL", "LISTUSERS", "CREATEUSER", "DELETEUSER", "EDTIUSER", "LISTROLES", "CREATEROLE", "DELETEROLE", "EDITROLE", "LISTPRODUCTS", "CREATEPRODUCT", "DELETEPRODUCT", "EDITPRODUCT"]
         if (document.getElementById("ADMIN").checked) {
@@ -60,7 +60,7 @@ function create_role() {
             "permissions": permissions
         }
 
-        postData(`https://api.mercurycloud.fr/api/roles/create-role?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+        postData(`https://dash.mercurycloud.fr:8000/api/roles?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             if (data.error == false) {
                 window.location.replace("/dashboard/roles/roles-list.html")
             } else {
@@ -71,6 +71,6 @@ function create_role() {
                     location.href = "../errors/error500.html"
                 }
             }
-        })  
+        })
     }
 }

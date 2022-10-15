@@ -1,6 +1,7 @@
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/nord_dark");
 editor.session.setMode("ace/mode/yaml");
+
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -17,10 +18,11 @@ var term = new Terminal({
 
 var back = [];
 var files_data = {};
+
 function load_files(directory) {
   document.getElementById("files-explorer").innerHTML =
     '<a class="list-group-item list-group-item"><div class="spinner-grow text-secondary" role="status"></div></a>';
-  fetch(`https://api.mercurycloud.fr/api/services/${url.searchParams.get("id")}/files?uuid=${getCookie("uuid")}&token=${getCookie("token")}&directory=${directory}`)
+  fetch(`https://dash.mercurycloud.fr:8000/api/services/${url.searchParams.get("id")}/files?uuid=${getCookie("uuid")}&token=${getCookie("token")}&directory=${directory}`)
     .then(function (response) {
       return response.json();
     })
@@ -70,7 +72,7 @@ function load_files(directory) {
                                          </div>`;
           } else {
             if (json_files.data[i].attributes.mimetype == "inode/directory") {
-              document.getElementById("files-explorer").innerHTML += `<div onclick="select_file(${directory + "/" + json_files.data[i].attributes.name})" ondblclick="load_filecontent('${directory + "/" + json_files.data[i].attributes.name}', ${i})" class="list-group-item list-group-item-action not-selectable">
+              document.getElementById("files-explorer").innerHTML += `<div onclick="select_file(${directory + "/" + json_files.data[i].attributes.name})" ondblclick="load_files('${directory + "/" + json_files.data[i].attributes.name}')" class="list-group-item list-group-item-action not-selectable">
                                             <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path opacity="0.4" d="M16.8843 5.11485H13.9413C13.2081 5.11969 12.512 4.79355 12.0474 4.22751L11.0782 2.88762C10.6214 2.31661 9.9253 1.98894 9.19321 2.00028H7.11261C3.37819 2.00028 2.00001 4.19201 2.00001 7.91884V11.9474C1.99536 12.3904 21.9956 12.3898 21.9969 11.9474V10.7761C22.0147 7.04924 20.6721 5.11485 16.8843 5.11485Z"
                                                     fill="currentColor"></path>
@@ -144,6 +146,7 @@ function editor_back() {
 }
 
 var file_path = "";
+
 function load_filecontent(path, file_id) {
   document.getElementById("files-explorer").innerHTML =
     '<a class="list-group-item list-group-item"><div class="spinner-grow text-secondary" role="status"></div></a>';
@@ -193,8 +196,7 @@ function load_filecontent(path, file_id) {
   document.getElementById("save-file-btn").classList.remove("disabled");
   document.getElementById("file-title").innerHTML =
     files_data[file_id].attributes.name;
-  fetch(
-    `https://api.mercurycloud.fr/api/services/${url.searchParams.get("id")}files?uuid=${getCookie("uuid")}&token=${getCookie("token")}&path=${path}`)
+  fetch(`https://dash.mercurycloud.fr:8000/api/services/${url.searchParams.get("id")}/file?uuid=${getCookie("uuid")}&token=${getCookie("token")}&path=${path}`)
     .then(function (response) {
       return response.text();
     })
@@ -219,24 +221,15 @@ function save_file_content() {
     "save-filecontent-btn"
   ).innerHTML = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>`;
   body = editor.getValue();
-  fetch(
-    `https://api.mercurycloud.fr/api/services/service-savefilecontent?uuid=${getCookie(
-      "uuid"
-    )}&token=${getCookie("token")}&id=${url.searchParams.get(
-      "id"
-    )}&path=${file_path}`,
-    {
-      method: "POST",
-      body: body,
-    }
-  )
+  fetch(`https://dash.mercurycloud.fr:8000/api/services/${url.searchParams.get("id")}/file?uuid=${getCookie("uuid")}&token=${getCookie("token")}&path=${file_path}`, {
+    method: "PUT",
+    body: body,
+  })
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      document
-        .getElementById("save-filecontent-btn")
-        .classList.remove("disabled");
+      document.getElementById("save-filecontent-btn").classList.remove("disabled");
       document.getElementById("save-filecontent-btn").innerHTML = `Enregistrer`;
     })
     .catch((error) => {
@@ -253,11 +246,7 @@ term.open(document.getElementById("terminal"));
 fitAddon.fit();
 const url = new URL(window.location.href);
 if (url.searchParams.get("id")) {
-  fetch(
-    `https://api.mercurycloud.fr/api/services/service-info?uuid=${getCookie(
-      "uuid"
-    )}&token=${getCookie("token")}&id=${url.searchParams.get("id")}`
-  )
+  fetch(`https://dash.mercurycloud.fr:8000/api/services/${url.searchParams.get("id")}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
     .then(function (response) {
       return response.json();
     })
@@ -294,12 +283,10 @@ if (url.searchParams.get("id")) {
             },
           },
 
-          series: [
-            {
-              name: "CPU",
-              data: [],
-            },
-          ],
+          series: [{
+            name: "CPU",
+            data: [],
+          },],
           colors: ["#344ed1"],
 
           xaxis: {
@@ -358,12 +345,10 @@ if (url.searchParams.get("id")) {
             },
           },
 
-          series: [
-            {
-              name: "RAM",
-              data: [],
-            },
-          ],
+          series: [{
+            name: "RAM",
+            data: [],
+          },],
           colors: ["#d95f18"],
 
           xaxis: {
@@ -422,12 +407,10 @@ if (url.searchParams.get("id")) {
             },
           },
 
-          series: [
-            {
-              name: "Disque",
-              data: [],
-            },
-          ],
+          series: [{
+            name: "Disque",
+            data: [],
+          },],
           colors: ["#17904b"],
 
           xaxis: {
@@ -486,12 +469,10 @@ if (url.searchParams.get("id")) {
             },
           },
 
-          series: [
-            {
-              name: "Réseau",
-              data: [],
-            },
-          ],
+          series: [{
+            name: "Réseau",
+            data: [],
+          },],
           colors: ["#ad2d1e"],
 
           xaxis: {
@@ -633,28 +614,11 @@ if (url.searchParams.get("id")) {
               100 +
               "Go";
             document.getElementById("disk-counter").innerHTML =
-              Math.round((args_parse.disk_bytes / (1024 * 1024 * 1024)) * 100) /
-              100 +
-              "Go";
+              Math.round((args_parse.disk_bytes / (1024 * 1024 * 1024)) * 100) / 100 + "Go";
             document.getElementById("net-counter").innerHTML =
-              (Math.round(
-                ((args_parse.network.rx_bytes + args_parse.network.tx_bytes) /
-                  (1024 * 1024)) *
-                100
-              ) /
-                100) *
-              8 +
-              "Mb/s";
-            document.getElementById("disk-counter-span").innerHTML =
-              Math.round((args_parse.disk_bytes / (1024 * 1024)) * 100) / 100 +
-              "Mo";
-            document.getElementById("ram-counter-span").innerHTML =
-              "sur " +
-              Math.round(
-                (args_parse.memory_limit_bytes / (1024 * 1024 * 1024)) * 100
-              ) /
-              100 +
-              "Go";
+              (Math.round(((args_parse.network.rx_bytes + args_parse.network.tx_bytes) / (1024 * 1024)) * 100) / 100) * 8 + "Mb/s";
+            document.getElementById("disk-counter-span").innerHTML = Math.round((args_parse.disk_bytes / (1024 * 1024)) * 100) / 100 + "Mo";
+            document.getElementById("ram-counter-span").innerHTML = "sur " + Math.round((args_parse.memory_limit_bytes / (1024 * 1024 * 1024)) * 10) / 10 + "Go";
             document.getElementById("net-counter-span").innerHTML = `
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 20 20"
                                     fill="currentColor">
@@ -662,78 +626,51 @@ if (url.searchParams.get("id")) {
                                        d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
                                        clip-rule="evenodd"></path>
                                 </svg>
-                                 ${(Math.round(
-              (args_parse.network.rx_bytes / 1024000) *
-              100
-            ) /
-                100) *
-              8
-              }Mb/s
+                                 ${(Math.round((args_parse.network.rx_bytes / 1024000) * 100) / 100) * 8}Mb/s
                                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                ${(Math.round(
-                (args_parse.network.tx_bytes / 1024000) *
-                100
-              ) /
-                100) *
-              8
-              }Mb/s`;
+                                ${(Math.round((args_parse.network.tx_bytes / 1024000) * 100) / 100) * 8}Mb/s`;
             if (cpu_series.length > 14) {
               cpu_series.shift();
             }
             cpu_series.push(Math.round(args_parse.cpu_absolute * 100) / 100);
-            cpu_chart.updateSeries([
-              {
-                name: "CPU",
-                data: cpu_series,
-              },
-            ]);
+            cpu_chart.updateSeries([{
+              name: "CPU",
+              data: cpu_series,
+            },]);
 
             if (ram_series.length > 14) {
               ram_series.shift();
             }
             ram_series.push(
-              Math.round((args_parse.memory_bytes / 1024000000) * 100) / 100
+              Math.round((args_parse.memory_bytes / (1024 * 1024 * 1024)) * 100) / 100 + "Go"
             );
-            ram_chart.updateSeries([
-              {
-                name: "RAM",
-                data: ram_series,
-              },
-            ]);
+            ram_chart.updateSeries([{
+              name: "RAM",
+              data: ram_series,
+            },]);
 
             if (disk_series.length > 14) {
               disk_series.shift();
             }
             disk_series.push(
-              Math.round((args_parse.disk_bytes / 1024000000) * 100) / 100
+              Math.round((args_parse.disk_bytes / (1024 * 1024 * 1024)) * 100) / 100 + "Go"
             );
-            disk_chart.updateSeries([
-              {
-                name: "Disque",
-                data: disk_series,
-              },
-            ]);
+            disk_chart.updateSeries([{
+              name: "Disque",
+              data: disk_series,
+            },]);
 
             if (net_series.length > 14) {
               net_series.shift();
             }
             net_series.push(
-              (Math.round(
-                ((args_parse.network.rx_bytes + args_parse.network.tx_bytes) /
-                  1024000) *
-                100
-              ) /
-                100) *
-              8
-            );
-            net_chart.updateSeries([
-              {
-                name: "Réseau",
-                data: net_series,
-              },
-            ]);
+              (Math.round(((args_parse.network.rx_bytes + args_parse.network.tx_bytes) / 1024000) * 100) / 100) * 8);
+            net_chart.updateSeries([{
+              name: "Réseau",
+              data: net_series,
+            },]);
           }
           if (data_parse.event == "console output") {
             term.writeUtf8(data_parse.args[0] + "\r\n");
@@ -794,7 +731,7 @@ if (url.searchParams.get("id")) {
       }
     })
     .catch((error) => {
-      //    window.location.replace("/dashboard/errors/error500.html")
+      window.location.replace("/dashboard/errors/error500.html")
     });
 } else {
   window.location.replace("/dashboard/errors/error404.html");

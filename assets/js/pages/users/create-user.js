@@ -6,30 +6,30 @@ function getCookie(name) {
 
 async function postData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
 
-fetch(`https://api.mercurycloud.fr/api/roles/roles-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
-.then(function (response) {
-    return response.json();
-}).then(function (json) {
-    var roles_select = `<option selected="" value="0">--</option>`
-    for (let i = 0; i < json.roles.length; i++) {
-        roles_select  = roles_select + `<option value="${json.roles[i].id}">${json.roles[i].name}</option>`
-    }
-    document.getElementById("roles-select").innerHTML = roles_select
-})
+fetch(`https://dash.mercurycloud.fr:8000/api/roles?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+    .then(function (response) {
+        return response.json();
+    }).then(function (json) {
+        var roles_select = `<option selected="" value="0">--</option>`
+        for (let i = 0; i < json.roles.length; i++) {
+            roles_select = roles_select + `<option value="${json.roles[i].id}">${json.roles[i].name}</option>`
+        }
+        document.getElementById("roles-select").innerHTML = roles_select
+    })
 
 function create_user() {
     var ok = 0
     var no = 0
-    if(document.getElementById("first-name").value.length > 2) {
+    if (document.getElementById("first-name").value.length > 2) {
         document.getElementById("first-name").classList.remove('is-invalid')
         document.getElementById("first-name").classList.add('is-valid')
         ok++
@@ -40,7 +40,7 @@ function create_user() {
         no++
     }
 
-    if(document.getElementById("roles-select").value != 0) {
+    if (document.getElementById("roles-select").value != 0) {
         document.getElementById("roles-select").classList.remove('is-invalid')
         document.getElementById("roles-select").classList.add('is-valid')
         ok++
@@ -51,27 +51,11 @@ function create_user() {
         no++
     }
 
-    if(document.getElementById("username-input").value.length > 2) {
-        fetch(`https://api.mercurycloud.fr/api/users/username-exist?uuid=${getCookie("uuid")}&token=${getCookie("token")}&username=${document.getElementById("username-input").value}`)
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (myJson) { 
-            if(myJson.exist == false) {
-                document.getElementById("username-input").classList.remove('is-invalid')
-                document.getElementById("username-input").classList.add('is-valid')
-                document.getElementById("username-toast").innerHTML = ``
-                ok++
-            } else {
-                no++
-                document.getElementById("username-input").classList.remove('is-valid')
-                document.getElementById("username-input").classList.add('is-invalid')
-                document.getElementById("username-input").value = ""
-                if (myJson.error != true) {
-                    document.getElementById("username-toast").innerHTML = `<div class="toast-body">Le nom d'utilisateur ${document.getElementById("username-input").value} éxiste déja !</div>`
-                }
-            }
-        })
+    if (document.getElementById("username-input").value.length > 2) {
+        document.getElementById("username-input").classList.remove('is-invalid')
+        document.getElementById("username-input").classList.add('is-valid')
+        document.getElementById("username-toast").innerHTML = ``
+        ok++
     } else {
         document.getElementById("username-input").classList.remove('is-valid')
         document.getElementById("username-input").classList.add('is-invalid')
@@ -80,7 +64,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("last-name").value.length > 2) {
+    if (document.getElementById("last-name").value.length > 2) {
         document.getElementById("last-name").classList.remove('is-invalid')
         document.getElementById("last-name").classList.add('is-valid')
         ok++
@@ -92,27 +76,10 @@ function create_user() {
     }
 
 
-    if(document.getElementById("mail").value.length > 2) {
-        fetch(`https://api.mercurycloud.fr/api/users/mail-exist?uuid=${getCookie("uuid")}&token=${getCookie("token")}&mail=${document.getElementById("mail").value}`)
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (myJson) { 
-            if(myJson.exist == false) {
-                document.getElementById("mail").classList.remove('is-invalid')
-                document.getElementById("mail").classList.add('is-valid')
-                document.getElementById("mail-toast").innerHTML = ``
-                ok++
-            } else {
-                document.getElementById("mail").classList.remove('is-valid')
-                document.getElementById("mail").classList.add('is-invalid')
-                document.getElementById("mail").value = ""
-                if (myJson.error != true) {
-                    document.getElementById("mail-toast").innerHTML = `<div class="toast-body">L'adresse mail ${document.getElementById("mail").value} est déja utilisé !</div>`
-                }
-                no++
-            }
-        })
+    if (document.getElementById("mail").value.length > 2) {
+        document.getElementById("mail").classList.remove('is-invalid')
+        document.getElementById("mail").classList.add('is-valid')
+        document.getElementById("mail-toast").innerHTML = ``
     } else {
         document.getElementById("mail").classList.remove('is-valid')
         document.getElementById("mail").classList.add('is-invalid')
@@ -120,8 +87,8 @@ function create_user() {
         no++
     }
 
-    
-    if(document.getElementById("password").value.length >= 8) {
+
+    if (document.getElementById("password").value.length >= 8) {
         document.getElementById("password").classList.remove('is-invalid')
         document.getElementById("password").classList.add('is-valid')
         ok++
@@ -133,7 +100,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("tel").value.length == 12 && document.getElementById("tel").value.match(/[0-9]/gi) != null && document.getElementById("tel").value.includes("+", 0) == true) {
+    if (document.getElementById("tel").value.length == 12 && document.getElementById("tel").value.match(/[0-9]/gi) != null && document.getElementById("tel").value.includes("+", 0) == true) {
         document.getElementById("tel").classList.remove('is-invalid')
         document.getElementById("tel").classList.add('is-valid')
         ok++
@@ -145,7 +112,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("address-1").value.length > 2) {
+    if (document.getElementById("address-1").value.length > 2) {
         document.getElementById("address-1").classList.remove('is-invalid')
         document.getElementById("address-1").classList.add('is-valid')
         ok++
@@ -157,7 +124,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("city").value.length > 2) {
+    if (document.getElementById("city").value.length > 2) {
         document.getElementById("city").classList.remove('is-invalid')
         document.getElementById("city").classList.add('is-valid')
         ok++
@@ -169,7 +136,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("zip").value.length == 5 && /^\d+$/.test(document.getElementById("zip").value) == true) {
+    if (document.getElementById("zip").value.length == 5 && /^\d+$/.test(document.getElementById("zip").value) == true) {
         document.getElementById("zip").classList.remove('is-invalid')
         document.getElementById("zip").classList.add('is-valid')
         ok++
@@ -181,7 +148,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("country").value > 0) {
+    if (document.getElementById("country").value > 0) {
         document.getElementById("country").classList.remove('is-invalid')
         document.getElementById("country").classList.add('is-valid')
         ok++
@@ -193,7 +160,7 @@ function create_user() {
     }
 
 
-    if(document.getElementById("state").value.length > 2) {
+    if (document.getElementById("state").value.length > 2) {
         document.getElementById("state").classList.remove('is-invalid')
         document.getElementById("state").classList.add('is-valid')
         ok++
@@ -202,9 +169,10 @@ function create_user() {
         document.getElementById("state").classList.add('is-invalid')
         document.getElementById("state").value = ""
         no++
-    }   
+    }
+    console.log("ok : " + ok + " no : " + no)
 
-    if(ok == 10 && no == 0) {       
+    if (ok == 11 && no == 0) {
         body = {
             "username": document.getElementById("username-input").value,
             "mail": document.getElementById("mail").value,
@@ -220,18 +188,26 @@ function create_user() {
             "country": document.getElementById("country").value,
             "state": document.getElementById("state").value
         }
-        postData(`https://api.mercurycloud.fr/api/users/create-user?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+        postData(`https://dash.mercurycloud.fr:8000/api/users?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             if (data.error == false) {
                 window.location.replace("/dashboard/users/users-list.html")
             } else {
-                console.log('[ERROR] Code : ' + data.code + ' Message : ' + data.msg);
-                if (data.code == 403) {
-                    location.href = "../errors/error403.html"
+                console.log('[ERROR] Message : ' + data.msg);
+                if (data.msg == "Mail already used") {
+                    document.getElementById("mail").classList.remove('is-valid')
+                    document.getElementById("mail").classList.add('is-invalid')
+                    document.getElementById("mail").value = ""
+                    document.getElementById("mail-toast").innerHTML = `<div class="toast-body">L'adresse mail ${document.getElementById("mail").value} est déja utilisé !</div>`
+                } else if (data.msg == "Username already exist") {
+                    document.getElementById("username-input").classList.remove('is-valid')
+                    document.getElementById("username-input").classList.add('is-invalid')
+                    document.getElementById("username-input").value = ""
+                    document.getElementById("username-toast").innerHTML = `<div class="toast-body">Le nom d'utilisateur ${document.getElementById("username-input").value} éxiste déja !</div>`
                 } else {
                     location.href = "../errors/error500.html"
                 }
             }
-        })    
-        
+        })
+
     }
 }

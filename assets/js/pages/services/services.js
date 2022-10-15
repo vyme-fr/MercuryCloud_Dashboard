@@ -15,24 +15,48 @@ async function deleteData(url = '', data = {}) {
   return response.json()
 }
 
-fetch(`https://api.mercurycloud.fr/api/services?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+fetch(`https://dash.mercurycloud.fr:8000/api/services?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
     if (json.error === false) {
-      list = ``
-      for (var i = 0; i < json.data.length; i++) {
-        statut = ''
-        if (json.data[i].statut == "installing") { statut = '<span class="badge bg-primary">Installation...</span>' }
-        if (json.data[i].statut == "active") { statut = '<span class="badge bg-success">Actif</span>' }
-        if (json.data[i].statut == "suspended") { statut = '<span class="badge bg-danger">Suspendu</span>' }
-        list = list + `
+      fetch(`https://dash.mercurycloud.fr:8000/api/users?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (json2) {
+          if (json2.error === false) {
+            fetch(`https://dash.mercurycloud.fr:8000/api/products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+              .then(function (response) {
+                return response.json();
+              })
+              .then(function (json3) {
+                if (json3.error === false) {
+                  owner_username = ''
+                  product_name = ''
+                  list = ``
+                  for (var i = 0; i < json.data.length; i++) {
+                    for (let ii = 0; ii < json2.users.length; ii++) {
+                      if (json2.users[ii].uuid == json.data[i].uuid) {
+                        owner_username = json2.users[ii].username
+                      }
+                    }
+                    for (let ii = 0; ii < json3.data.length; ii++) {
+                      if (json3.data[ii].id == json.data[i].product_id) {
+                        product_name = json3.data[ii].name
+                      }
+                    }
+                    statut = ''
+                    if (json.data[i].statut == "installing") { statut = '<span class="badge bg-primary">Installation...</span>' }
+                    if (json.data[i].statut == "active") { statut = '<span class="badge bg-success">Actif</span>' }
+                    if (json.data[i].statut == "suspended") { statut = '<span class="badge bg-danger">Suspendu</span>' }
+                    list = list + `
         <tr>
             <td>${json.data[i].id}</td>
             <td><a href="/dashboard/services/service-game.html?id=${json.data[i].id}">${json.data[i].name}</a></td>
-            <td>${json.data[i].uuid}</td>
-            <td>${json.data[i].product_id}</td>
+            <td>${owner_username}</td>
+            <td>${product_name}</td>
             <td>${json.data[i].price}€</td>
             <td>${statut}</td>
             <td>
@@ -58,15 +82,23 @@ fetch(`https://api.mercurycloud.fr/api/services?uuid=${getCookie("uuid")}&token=
             </div>
             </td>
         </tr>`
-      }
-      document.getElementById("services-table").innerHTML = list
+                  }
+                  document.getElementById("services-table").innerHTML = list
+                } else {
+                  window.location.replace("/dashboard/errors/error500.html");
+                }
+              })
+          } else {
+            window.location.replace("/dashboard/errors/error500.html");
+          }
+        })
     } else {
       window.location.replace("/dashboard/errors/error500.html");
     }
   })
 
 function delete_product(id) {
-  deleteData(`https://api.mercurycloud.fr/api/services/${id}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`).then(data => {
+  deleteData(`https://dash.mercurycloud.fr:8000/api/services/${id}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`).then(data => {
     console.log(data)
     if (data.error == false) {
       window.location.reload()

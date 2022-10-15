@@ -13,6 +13,10 @@ const fetch = require('node-fetch');
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
+var server_opt = {
+  cert: fs.readFileSync(config.api_ssl_cert_path),
+  key: fs.readFileSync(config.api_ssl_privkey_path)
+}
 
 let start_date = new Date();;
 let date = ("0" + start_date.getDate()).slice(-2);
@@ -42,7 +46,6 @@ function logger(msg) {
 
 logger(" [INFO] The API is starting...")
 
-const PORT = 400
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: config.mysql_host,
@@ -125,48 +128,35 @@ connection.connect(function (err) {
       app.use('/api/', require('./routes/index'));
 
       // products //
-      app.use('/api/products/ptero-create-product', require('./routes/products/ptero-create-product'));
-      app.use('/api/products/proxmox-create-product', require('./routes/products/proxmox-create-product'));
-      app.use('/api/products/proxmox-qemu-list', require('./routes/products/proxmox-qemu-list'));
-      app.use('/api/products/proxmox-nodes-list', require('./routes/products/proxmox-nodes-list'));
-      app.use('/api/products/proxmox-storage-list', require('./routes/products/proxmox-storage-list'));
-      app.use('/api/products/delete-product', require('./routes/products/delete-product'));
-      app.use('/api/products/product-info', require('./routes/products/product-info'));
-      app.use('/api/products/products', require('./routes/products/products'));
-      app.use('/api/products/edit-product', require('./routes/products/edit-product'));
+      app.use('/api/products', require('./routes/products/products'));
+      app.use('/api/products/:product_id', require('./routes/products/infos/product-info'));
+      app.use('/api/products/proxmox/qemu', require('./routes/products/infos/proxmox/qemu'));
+      app.use('/api/products/proxmox/nodes', require('./routes/products/infos/proxmox/nodes'));
+      app.use('/api/products/proxmox/storage', require('./routes/products/infos/proxmox/storage'));
 
       // users //
-      app.use('/api/users/create-user', require('./routes/users/create-user'));
-      app.use('/api/users/login-user', require('./routes/users/login-user'));
-      app.use('/api/users/users-list', require('./routes/users/users-list'));
-      app.use('/api/users/user-info', require('./routes/users/user-info'));
-      app.use('/api/users/username-exist', require('./routes/users/username-exist'));
-      app.use('/api/users/mail-exist', require('./routes/users/mail-exist'));
-      app.use('/api/users/delete-user', require('./routes/users/delete-user'));
-      app.use('/api/users/edit-user', require('./routes/users/edit-user'));
+      app.use('/api/users', require('./routes/users/users'));
+      app.use('/api/users/:user_uuid', require('./routes/users/infos/user-info'));
+      app.use('/api/users/:user_mail/login', require('./routes/users/infos/user-login'));
 
       // roles //
-      app.use('/api/roles/create-role', require('./routes/roles/create-role'));
-      app.use('/api/roles/delete-role', require('./routes/roles/delete-role'));
-      app.use('/api/roles/roles-list', require('./routes/roles/roles-list'));
-      app.use('/api/roles/role-info', require('./routes/roles/role-info'));
-      app.use('/api/roles/role-edit', require('./routes/roles/role-edit'));
+      app.use('/api/roles', require('./routes/roles/roles'));
+      app.use('/api/roles/:role_id', require('./routes/roles/infos/role-info'));
 
 
       // services //
       app.use('/api/services', require('./routes/services/services'));
       app.use('/api/services/:service_name', require('./routes/services/infos/service-info'));
       app.use('/api/services/:service_name/files', require('./routes/services/infos/files/service-files'));
+      app.use('/api/services/:service_name/file', require('./routes/services/infos/files/service-file'));
 
 
 
       // utils //
       app.use('/api/utils/send-mail', require('./routes/utils/send-mail'));
-
-      app.listen(PORT, () => {
-        logger(` [INFO] MercuryCloud API listening on ${config.api_url} !`)
-      }
-      );
+      https.createServer(server_opt, app).listen(config.api_port, config.api_bind_address, function () {
+        logger(` [INFO] MercuryCloud API listening on ${config.api_url + ":" + config.api_port} !`)
+      });
     }).catch((error) => {
       logger(" [ERROR] Proxmox API error : " + error);
       process.exit(1);

@@ -1,13 +1,13 @@
-fetch('https://api.mercurycloud.fr/api/products/products')
-.then(function (response) {
-  return response.json();
-})
-.then(function (json) {
-    let products = ``
-    for(var i = 0; i < json.data.length; i++) {
-      if (window.location.href.includes("vps-pricings.html")) {
-         if (json.data[i].category == "proxmox") {
-            products = products + `
+fetch('https://dash.mercurycloud.fr:8000/api/products')
+   .then(function (response) {
+      return response.json();
+   })
+   .then(function (json) {
+      let products = ``
+      for (var i = 0; i < json.data.length; i++) {
+         if (window.location.href.includes("vps-pricings.html")) {
+            if (json.data[i].category == "proxmox") {
+               products = products + `
             <div class="col iq-star-inserted-3">
             <div class="card my-5">
                <div class="card-body">
@@ -25,11 +25,11 @@ fetch('https://api.mercurycloud.fr/api/products/products')
             </div>
          </div>
             `
-        }
-      }
-      if (window.location.href.includes("game-pricings.html")) {
-         if (json.data[i].category == "pterodactyl") {
-            products = products + `
+            }
+         }
+         if (window.location.href.includes("game-pricings.html")) {
+            if (json.data[i].category == "pterodactyl") {
+               products = products + `
             <div class="col iq-star-inserted-3">
             <div class="card my-5">
                <div class="card-body">
@@ -47,8 +47,8 @@ fetch('https://api.mercurycloud.fr/api/products/products')
             </div>
          </div>
             `
-        }
+            }
+         }
       }
-    }
-    document.getElementById('pricings').innerHTML =  products
-})
+      document.getElementById('pricings').innerHTML = products
+   })

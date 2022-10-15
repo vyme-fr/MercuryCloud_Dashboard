@@ -1,68 +1,68 @@
 async function postData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
 
 function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
-fetch(`https://api.mercurycloud.fr/api/products/proxmox-nodes-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
-.then(function (response) {
-  return response.json();
-})
-.then(function (json) {
-    let nodes_html = ``
-    for(var i = 0; i < json.nodes.length; i++) {
-        nodes_html = nodes_html + `
+fetch(`https://dash.mercurycloud.fr:8000/api/products/proxmox/nodes?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        let nodes_html = ``
+        for (var i = 0; i < json.nodes.length; i++) {
+            nodes_html = nodes_html + `
         <option value="${json.nodes[i].node}">${json.nodes[i].node}</option>
         `
-    }
-    document.getElementById('nodes').innerHTML =  '<option value="0">Veuillez choisir un noeud</option>' + nodes_html
-})
+        }
+        document.getElementById('nodes').innerHTML = '<option value="0">Veuillez choisir un noeud</option>' + nodes_html
+    })
 
 function update_node() {
-    fetch(`https://api.mercurycloud.fr/api/products/proxmox-qemu-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}&node=${document.getElementById('nodes').value}`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        let template_vm_html = ``
-        for(var i = 0; i < json.vms.length; i++) {
-            template_vm_html = template_vm_html + `
+    fetch(`https://dash.mercurycloud.fr:8000/api/products/proxmox/qemu?uuid=${getCookie("uuid")}&token=${getCookie("token")}&node=${document.getElementById('nodes').value}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            let template_vm_html = ``
+            for (var i = 0; i < json.vms.length; i++) {
+                template_vm_html = template_vm_html + `
             <option value="${json.vms[i].vmid}">${json.vms[i].name}</option>
             `
-        }
-        document.getElementById('template_vm').innerHTML = template_vm_html
-    })
+            }
+            document.getElementById('template_vm').innerHTML = template_vm_html
+        })
 
-    fetch(`https://api.mercurycloud.fr/api/products/proxmox-storage-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}&node=${document.getElementById('nodes').value}`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        let storage_html = ``
-        for(var i = 0; i < json.storage.length; i++) {
-            storage_html = storage_html + `
+    fetch(`https://dash.mercurycloud.fr:8000/api/products/proxmox/storage?uuid=${getCookie("uuid")}&token=${getCookie("token")}&node=${document.getElementById('nodes').value}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            let storage_html = ``
+            for (var i = 0; i < json.storage.length; i++) {
+                storage_html = storage_html + `
             <option value="${json.storage[i].storage}">${json.storage[i].storage}</option>
             `
-        }
-        document.getElementById('storage').innerHTML = storage_html
-    })
+            }
+            document.getElementById('storage').innerHTML = storage_html
+        })
 }
 
 function create_product() {
     var ok = 0
     var no = 0
-    if(document.getElementById('name').value.length > 0) {
+    if (document.getElementById('name').value.length > 0) {
         document.getElementById('name').classList.remove('is-invalid')
         document.getElementById('name').classList.add('is-valid')
         ok++
@@ -73,7 +73,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('description').value.length > 0) {
+    if (document.getElementById('description').value.length > 0) {
         document.getElementById('description').classList.remove('is-invalid')
         document.getElementById('description').classList.add('is-valid')
         ok++
@@ -84,7 +84,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('price').value.length > 0) {
+    if (document.getElementById('price').value.length > 0) {
         document.getElementById('price').classList.remove('is-invalid')
         document.getElementById('price').classList.add('is-valid')
         ok++
@@ -95,7 +95,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('nodes').value != 0) {
+    if (document.getElementById('nodes').value != 0) {
         document.getElementById('nodes').classList.remove('is-invalid')
         document.getElementById('nodes').classList.add('is-valid')
         ok++
@@ -105,7 +105,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('template_vm').value != 0) {
+    if (document.getElementById('template_vm').value != 0) {
         document.getElementById('template_vm').classList.remove('is-invalid')
         document.getElementById('template_vm').classList.add('is-valid')
         ok++
@@ -115,7 +115,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('cores').value.length > 0) {
+    if (document.getElementById('cores').value.length > 0) {
         document.getElementById('cores').classList.remove('is-invalid')
         document.getElementById('cores').classList.add('is-valid')
         ok++
@@ -126,7 +126,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('ram').value.length > 0) {
+    if (document.getElementById('ram').value.length > 0) {
         document.getElementById('ram').classList.remove('is-invalid')
         document.getElementById('ram').classList.add('is-valid')
         ok++
@@ -137,7 +137,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('storage').value != 0) {
+    if (document.getElementById('storage').value != 0) {
         document.getElementById('storage').classList.remove('is-invalid')
         document.getElementById('storage').classList.add('is-valid')
         ok++
@@ -147,7 +147,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('disk_size').value.length > 0) {
+    if (document.getElementById('disk_size').value.length > 0) {
         document.getElementById('disk_size').classList.remove('is-invalid')
         document.getElementById('disk_size').classList.add('is-valid')
         ok++
@@ -160,11 +160,12 @@ function create_product() {
 
 
 
-    if(ok == 9 && no == 0) {
+    if (ok == 9 && no == 0) {
         body = {
             "name": document.getElementById("name").value,
             "description": document.getElementById("description").value,
             "price": document.getElementById("price").value,
+            "category": "proxmox",
             "node": document.getElementById("nodes").value,
             "template_vm": document.getElementById("template_vm").value,
             "cores": document.getElementById("cores").value,
@@ -173,7 +174,7 @@ function create_product() {
             "disk_size": document.getElementById("disk_size").value,
             "add_conf": document.getElementById("add_conf").value
         }
-        postData(`https://api.mercurycloud.fr/api/products/proxmox-create-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+        postData(`https://dash.mercurycloud.fr:8000/api/products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
                 window.location.replace("/dashboard/products/proxmox-products-list.html")
@@ -185,6 +186,6 @@ function create_product() {
                     location.href = "../errors/error500.html"
                 }
             }
-        })    
+        })
     }
 }

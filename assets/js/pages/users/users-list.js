@@ -15,20 +15,32 @@ async function deleteData(url = '', data = {}) {
     return response.json()
 }
 
-fetch(`https://api.mercurycloud.fr/api/users/users-list?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+fetch(`https://dash.mercurycloud.fr:8000/api/users?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
     .then(function (response) {
         return response.json();
     })
     .then(function (json) {
         if (json.error === false) {
-            list = ``
-            for (var i = 0; i < json.users.length; i++) {
-                list = list + `
+            fetch(`https://dash.mercurycloud.fr:8000/api/roles?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (json2) {
+                    if (json2.error === false) {
+                        list = ``
+                        role_name = ''
+                        for (let i = 0; i < json.users.length; i++) {
+                            for (let ii = 0; ii < json2.roles.length; ii++) {
+                                if (json2.roles[ii].id == json.users[i].role) {
+                                    role_name = json2.roles[ii].name
+                                }
+                            }
+                            list = list + `
         <tr>
             <td>${json.users[i].uuid}</td>
             <td>${json.users[i].username}</td>
             <td>${json.users[i].mail}</td>
-            <td>${json.users[i].role}</td>
+            <td>${role_name}</td>
             <td><span class="badge bg-primary">Actif</span></td>
             <td>
             <div class="flex align-items-center list-user-action">
@@ -52,16 +64,19 @@ fetch(`https://api.mercurycloud.fr/api/users/users-list?uuid=${getCookie("uuid")
             </div>
             </td>
         </tr>`
-            }
-            document.getElementById("users-table").innerHTML = list
+                        }
+                        document.getElementById("users-table").innerHTML = list
+                    } else {
+                        window.location.replace("/dashboard/errors/error500.html");
+                    }
+                })
         } else {
             window.location.replace("/dashboard/errors/error500.html");
         }
     })
 
 function delete_product(uuid) {
-    deleteData(`https://api.mercurycloud.fr/api/users/delete-user?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, { "user_uuid": uuid }).then(data => {
-        console.log(data)
+    deleteData(`https://dash.mercurycloud.fr:8000/api/users/${uuid}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`).then(data => {
         if (data.error == false) {
             window.location.reload()
         } else {

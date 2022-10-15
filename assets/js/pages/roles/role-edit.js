@@ -4,13 +4,13 @@ function getCookie(name) {
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
-async function postData(url = '', data = {}) {
+async function putData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
@@ -18,32 +18,31 @@ async function postData(url = '', data = {}) {
 var role_id = ""
 const url = new URL(window.location.href);
 if (url.searchParams.get('id')) {
-    fetch(`https://api.mercurycloud.fr/api/roles/role-info?uuid=${getCookie("uuid")}&token=${getCookie("token")}&id=${url.searchParams.get('id')}`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        console.log(json)
-        if (json.error === false) {
-            if (json.data.uuid == 404) {
-                window.location.replace("/dashboard/errors/error404.html");
-            } else {
-                document.getElementById("title").innerHTML = `Mercury Cloud | Edition du rôle ${json.data.name}`
-                document.getElementById("role-title").innerHTML = `Edition du rôle ${json.data.name}`
-                document.getElementById("role-name").value = json.data.name
-                if (json.data.permissions != "NONE") {
-                    const role_permissions = json.data.permissions.split(",");
-                    for (let i = 0; i < role_permissions.length; ++i) {
-                        document.getElementById(role_permissions[i]).checked = true
+    fetch(`https://dash.mercurycloud.fr:8000/api/roles/${url.searchParams.get('id')}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            if (json.error === false) {
+                if (json.data.uuid == 404) {
+                    window.location.replace("/dashboard/errors/error404.html");
+                } else {
+                    document.getElementById("title").innerHTML = `Mercury Cloud | Edition du rôle ${json.data.name}`
+                    document.getElementById("role-title").innerHTML = `Edition du rôle ${json.data.name}`
+                    document.getElementById("role-name").value = json.data.name
+                    if (json.data.permissions != "NONE") {
+                        const role_permissions = json.data.permissions.split(",");
+                        for (let i = 0; i < role_permissions.length; ++i) {
+                            document.getElementById(role_permissions[i]).checked = true
+                        }
+                        admin_click()
                     }
-                    admin_click()
+                    role_id = json.data.id
                 }
-                role_id = json.data.id
+            } else {
+                window.location.replace("/dashboard/errors/error500.html");
             }
-        } else {
-            window.location.replace("/dashboard/errors/error500.html");
-        }
-    })
+        })
 } else {
     window.location.replace("/dashboard/errors/error404.html");
 }
@@ -64,7 +63,7 @@ function admin_click() {
 function save_role() {
     var ok = 0
     var no = 0
-    if(document.getElementById("role-name").value.length > 2) {
+    if (document.getElementById("role-name").value.length > 2) {
         document.getElementById("role-name").classList.remove('is-invalid')
         document.getElementById("role-name").classList.add('is-valid')
         ok++
@@ -75,7 +74,7 @@ function save_role() {
         no++
     }
 
-    if(ok == 1 && no == 0) {    
+    if (ok == 1 && no == 0) {
         var permissions = []
         const permissions_array = ["ADMIN", "VIEWADMINPANEL", "LISTUSERS", "CREATEUSER", "DELETEUSER", "EDTIUSER", "LISTROLES", "CREATEROLE", "DELETEROLE", "EDITROLE", "LISTPRODUCTS", "CREATEPRODUCT", "DELETEPRODUCT", "EDITPRODUCT", "LISTSERVICES", "CREATESERVICE", "DELETESERVICE", "EDITSERVICE"]
         if (document.getElementById("ADMIN").checked) {
@@ -89,12 +88,11 @@ function save_role() {
             }
         }
         body = {
-            "id": role_id,
             "name": document.getElementById("role-name").value,
             "permissions": permissions
         }
 
-        postData(`https://api.mercurycloud.fr/api/roles/role-edit?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+        putData(`https://dash.mercurycloud.fr:8000/api/roles/${role_id}?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             if (data.error == false) {
                 window.location.reload()
             } else {
@@ -105,6 +103,6 @@ function save_role() {
                     location.href = "../errors/error500.html"
                 }
             }
-        })  
+        })
     }
 }

@@ -6,12 +6,7 @@ function getRandomInt(max, min) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 router.get('', (req, res) => {
-  var forwardedIpsStr = req.header('x-forwarded-for');
-  var IP = '';
-
-  if (forwardedIpsStr) {
-    IP = forwardedIps = forwardedIpsStr.split(',')[0];
-  }
+  var IP = req.socket.remoteAddress;
   server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
   server.con.query(sql, function (err, result) {

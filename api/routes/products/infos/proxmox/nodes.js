@@ -1,19 +1,14 @@
 var router = require('express').Router();
-const server = require('../../server.js')
-const config = require('../../config.json');
+const server = require('../../../../server.js')
+const config = require('../../../../config.json');
 const { response } = require('express');
-const permissions_manager = require("../../utils/permissions-manager.js")
-const route_name = "/products/proxmox-nodes-list"
+const permissions_manager = require("../../../../utils/permissions-manager.js")
+const route_name = "/products/proxmox/nodes"
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
   ipInfo = server.ip(req);
-  var forwardedIpsStr = req.header('x-forwarded-for');
-  var IP = '';
-
-  if (forwardedIpsStr) {
-    IP = forwardedIps = forwardedIpsStr.split(',')[0];
-  }
+  var IP = req.socket.remoteAddress;
   server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
   server.con.query(sql, function (err, result) {

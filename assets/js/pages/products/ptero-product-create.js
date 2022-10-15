@@ -1,18 +1,18 @@
 async function postData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     });
     return response.json()
 }
 
 function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
 function update_eggs() {
@@ -153,7 +153,7 @@ function update_eggs() {
 function create_product() {
     var ok = 0
     var no = 0
-    if(document.getElementById('name').value.length > 0) {
+    if (document.getElementById('name').value.length > 0) {
         document.getElementById('name').classList.remove('is-invalid')
         document.getElementById('name').classList.add('is-valid')
         ok++
@@ -164,7 +164,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('description').value.length > 0) {
+    if (document.getElementById('description').value.length > 0) {
         document.getElementById('description').classList.remove('is-invalid')
         document.getElementById('description').classList.add('is-valid')
         ok++
@@ -175,7 +175,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('price').value.length > 0) {
+    if (document.getElementById('price').value.length > 0) {
         document.getElementById('price').classList.remove('is-invalid')
         document.getElementById('price').classList.add('is-valid')
         ok++
@@ -186,7 +186,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('cpu').value.length > 0) {
+    if (document.getElementById('cpu').value.length > 0) {
         document.getElementById('cpu').classList.remove('is-invalid')
         document.getElementById('cpu').classList.add('is-valid')
         ok++
@@ -197,7 +197,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('ram').value.length > 0) {
+    if (document.getElementById('ram').value.length > 0) {
         document.getElementById('ram').classList.remove('is-invalid')
         document.getElementById('ram').classList.add('is-valid')
         ok++
@@ -208,7 +208,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('disk').value.length > 0) {
+    if (document.getElementById('disk').value.length > 0) {
         document.getElementById('disk').classList.remove('is-invalid')
         document.getElementById('disk').classList.add('is-valid')
         ok++
@@ -219,7 +219,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('swap').value.length > 0) {
+    if (document.getElementById('swap').value.length > 0) {
         document.getElementById('swap').classList.remove('is-invalid')
         document.getElementById('swap').classList.add('is-valid')
         ok++
@@ -230,7 +230,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('io').value.length > 0) {
+    if (document.getElementById('io').value.length > 0) {
         document.getElementById('io').classList.remove('is-invalid')
         document.getElementById('io').classList.add('is-valid')
         ok++
@@ -241,7 +241,7 @@ function create_product() {
         no++
     }
 
-    if(document.getElementById('startup_command').value.length > 0) {
+    if (document.getElementById('startup_command').value.length > 0) {
         document.getElementById('startup_command').classList.remove('is-invalid')
         document.getElementById('startup_command').classList.add('is-valid')
         ok++
@@ -253,32 +253,33 @@ function create_product() {
     }
 
 
-    if(ok == 9 && no == 0) {
+    if (ok == 9 && no == 0) {
 
         var env_vars_count = 2
         var env_vars = []
         var env_vars_title = []
         var env_vars_json = `{`
-        if (document.getElementById("egg").value == 1) {env_vars_count = 2, env_vars_title = ['BUNGEE_VERSION', 'SERVER_JARFILE']}
-        if (document.getElementById("egg").value == 2) {env_vars_count = 2, env_vars_title = ['SERVER_JARFILE', 'VANILLA_VERSION']}
-        if (document.getElementById("egg").value == 3) {env_vars_count = 4, env_vars_title = ['MINECRAFT_VERSION', 'SERVER_JARFILE', 'DL_PATH', 'BUILD_NUMBER']}
-        if (document.getElementById("egg").value == 4) {env_vars_count = 4, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'BUILD_TYPE', 'FORGE_VERSION ']}
-        if (document.getElementById("egg").value == 5) {env_vars_count = 2, env_vars_title = ['SPONGE_VERSION', 'SERVER_JARFILE']}
-        if (document.getElementById("egg").value == 6) {env_vars_count = 3, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'FABRIC_VERSION']}
-        if (document.getElementById("egg").value == 7) {env_vars_count = 6, env_vars_title = ['BEDROCK_VERSION', 'LD_LIBRARY_PATH', 'SERVERNAME', 'GAMEMODE', 'DIFFICULTY', 'CHEATS']}
-        if (document.getElementById("egg").value == 8) {env_vars_count = 2, env_vars_title = ['GITHUB_PACKAGE', 'MATCH']}
-        for(var i= 1; i < env_vars_count + 1; i++) {
+        if (document.getElementById("egg").value == 1) { env_vars_count = 2, env_vars_title = ['BUNGEE_VERSION', 'SERVER_JARFILE'] }
+        if (document.getElementById("egg").value == 2) { env_vars_count = 2, env_vars_title = ['SERVER_JARFILE', 'VANILLA_VERSION'] }
+        if (document.getElementById("egg").value == 3) { env_vars_count = 4, env_vars_title = ['MINECRAFT_VERSION', 'SERVER_JARFILE', 'DL_PATH', 'BUILD_NUMBER'] }
+        if (document.getElementById("egg").value == 4) { env_vars_count = 4, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'BUILD_TYPE', 'FORGE_VERSION '] }
+        if (document.getElementById("egg").value == 5) { env_vars_count = 2, env_vars_title = ['SPONGE_VERSION', 'SERVER_JARFILE'] }
+        if (document.getElementById("egg").value == 6) { env_vars_count = 3, env_vars_title = ['SERVER_JARFILE', 'MC_VERSION', 'FABRIC_VERSION'] }
+        if (document.getElementById("egg").value == 7) { env_vars_count = 6, env_vars_title = ['BEDROCK_VERSION', 'LD_LIBRARY_PATH', 'SERVERNAME', 'GAMEMODE', 'DIFFICULTY', 'CHEATS'] }
+        if (document.getElementById("egg").value == 8) { env_vars_count = 2, env_vars_title = ['GITHUB_PACKAGE', 'MATCH'] }
+        for (var i = 1; i < env_vars_count + 1; i++) {
             env_vars.push(document.getElementById("env_" + i).value)
         }
-        for(var i= 0; i < env_vars.length; i++) {
-            env_vars_json = env_vars_json + `"${env_vars_title[i]}": "${env_vars[i]}"` 
-            if (i < env_vars.length - 1) {env_vars_json = env_vars_json + ","}
-            if (i == env_vars.length - 1) {env_vars_json = env_vars_json + "}"}
+        for (var i = 0; i < env_vars.length; i++) {
+            env_vars_json = env_vars_json + `"${env_vars_title[i]}": "${env_vars[i]}"`
+            if (i < env_vars.length - 1) { env_vars_json = env_vars_json + "," }
+            if (i == env_vars.length - 1) { env_vars_json = env_vars_json + "}" }
         }
         body = {
             "name": document.getElementById("name").value,
             "description": document.getElementById("description").value,
             "price": document.getElementById("price").value,
+            "category": "pterodactyl",
             "cpu": document.getElementById("cpu").value,
             "cpu_pinning": document.getElementById("cpu_pinning").value,
             "ram": document.getElementById("ram").value,
@@ -289,7 +290,7 @@ function create_product() {
             "startup_command": document.getElementById("startup_command").value,
             "env": env_vars_json
         }
-        postData(`https://api.mercurycloud.fr/api/products/ptero-create-product?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
+        postData(`https://dash.mercurycloud.fr:8000/api/products?uuid=${getCookie("uuid")}&token=${getCookie("token")}`, body).then(data => {
             console.log(data)
             if (data.error == false) {
                 window.location.replace("/dashboard/products/ptero-products-list.html")
@@ -301,6 +302,6 @@ function create_product() {
                     location.href = "../errors/error500.html"
                 }
             }
-        })    
+        })
     }
 }
