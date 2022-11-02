@@ -8,10 +8,7 @@ server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
   ipInfo = server.ip(req);
-
   var IP = req.socket.remoteAddress;
-
-
   server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
   server.con.query(sql, function (err, result) {
@@ -110,10 +107,7 @@ router.get('', function (req, res) {
 
 router.post('', jsonParser, function (req, res) {
   ipInfo = server.ip(req);
-
   var IP = req.socket.remoteAddress;
-
-
   var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };

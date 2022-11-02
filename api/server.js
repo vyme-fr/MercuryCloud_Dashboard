@@ -148,6 +148,7 @@ connection.connect(function (err) {
       app.use('/api/services', require('./routes/services/services'));
       app.use('/api/services/:service_name', require('./routes/services/infos/service-info'));
       app.use('/api/services/:service_name/files', require('./routes/services/infos/files/service-files'));
+      app.use('/api/services/:service_name/files/delete', require('./routes/services/infos/files/delete-files'));
       app.use('/api/services/:service_name/file', require('./routes/services/infos/files/service-file'));
 
 
@@ -155,7 +156,7 @@ connection.connect(function (err) {
       // utils //
       app.use('/api/utils/send-mail', require('./routes/utils/send-mail'));
       https.createServer(server_opt, app).listen(config.api_port, config.api_bind_address, function () {
-        logger(` [INFO] MercuryCloud API listening on ${config.api_url + ":" + config.api_port} !`)
+        logger(` [INFO] MercuryCloud API v${config.api_version} listening on ${config.api_url + ":" + config.api_port} !`)
       });
     }).catch((error) => {
       logger(" [ERROR] Proxmox API error : " + error);

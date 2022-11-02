@@ -18,6 +18,7 @@
    <script src="../../assets/js/xterm.js"></script>
    <script src="../../assets/js/xterm-addon-fit.js"></script>
    <script src="../../assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+   <script src="	https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
 </head>
 
 <body class="  ">
@@ -479,9 +480,13 @@
                            </div>
                         </div>
                         <div class="text-center not-selectable">
-                           <h2 class="counter not-selectable" id="cpu-counter"></h2>
+                           <h2 class="counter not-selectable" id="cpu-counter">
+                              <a class="list-group-item list-group-item">
+                                 <div class="spinner-grow text-secondary" role="status"></div>
+                              </a>
+                           </h2>
                            <div>
-                              <span>100% par coeur utilisé</span>
+                              <span id="cpu-counter-span"></span>
                            </div>
                         </div>
                      </div>
@@ -544,7 +549,11 @@
                            </div>
                         </div>
                         <div class="text-center not-selectable">
-                           <h2 class="counter not-selectable" id="ram-counter"></h2>
+                           <h2 class="counter not-selectable" id="ram-counter">
+                              <a class="list-group-item list-group-item">
+                                 <div class="spinner-grow text-secondary" role="status"></div>
+                              </a>
+                           </h2>
                            <div>
                               <span id="ram-counter-span"></span>
                            </div>
@@ -572,7 +581,11 @@
                            </div>
                         </div>
                         <div class="text-center not-selectable">
-                           <h2 class="counter not-selectable" id="disk-counter"></h2>
+                           <h2 class="counter not-selectable" id="disk-counter">
+                              <a class="list-group-item list-group-item">
+                                 <div class="spinner-grow text-secondary" role="status"></div>
+                              </a>
+                           </h2>
                            <div>
                               <span id="disk-counter-span"></span>
                            </div>
@@ -606,7 +619,11 @@
                            </div>
                         </div>
                         <div class="text-center not-selectable">
-                           <h2 class="counter not-selectable" id="net-counter"></h2>
+                           <h2 class="counter not-selectable" id="net-counter">
+                              <a class="list-group-item list-group-item">
+                                 <div class="spinner-grow text-secondary" role="status"></div>
+                              </a>
+                           </h2>
                            <div>
                               <span id="net-counter-span">
                               </span>
@@ -619,26 +636,21 @@
                <div class="col-lg-3">
                   <div class="card">
                      <button id="start-button" class="btn btn-success col-md-12">Démarrer</button>
-                     <div id=" net-chart">
-                     </div>
                   </div>
                </div>
                <div class="col-lg-3">
                   <div class="card">
                      <button id="restart-button" class="btn btn-warning col-md-12">Redémarrer</button>
-                     <div id="net-chart"></div>
                   </div>
                </div>
                <div class="col-lg-3">
                   <div class="card">
                      <button id="stop-button" class="btn btn-danger col-md-12">Stopper</button>
-                     <div id="net-chart"></div>
                   </div>
                </div>
                <div class="col-lg-3">
                   <div class="card">
                      <button id="kill-button" class="btn btn-secondary col-md-12">Tuer</button>
-                     <div id="net-chart"></div>
                   </div>
                </div>
                <div class="bd-example">
@@ -661,14 +673,39 @@
                   <div class="tab-content" id="pills-tabContent">
                      <div class="tab-pane fade show active" id="pills-home1" role="tabpanel"
                         aria-labelledby="pills-home-tab1">
-                        <div class="col-lg-12">
-                           <div class="card">
-                              <div class="card-body">
-                                 <div id="terminal" class="console-card"></div>
-                                 <div class="mb-3">
-                                    <input class="form-control form-control-sm" type="text"
-                                       placeholder="Tapez une commande »" aria-label=".form-control-sm example"
-                                       id="terminal-input">
+                        <div class="row">
+                           <div class="col-lg-9">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <div id="terminal" class="console-card"></div>
+                                    <div class="mb-3">
+                                       <input class="form-control form-control-sm" type="text"
+                                          placeholder="Tapez une commande »" aria-label=".form-control-sm example"
+                                          id="terminal-input">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-xl-3 col-lg-4">
+                              <div class="card">
+                                 <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                       <h4 id="service-title" class="card-title"></h4>
+                                    </div>
+                                 </div>
+                                 <div class="card-body">
+                                    <h5>Détails</h5>
+                                    <ul class="list-unstyled">
+                                       <li id="service-ip"></li>
+                                       <li id="service-ports"></li>
+                                    </ul>
+                                    <h5>SFTP</h5>
+                                    <ul class="list-unstyled">
+                                       <li id="service-sftp-ip"></li>
+                                       <li id="service-sftp-port"></li>
+                                    </ul>
+                                    <p></p>
+                                    <h5>Racourcis</h5>
                                  </div>
                               </div>
                            </div>
@@ -684,20 +721,29 @@
                                        <ol class="breadcrumb" id="files-explorer-nav">
                                        </ol>
                                     </nav>
-                                    <div class="list-group" id="files-explorer-div">
-                                    </div>
+
                                     <button
                                        onclick='document.getElementById("back-button").classList.add("disabled"); document.getElementById("back-button").innerHTML = `<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>`; back.pop(); load_files(back[back.length - 1]); document.getElementById("back-button").classList.remove("disabled"); document.getElementById("back-button").innerHTML = `Retour`'
                                        id="back-button" class="btn btn-primary col-md-2">Retour</button>
+                                    <button id="upload-button" type="file"
+                                       class="btn btn-primary col-md-2">Télécharger</button>
+                                    <input type="file" id="file-upload" multiple>
                                     <p></p>
+                                    <div id="progress-div" class="progress" style="height:5px">
+                                       <div id="progress-upload" class="progress-bar" role="progressbar"
+                                          aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                       </div>
+                                    </div>
                                     <button onclick="editor_back()" id="editor-back-button"
                                        class="btn btn-primary col-md-2">Retour</button>
-                                    <div class="list-group" id="files-explorer">
-                                    </div>
                                     <button onclick="save_file_content()" class="btn btn-primary col-md-2"
                                        id="save-filecontent-btn">Enregistrer</button>
                                     <p></p>
+                                    <div class="list-group" id="files-explorer">
+                                    </div>
                                     <div id="editor" style="height: 500px; width: 100%"></div>
+                                    <img id="image" style="height: 100%; width: 100%"></img>
+                                    <iframe id="pdf" frameborder="0" height="979px" width="100%"></iframe>
                                     <p></p>
                                     <select id="editor-mode" onchange=' editor.session.setMode("ace/mode/" +
                                        document.getElementById("editor-mode").value.toLowerCase())'

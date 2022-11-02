@@ -50,37 +50,51 @@ router.get('', function (req, res) {
                   }).then(response => {
                     return response.json()
                   }).then(data1 => {
-                    var sql = `SELECT * FROM services_logs WHERE service_id = '${id}' ORDER BY timestamp DESC`;
-                    server.con.query(sql, function (err, result1) {
-                      let ii = 0
-                      var service_logs = []
-                      for (let i = 0; i < result1.length; i++) {
-                        ii++
-                        if (ii <= 25) {
-                          service_logs.push({
-                            'timestamp': result1[i].timestamp,
-                            'uuid': result1[i].uuid,
-                            'ip': result1[i].ip,
-                            'action': result1[i].action
-                          })
-                        }
+                    server.fetch(config.pterodactyl_url + "/api/client/servers/" + service_config.identifier, {
+                      "method": "GET",
+                      "headers": {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${config.pterodactyl_user_api_key}`,
                       }
-                      return res.json({
-                        'error': false, 'data': {
-                          'id': result[0].id,
-                          'uuid': result[0].uuid,
-                          'name': result[0].name,
-                          'product_id': result[0].product_id,
-                          'price': result[0].price,
-                          'category': result[0].category,
-                          'configuration': service_config,
-                          'statut': result[0].statut,
-                          'resources': data.attributes,
-                          'websocket': {
-                            'websocket_url': data1.data.socket,
-                            'websocket_token': data1.data.token
+                    }).then(response => {
+                      return response.json()
+                    }).then(data2 => {
+                      var sql = `SELECT * FROM services_logs WHERE service_id = '${id}' ORDER BY timestamp DESC`;
+                      server.con.query(sql, function (err, result1) {
+                        let ii = 0
+                        var service_logs = []
+                        for (let i = 0; i < result1.length; i++) {
+                          ii++
+                          if (ii <= 25) {
+                            service_logs.push({
+                              'timestamp': result1[i].timestamp,
+                              'uuid': result1[i].uuid,
+                              'ip': result1[i].ip,
+                              'action': result1[i].action
+                            })
                           }
-                        }, 'logs': service_logs
+                        }
+                        return res.json({
+                          'error': false, 'data': {
+                            'id': result[0].id,
+                            'uuid': result[0].uuid,
+                            'name': result[0].name,
+                            'product_id': result[0].product_id,
+                            'price': result[0].price,
+                            'category': result[0].category,
+                            'configuration': service_config,
+                            'statut': result[0].statut,
+                            'resources': data.attributes,
+                            'feature_limits': data2.feature_limits,
+                            'allocations': data2.attributes.relationships.allocations.data,
+                            'sftp_details': data2.attributes.sftp_details,
+                            'websocket': {
+                              'websocket_url': data1.data.socket,
+                              'websocket_token': data1.data.token
+                            }
+                          }, 'logs': service_logs
+                        })
                       })
                     })
                   }).catch(err => { server.logger(" [ERROR] Pterodactyl API error : " + err); return res.json({ "error": true, "code": 503, "msg": "Pterodactyl API error : " + err }) })
@@ -137,6 +151,8 @@ router.get('', function (req, res) {
                               'configuration': service_config,
                               'statut': result[0].statut,
                               'resources': data.attributes,
+                              'feature_limits': data.feature_limits,
+                              'allocations': data.relationships,
                               'websocket': {
                                 'websocket_url': data1.data.socket,
                                 'websocket_token': data1.data.token
