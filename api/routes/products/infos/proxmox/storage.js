@@ -1,4 +1,4 @@
-var router = require('express').Router();
+let router = require('express').Router();
 const server = require('../../../../server.js')
 const config = require('../../../../config.json');
 const { response } = require('express');
@@ -7,17 +7,22 @@ const route_name = "/products/proxmox/storage"
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
+  const start = process.hrtime()
   ipInfo = server.ip(req);
-  var IP = req.socket.remoteAddress;
-  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  let sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };
     if (result.length == 0) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
-      if (result[0].token === req.query.token) {
-        permissions_manager.has_permission(req.query.uuid, "LISTPRODUCTS").then(function (result) {
+      if (result[0].token === req.cookies.token) {
+        permissions_manager.has_permission(req.cookies.uuid, "LISTPRODUCTS").then(function (result) {
           if (result) {
             server.fetch(`${config.proxmox_url}/api2/json/nodes/${req.query.node}/storage`, {
               "method": "GET",
@@ -48,6 +53,10 @@ router.get('', function (req, res) {
       }
     }
   });
+  res.on('finish', () => {
+    const durationInMilliseconds = server.getDurationInMilliseconds(start)
+    server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+  })
 })
 
 module.exports = router;

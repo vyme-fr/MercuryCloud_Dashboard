@@ -12,6 +12,7 @@
     "@devnote-dev/pterojs": "^1.2.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
     "cross-fetch": "^3.1.5",
     "crypto": "^1.0.1",
     "express": "^4.17.3",
@@ -27,6 +28,7 @@
     "readline": "^1.3.0",
     "request": "^2.88.2",
     "uuid": "^8.3.2",
+    "ws": "^8.12.1",
     "xterm": "^4.19.0",
     "xterm-addon-fit": "^0.5.0"
   }

@@ -1,27 +1,34 @@
-var router = require('express').Router();
+let router = require('express').Router();
 const server = require('../server.js')
 const route_name = "/"
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 function getRandomInt(max, min) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
 router.get('', (req, res) => {
-  var IP = req.socket.remoteAddress;
-  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  const start = process.hrtime()
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  let sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
-    if (err) { logger(" [ERROR] Database error\n  " + err) };
-    if (result.length == 0) {
-      return res.json({ 'error': true, 'code': 404 })
+    if (err) { logger(" [ERROR] Database error\n  " + err) }
+    if (result.length === 0) {
+      res.status(401);
+      return res.json({ 'error': true, 'code': 401 })
     } else {
-      if (result[0].token === req.query.token) {
-        var sql = `SELECT * FROM users WHERE uuid = '${req.query.uuid}'`;
+      if (result[0].token === req.cookies.token) {
+        let sql = `SELECT * FROM users WHERE uuid = '${req.cookies.uuid}'`;
         server.con.query(sql, function (err, result1) {
-          if (err) { server.logger(" [ERROR] Database error\n  " + err) };
-          var sql = `SELECT * FROM roles WHERE id = '${result1[0].role}'`;
+          if (err) { server.logger(" [ERROR] Database error\n  " + err) }
+          let sql = `SELECT * FROM roles WHERE id = '${result1[0].role}'`;
           server.con.query(sql, function (err, result2) {
-            if (err) { server.logger(" [ERROR] Database error\n  " + err) };
-            var activity = []
+            if (err) { server.logger(" [ERROR] Database error\n  " + err) }
+            let activity = []
             activity.push({
               "name": "Maintenance Serveur PVE-1",
               "date": "17 FEV 15:59"
@@ -34,8 +41,8 @@ router.get('', (req, res) => {
               "name": "Maintenance DNS",
               "date": "15 JUN 11:00"
             })
-            var cpu = []
-            var ram = []
+            let cpu = []
+            let ram = []
             for (let i = 0; i < 24; i++) {
               cpu.push(getRandomInt(80, 10))
             }
@@ -86,10 +93,15 @@ router.get('', (req, res) => {
           })
         })
       } else {
-        return res.json({ 'error': true, 'code': 403 })
+        res.status(401);
+        return res.json({ 'error': true, 'code': 401 })
       }
     }
   });
+  res.on('finish', () => {
+    const durationInMilliseconds = server.getDurationInMilliseconds(start)
+    server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+  })
 });
 
 module.exports = router;

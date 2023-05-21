@@ -1,27 +1,32 @@
-var router = require('express').Router();
+const router = require('express').Router();
 const server = require('../../server.js')
-var jsonParser = server.parser.json()
+const jsonParser = server.parser.json()
 const route_name = "/services"
 const permissions_manager = require("../../utils/permissions-manager")
 const config = require('../../config.json')
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.get('', function (req, res) {
+  const start = process.hrtime()
   ipInfo = server.ip(req);
-  var IP = req.socket.remoteAddress;
-  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  const sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };
     if (result.length == 0) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
-      if (result[0].token === req.query.token) {
-        permissions_manager.has_permission(req.query.uuid, "LISTSERVICES").then(function (result) {
+      if (result[0].token === req.cookies.token) {
+        permissions_manager.has_permission(req.cookies.uuid, "LISTSERVICES").then(function (result) {
           if (result) {
-            var sql = `SELECT * FROM services;`;
+            const sql = `SELECT * FROM services;`;
             server.con.query(sql, function (err, result) {
-              if (err) { server.logger(" [ERROR] Database error\n  " + err) };
+              if (err) { server.logger(" [ERROR] Database error\n  " + err) }
               server.fetch(config.pterodactyl_url + "/api/application/servers", {
                 "method": "GET",
                 "headers": {
@@ -32,7 +37,7 @@ router.get('', function (req, res) {
               }).then(response => {
                 return response.json()
               }).then(data => {
-                var servers = []
+                let servers = []
                 for (let i = 0; i < data.data.length; i++) {
                   for (let ii = 0; ii < result.length; ii++) {
                     const configuration = JSON.parse(result[ii].configuration)
@@ -44,32 +49,44 @@ router.get('', function (req, res) {
                     }
                   }
                 }
-                var services = []
+                let services = []
                 for (let i = 0; i < result.length; i++) {
-                  if (data.data[servers[i].ptero_i].attributes.suspended == true) {
-                    statut = "suspended"
-                  } else if (data.data[servers[i].ptero_i].attributes.container.installed == false) {
-                    statut = "installing"
-                  } else {
-                    statut = "active"
+                  if (result[i].category == "pterodactyl") {
+                    if (data.data[servers[i].ptero_i].attributes.suspended == true) {
+                      statut = "suspended"
+                    } else if (data.data[servers[i].ptero_i].attributes.container.installed == false) {
+                      statut = "installing"
+                    } else {
+                      statut = "active"
+                    }
+                    services.push({
+                      "id": result[i].id,
+                      "uuid": result[i].uuid,
+                      "name": result[i].name,
+                      "product_id": result[i].product_id,
+                      "price": result[i].price,
+                      "category": result[i].category,
+                      "statut": statut
+                    })
+                  } else if (result[i].category == "proxmox") {
+                    services.push({
+                      "id": result[i].id,
+                      "uuid": result[i].uuid,
+                      "name": result[i].name,
+                      "product_id": result[i].product_id,
+                      "price": result[i].price,
+                      "category": result[i].category,
+                      "statut": result[i].statut
+                    })
                   }
-                  services.push({
-                    "id": result[i].id,
-                    "uuid": result[i].uuid,
-                    "name": result[i].name,
-                    "product_id": result[i].product_id,
-                    "price": result[i].price,
-                    "category": result[i].category,
-                    "statut": statut
-                  })
                 }
                 return res.json({ 'error': false, 'data': services })
               }).catch(err => { server.logger(" [ERROR] Pterodactyl API error : " + err); return res.json({ "error": true, "code": 503, "msg": "Pterodactyl API error : " + err }) })
             });
           } else {
-            var sql = `SELECT * FROM services WHERE uuid = '${req.query.uuid}';`;
+            const sql = `SELECT * FROM services WHERE uuid = '${req.cookies.uuid}';`;
             server.con.query(sql, function (err, result) {
-              if (err) { server.logger(" [ERROR] Database error\n  " + err) };
+              if (err) { server.logger(" [ERROR] Database error\n  " + err) }
               server.fetch(config.pterodactyl_url + "/api/application/servers", {
                 "method": "GET",
                 "headers": {
@@ -80,7 +97,7 @@ router.get('', function (req, res) {
               }).then(response => {
                 return response.json()
               }).then(data => {
-                var servers = []
+                let servers = []
                 for (let i = 0; i < data.data.length; i++) {
                   for (let ii = 0; ii < result.length; ii++) {
                     const configuration = JSON.parse(result[ii].configuration)
@@ -92,9 +109,39 @@ router.get('', function (req, res) {
                     }
                   }
                 }
-                console.log(servers)
-              }).catch(err => { server.logger(" [ERROR] Pterodactyl API error : " + err); return req.json({ "error": true, "code": 503, "msg": "Pterodactyl API error : " + err }) })
-              return res.json({ 'error': false, 'data': result })
+                let services = []
+                for (let i = 0; i < result.length; i++) {
+                  if (result[i].category == "pterodactyl") {
+                    if (data.data[servers[i].ptero_i].attributes.suspended == true) {
+                      statut = "suspended"
+                    } else if (data.data[servers[i].ptero_i].attributes.container.installed == false) {
+                      statut = "installing"
+                    } else {
+                      statut = "active"
+                    }
+                    services.push({
+                      "id": result[i].id,
+                      "uuid": result[i].uuid,
+                      "name": result[i].name,
+                      "product_id": result[i].product_id,
+                      "price": result[i].price,
+                      "category": result[i].category,
+                      "statut": statut
+                    })
+                  } else if (result[i].category == "proxmox") {
+                    services.push({
+                      "id": result[i].id,
+                      "uuid": result[i].uuid,
+                      "name": result[i].name,
+                      "product_id": result[i].product_id,
+                      "price": result[i].price,
+                      "category": result[i].category,
+                      "statut": result[i].statut
+                    })
+                  }
+                }
+                return res.json({ 'error': false, 'data': services })
+              }).catch(err => { server.logger(" [ERROR] Pterodactyl API error : " + err); return res.json({ "error": true, "code": 503, "msg": "Pterodactyl API error : " + err }) })
             });
           }
         })
@@ -103,23 +150,33 @@ router.get('', function (req, res) {
       }
     }
   });
+  res.on('finish', () => {
+    const durationInMilliseconds = server.getDurationInMilliseconds(start)
+    server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+  })
 })
 
 router.post('', jsonParser, function (req, res) {
+  const start = process.hrtime()
   ipInfo = server.ip(req);
-  var IP = req.socket.remoteAddress;
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  const sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };
     if (result.length == 0) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
-      if (result[0].token === req.query.token) {
-        var sql = `SELECT * FROM products WHERE id = '${req.body.product_id}'`;
+      if (result[0].token === req.cookies.token) {
+        const sql = `SELECT * FROM products WHERE id = '${req.body.product_id}'`;
         server.con.query(sql, async function (err, result) {
           if (err) { server.logger(" [ERROR] Database error\n  " + err) };
           if (result[0].category == "pterodactyl") {
-            var docker_img = "ghcr.io/pterodactyl/yolks:java_17"
+            const docker_img = "ghcr.io/pterodactyl/yolks:java_17"
             configuration = JSON.parse(result[0].configuration)
             let body = {
               'name': result[0].name + " " + req.body.srv_info.srv_name,
@@ -176,13 +233,13 @@ router.post('', jsonParser, function (req, res) {
                 'uuid': data.attributes.uuid
               }
               service_id = server.crypto.randomBytes(3).toString('hex')
-              var sql = `INSERT INTO services (id, uuid, name, product_id, price, category, configuration, statut) VALUES('${service_id}', '${req.query.uuid}', '${req.body.srv_info.srv_name}', '${req.body.product_id}', '${result[0].price}', 'pterodactyl', '${JSON.stringify(service_configuration)}', 'installing')`;
+              const sql = `INSERT INTO services (id, uuid, name, product_id, price, category, configuration, statut) VALUES('${service_id}', '${req.cookies.uuid}', '${req.body.srv_info.srv_name}', '${req.body.product_id}', '${result[0].price}', 'pterodactyl', '${JSON.stringify(service_configuration)}', 'installing')`;
               server.con.query(sql, function (err, result) {
                 if (err) { server.logger(" [ERROR] Database error\n  " + err) };
               });
               server.logger(" [DEBUG] Email to " + req.body.user_info.mail + " from " + config.smtp_username + " sent !")
               server.logger(" [DEBUG] New service : " + req.body.srv_info.srv_name + " !")
-              server.services_action_logger(service_id, req.query.uuid, IP, "Création du service " + req.body.srv_info.srv_name)
+              server.services_action_logger(service_id, req.cookies.uuid, IP, "Création du service " + req.body.srv_info.srv_name)
               return res.json({ "error": false, "response": "OK" });
             }).catch(err => { server.logger(" [ERROR] Pterodactyl API error : " + err); return req.json({ "error": true, "code": 503, "msg": "Pterodactyl API error : " + err }) })
           } else if (result[0].category == "proxmox") {
@@ -196,8 +253,10 @@ router.post('', jsonParser, function (req, res) {
       }
     }
   })
+  res.on('finish', () => {
+    const durationInMilliseconds = server.getDurationInMilliseconds(start)
+    server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+  })
 })
-
-
 
 module.exports = router;

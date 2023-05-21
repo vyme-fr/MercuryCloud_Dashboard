@@ -1,20 +1,20 @@
-var router = require('express').Router();
+let router = require('express').Router();
 const server = require('../../server.js')
-var jsonParser = server.parser.json()
+let jsonParser = server.parser.json()
 const config = require('../../config.json');
 const route_name = "/utils/send-mail"
 server.logger(" [INFO] /api" + route_name + " route loaded !")
 
 router.post('', jsonParser, function (req, res) {
+    const start = process.hrtime()
     ipInfo = server.ip(req);
-    server.logger(' [DEBUG] GET from : ' + ipInfo.clientIp.split("::ffff:")[1] + `, ${req.query.uuid}`)
-    var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+    let sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
     server.con.query(sql, function (err, result) {
       if (err) {server.logger(" [ERROR] Database error\n  " + err)};
       if (result.length == 0) {
         return res.json({'error': true, 'code': 404})
       } else {
-        if (result[0].token === req.query.token) {
+        if (result[0].token === req.cookies.token) {
           server.mail_transporter.sendMail({
             from: config.smtp_username,
             to: req.body.to,
@@ -28,6 +28,10 @@ router.post('', jsonParser, function (req, res) {
         }
     }
 })
+    res.on('finish', () => {
+        const durationInMilliseconds = server.getDurationInMilliseconds (start)
+        server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+    })
 })
 
 module.exports = router;

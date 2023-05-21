@@ -1,15 +1,15 @@
 const server = require('../server.js')
 
 function has_permission(uuid, permission) {
-    var sql = `SELECT role FROM users WHERE uuid = '${uuid}'`;
+    let sql = `SELECT role FROM users WHERE uuid = '${uuid}'`;
     return new Promise(function(resolve, reject) {
         server.con.query(sql, function (err, result) {
             if (err) {reject(err)}
             if (result[0].role.length > 0) {
-                var sql = `SELECT permissions FROM roles WHERE id = '${result[0].role}'`;
+                let sql = `SELECT permissions FROM roles WHERE id = '${result[0].role}'`;
                 server.con.query(sql, function (err, result) {
                     if (err) {reject(err)}
-                    permissions = result[0].permissions.split(",")
+                    let permissions = result[0].permissions.split(",")
                     if (permissions.includes("ADMIN")) {
                         resolve(true)
                     } else if (permissions.includes(permission)) {

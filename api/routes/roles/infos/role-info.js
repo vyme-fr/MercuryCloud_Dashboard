@@ -1,6 +1,6 @@
-var router = require('express').Router({ mergeParams: true });
+let router = require('express').Router({ mergeParams: true });
 const server = require('../../../server.js')
-var jsonParser = server.parser.json()
+let jsonParser = server.parser.json()
 const route_name = "/roles/:role_id"
 const permissions_manager = require("../../../utils/permissions-manager")
 server.logger(" [INFO] /api" + route_name + " route loaded !")
@@ -8,23 +8,27 @@ server.logger(" [INFO] /api" + route_name + " route loaded !")
 // GET INFOS //
 
 router.get('', function (req, res) {
+  const start = process.hrtime()
   ipInfo = server.ip(req);
-
-  var IP = req.socket.remoteAddress;
-  server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  let sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };
     if (result.length == 0) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
-      if (result[0].token === req.query.token) {
-        permissions_manager.has_permission(req.query.uuid, "LISTROLES").then(function (result) {
+      if (result[0].token === req.cookies.token) {
+        permissions_manager.has_permission(req.cookies.uuid, "LISTROLES").then(function (result) {
           if (result) {
-            var id = req.params.role_id
+            let id = req.params.role_id
             if (id == undefined) { return res.json({ 'error': true, 'msg': "Role id params is required", "code": 101 }) }
             if (id == "") { return res.json({ 'error': true, 'msg': "Role id params is required", "code": 102 }) }
-            var sql = `SELECT * FROM roles WHERE id = '${id}'`;
+            let sql = `SELECT * FROM roles WHERE id = '${id}'`;
             server.con.query(sql, function (err, result) {
               if (err) { server.logger(" [ERROR] Database error\n  " + err) };
               if (result.length > 0) {
@@ -55,37 +59,46 @@ router.get('', function (req, res) {
       }
     }
   });
+  res.on('finish', () => {
+    const durationInMilliseconds = server.getDurationInMilliseconds(start)
+    server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+  })
 })
 
 // EDIT ROLE //
 
 router.put('', jsonParser, function (req, res) {
+  const start = process.hrtime()
   ipInfo = server.ip(req);
-
-  var IP = req.socket.remoteAddress;
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  let sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };
     if (result.length == 0) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
-      if (result[0].token === req.query.token) {
-        var id = req.params.role_id
+      if (result[0].token === req.cookies.token) {
+        let id = req.params.role_id
         if (id == undefined) { return res.json({ 'error': true, 'msg': "Role id params is required", "code": 101 }) }
         if (id == "") { return res.json({ 'error': true, 'msg': "Role id params is required", "code": 102 }) }
-        permissions_manager.has_permission(req.query.uuid, "EDITROLE").then(function (result) {
+        permissions_manager.has_permission(req.cookies.uuid, "EDITROLE").then(function (result) {
           if (result) {
-            var permissions = ''
+            let permissions = ''
             if (req.body.permissions.length < 1) {
               permissions = "NONE"
             } else {
               permissions = req.body.permissions
             }
-            var sql = `UPDATE roles SET name = '${req.body.name}', permissions = '${permissions}' WHERE id = '${id}';`;
+            let sql = `UPDATE roles SET name = '${req.body.name}', permissions = '${permissions}' WHERE id = '${id}';`;
             server.con.query(sql, function (err, result) {
               if (err) { server.logger(" [ERROR] Database error\n  " + err); return res.json({ "error": true, "msg": "Database error : " + err }) };
             });
-            server.logger(" [DEBUG] Role " + req.body.name + " updated from " + IP + " with uuid " + req.query.uuid + " !")
+            server.logger(" [DEBUG] Role " + req.body.name + " updated from " + IP + " with uuid " + req.cookies.uuid + " !")
             return res.json({ "error": false, "response": "OK" });
           } else {
             return res.json({
@@ -105,24 +118,29 @@ router.put('', jsonParser, function (req, res) {
 // DELETE ROLE //
 
 router.delete('', jsonParser, function (req, res) {
+  const start = process.hrtime()
   ipInfo = server.ip(req);
-  var response = "OK"
-  var error = false
-
-  var IP = req.socket.remoteAddress;
-  var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+  let response = "OK"
+  let error = false
+  let IP = ""
+  if (req.headers['x-forwarded-for'] == undefined) {
+    IP = req.socket.remoteAddress.replace("::ffff:", "")
+  } else {
+    IP = req.headers['x-forwarded-for'].split(',')[0]
+  }
+  let sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
   server.con.query(sql, function (err, result) {
     if (err) { server.logger(" [ERROR] Database error\n  " + err) };
     if (result.length == 0) {
       return res.json({ 'error': true, 'code': 404 })
     } else {
-      if (result[0].token === req.query.token) {
-        var id = req.params.role_id
+      if (result[0].token === req.cookies.token) {
+        let id = req.params.role_id
         if (id == undefined) { return res.json({ 'error': true, 'msg': "Role id params is required", "code": 101 }) }
         if (id == "") { return res.json({ 'error': true, 'msg': "Role id params is required", "code": 102 }) }
-        permissions_manager.has_permission(req.query.uuid, "DELETEROLE").then(function (result) {
+        permissions_manager.has_permission(req.cookies.uuid, "DELETEROLE").then(function (result) {
           if (result) {
-            var sql = `DELETE FROM roles WHERE id='${id}'`;
+            let sql = `DELETE FROM roles WHERE id='${id}'`;
             server.con.query(sql, function (err, result) {
               if (err) { server.logger(" [ERROR] Database error\n  " + err), error = true, response = "Database error" };
             });
@@ -140,6 +158,10 @@ router.delete('', jsonParser, function (req, res) {
       }
     }
   });
+  res.on('finish', () => {
+    const durationInMilliseconds = server.getDurationInMilliseconds(start)
+    server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+  })
 })
 
 module.exports = router;

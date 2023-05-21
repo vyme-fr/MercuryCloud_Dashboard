@@ -1,6 +1,6 @@
-var router = require('express').Router();
+let router = require('express').Router();
 const server = require('../../server.js')
-var jsonParser = server.parser.json()
+let jsonParser = server.parser.json()
 const route_name = "/users"
 const permissions_manager = require("../../utils/permissions-manager")
 server.logger(" [INFO] /api" + route_name + " route loaded !")
@@ -9,24 +9,27 @@ server.logger(" [INFO] /api" + route_name + " route loaded !")
 // USERS LIST //
 
 router.get('', function (req, res) {
-    ipInfo = server.ip(req);
-
-    var IP = req.socket.remoteAddress;
-    server.logger(' [DEBUG] GET /api' + route_name + ' from ' + IP + ` with uuid ${req.query.uuid}`)
-    var sql = `SELECT token FROM users WHERE uuid = '${req.query.uuid}'`;
+    const start = process.hrtime()
+    let IP = ""
+    if (req.headers['x-forwarded-for'] == undefined) {
+        IP = req.socket.remoteAddress.replace("::ffff:", "")
+    } else {
+        IP = req.headers['x-forwarded-for'].split(',')[0]
+    }
+    const sql = `SELECT token FROM users WHERE uuid = '${req.cookies.uuid}'`;
     server.con.query(sql, function (err, result) {
         if (err) { server.logger(" [ERROR] Database error\n  " + err) };
         if (result.length == 0) {
             return res.json({ 'error': true, 'code': 401 })
         } else {
-            if (result[0].token === req.query.token) {
-                permissions_manager.has_permission(req.query.uuid, "LISTUSERS").then(function (result) {
+            if (result[0].token === req.cookies.token) {
+                permissions_manager.has_permission(req.cookies.uuid, "LISTUSERS").then(function (result) {
                     if (result) {
-                        var sql = `SELECT * FROM users`;
+                        let sql = `SELECT * FROM users`;
                         server.con.query(sql, function (err, result) {
                             if (err) { server.logger(" [ERROR] Database error\n  " + err) };
                             users = []
-                            for (var i = 0; i < result.length; i++) {
+                            for (let i = 0; i < result.length; i++) {
                                 users.push({
                                     "uuid": result[i].uuid,
                                     "username": result[i].username,
@@ -53,27 +56,37 @@ router.get('', function (req, res) {
             }
         }
     });
+    res.on('finish', () => {
+        const durationInMilliseconds = server.getDurationInMilliseconds(start)
+        server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+    })
 })
 
 
 // CREATE //
 
 router.post('', jsonParser, function (req, res) {
-    var IP = req.socket.remoteAddress;
-    var sql = `SELECT mail FROM users WHERE mail = '${req.body.mail.toLowerCase()}'`;
+    const start = process.hrtime()
+    let IP = ""
+    if (req.headers['x-forwarded-for'] == undefined) {
+        IP = req.socket.remoteAddress.replace("::ffff:", "")
+    } else {
+        IP = req.headers['x-forwarded-for'].split(',')[0]
+    }
+    let sql = `SELECT mail FROM users WHERE mail = '${req.body.mail.toLowerCase()}'`;
     server.con.query(sql, function (err, result) {
         if (err) { server.logger(" [ERROR] Database error\n  " + err) };
         if (result.length > 0) {
             return res.json({ "error": true, "msg": "Mail already used" })
         } else {
-            var sql = `SELECT username FROM users WHERE username = '${req.body.username}'`;
+            let sql = `SELECT username FROM users WHERE username = '${req.body.username}'`;
             server.con.query(sql, function (err, result) {
                 if (err) { server.logger(" [ERROR] Database error\n  " + err) };
                 if (result.length > 0) {
                     return res.json({ "error": true, "msg": "Username already exist" })
                 } else {
                     server.bcrypt.hash(req.body.password, 10, function (err, hash) {
-                        var sql = `INSERT INTO users (uuid, username, role, mail, token, password, first_name, last_name, tel, address_1, address_2, city, zip, country, state, balance, tickets, services, suspend_services, alerts) VALUES('${server.uuid.v4()}', '${req.body.username}', '${req.body.role}', '${req.body.mail.toLowerCase()}', '${server.crypto.randomBytes(20).toString('hex')}', '${hash}', '${req.body.first_name}', '${req.body.last_name}', '${req.body.tel}', '${req.body.address_1}', '${req.body.address_2}', '${req.body.city}', '${req.body.zip}', '${req.body.country}', '${req.body.state}', 0, 0, 0, 0, 0)`;
+                        let sql = `INSERT INTO users (uuid, username, role, mail, token, password, first_name, last_name, tel, address_1, address_2, city, zip, country, state, balance, tickets, services, suspend_services, alerts) VALUES('${server.uuid.v4()}', '${req.body.username}', '${req.body.role}', '${req.body.mail.toLowerCase()}', '${server.crypto.randomBytes(20).toString('hex')}', '${hash}', '${req.body.first_name}', '${req.body.last_name}', '${req.body.tel}', '${req.body.address_1}', '${req.body.address_2}', '${req.body.city}', '${req.body.zip}', '${req.body.country}', '${req.body.state}', 0, 0, 0, 0, 0)`;
                         server.con.query(sql, function (err, result) {
                             if (err) { server.logger(" [ERROR] Database error\n  " + err); return res.json({ "error": true, "msg": "Database error " + err }) };
                         });
@@ -84,6 +97,10 @@ router.post('', jsonParser, function (req, res) {
             });
         }
     });
+    res.on('finish', () => {
+        const durationInMilliseconds = server.getDurationInMilliseconds(start)
+        server.logger(` [DEBUG] ${req.method} ${route_name} [FINISHED] [FROM ${IP}] in ${durationInMilliseconds.toLocaleString()} ms`)
+    })
 })
 
 

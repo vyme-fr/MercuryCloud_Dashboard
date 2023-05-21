@@ -1,8 +1,9 @@
 const https = require('https');
 const express = require('express');
-var getIP = require('ipware')().get_ip;
+const getIP = require('ipware')().get_ip;
 const fs = require('fs')
-var crypto = require("crypto");
+const crypto = require("crypto");
+const cookieParser = require('cookie-parser');
 const uuid = require('uuid');
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
@@ -13,12 +14,12 @@ const fetch = require('node-fetch');
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
-var server_opt = {
+const server_opt = {
   cert: fs.readFileSync(config.api_ssl_cert_path),
   key: fs.readFileSync(config.api_ssl_privkey_path)
 }
 
-let start_date = new Date();;
+let start_date = new Date();
 let date = ("0" + start_date.getDate()).slice(-2);
 let month = ("0" + (start_date.getMonth() + 1)).slice(-2);
 let year = start_date.getFullYear();
@@ -39,15 +40,23 @@ function logger(msg) {
   if (seconds < 10) { seconds = "0" + seconds }
   if (hours < 10) { hours = "0" + hours }
   if (minutes < 10) { minutes = "0" + minutes }
-  console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg)
-  fs.appendFileSync('logs/' + start_time + '.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
-  fs.appendFileSync('logs/latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + '] ' + msg + '\n')
+  console.log('[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + ']' + msg)
+  fs.appendFileSync('logs/' + start_time + '.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + ']' + msg + '\n')
+  fs.appendFileSync('logs/latest.log', '[' + year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds + ']' + msg + '\n')
+}
+
+const getDurationInMilliseconds = (start) => {
+  const NS_PER_SEC = 1e9
+  const NS_TO_MS = 1e6
+  const diff = process.hrtime(start)
+
+  return (diff[0] * NS_PER_SEC + diff[1]) / NS_TO_MS
 }
 
 logger(" [INFO] The API is starting...")
 
-var mysql = require('mysql');
-var connection = mysql.createConnection({
+const mysql = require('mysql');
+const connection = mysql.createConnection({
   host: config.mysql_host,
   user: config.mysql_usr,
   password: config.mysql_passwd,
@@ -63,6 +72,7 @@ exports.logger = logger
 exports.con = connection
 exports.ip = getIP
 exports.httpsAgent = httpsAgent
+exports.getDurationInMilliseconds = getDurationInMilliseconds
 
 logger(`   
 
@@ -79,12 +89,12 @@ connection.connect(function (err) {
     logger(` [ERROR] Database error !\n  ${err.stack}`);
     process.exit(1);
   }
-  logger(` [INFO] Database succefull connected ! (${connection.threadId})`);
+  logger(` [INFO] Database successfully connected ! (${connection.threadId})`);
 
   function services_action_logger(service_id, uuid, ip, action) {
-    var sql = `INSERT INTO services_logs (service_id, timestamp, uuid, ip, action) VALUES('${service_id}', '${Date.now()}', '${uuid}', '${ip}', '${action}')`;
-    connection.query(sql, function (err, result) {
-      if (err) { server.logger(" [ERROR] Database error\n  " + err) };
+    let sql = `INSERT INTO services_logs (service_id, timestamp, uuid, ip, action) VALUES('${service_id}', '${Date.now()}', '${uuid}', '${ip}', '${action}')`;
+    connection.query(sql, function (err) {
+      if (err) { server.logger(" [ERROR] Database error\n  " + err) }
     });
   }
   exports.services_action_logger = services_action_logger
@@ -103,7 +113,7 @@ connection.connect(function (err) {
       exports.proxmox_ticket = proxmox_ticket
       exports.proxmox_CSRFPreventionToken = proxmox_CSRFPreventionToken
       logger(" [INFO] Proxmox API loaded ! (" + data.data.username + ")");
-      let mail_transporter = nodemailer.createTransport({
+      exports.mail_transporter = nodemailer.createTransport({
         host: config.smtp_host,
         port: config.smtp_port,
         secure: config.smtp_ssl,
@@ -112,16 +122,16 @@ connection.connect(function (err) {
           pass: config.smtp_pswd
         }
       })
-      exports.mail_transporter = mail_transporter
       logger(" [INFO] SMTP Client loaded ! (" + config.smtp_host + ":" + config.smtp_port + ")");
       app.use((req, res, next) => {
         res.append('Access-Control-Allow-Origin', ['*']);
         res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-        res.append('Access-Control-Allow-Headers', 'Content-Type');
+        res.append("Access-Control-Allow-Headers", "auth-uuid, auth-token, Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
         next();
         bodyParser.json();
       });
       app.use(require('./utils/rate-limit'));
+      app.use(cookieParser());
       // app.use(require('./utils/sql-injection'));
 
       // index //
@@ -150,16 +160,25 @@ connection.connect(function (err) {
       app.use('/api/services/:service_name/files', require('./routes/services/infos/files/service-files'));
       app.use('/api/services/:service_name/files/delete', require('./routes/services/infos/files/delete-files'));
       app.use('/api/services/:service_name/file', require('./routes/services/infos/files/service-file'));
+      app.use('/api/services/:service_name/proxmox/vnc/ticket', require('./routes/services/infos/proxmox/vnc/ticket'));
+      app.use('/api/services/:service_name/proxmox/vnc/websocket', require('./routes/services/infos/proxmox/vnc/websocket'));
 
+      // upgrades //
+      app.use('/api/upgrades', require('./routes/products/upgrades/upgrades'));
 
 
       // utils //
       app.use('/api/utils/send-mail', require('./routes/utils/send-mail'));
+
       https.createServer(server_opt, app).listen(config.api_port, config.api_bind_address, function () {
-        logger(` [INFO] MercuryCloud API v${config.api_version} listening on ${config.api_url + ":" + config.api_port} !`)
+        logger(` [INFO] MercuryCloud API v${config.api_version} listening on ${config.api_url} !`)
       });
     }).catch((error) => {
-      logger(" [ERROR] Proxmox API error : " + error);
+      if (error.toString().includes("null (reading 'ticket')")) {
+        logger(" [ERROR] Proxmox API error : Wrong user password or username !");
+      } else {
+        logger(" [ERROR] Proxmox API error : " + error);
+      }
       process.exit(1);
     });
 });

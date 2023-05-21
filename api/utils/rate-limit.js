@@ -4,7 +4,12 @@ const config = require('../config.json')
 // fs.readdirSync('utils/rate-limit-windows/').forEach(f => fs.rmSync(`${'utils/rate-limit-windows/'}/${f}`))
 
 function middleware(req, res, next) {
-    var IP = req.socket.remoteAddress;
+    let IP = ""
+    if (req.headers['x-forwarded-for'] == undefined) {
+        IP = req.socket.remoteAddress.replace("::ffff:", "")
+    } else {
+        IP = req.headers['x-forwarded-for'].split(',')[0]
+    }
     if (fs.existsSync('utils/rate-limit-windows/' + IP + '.json')) {
         fs.readFile('utils/rate-limit-windows/' + IP + '.json', 'utf8', (err, data) => {
             data_parsed = JSON.parse(data)
@@ -16,7 +21,7 @@ function middleware(req, res, next) {
             } else {
                 if (data_parsed.rate >= config.rate_limit_max_rate) {
                     server.logger(" [DEBUG] " + IP + " rate limit !")
-                    return res.json({ "error": true, "code": 429, "msg": "Your IP has been rate limit! This incident will be reported to the administrators." })
+                    return res.json({ "error": true, "code": 429, "msg": "Your IP has been blocked for rate limit! This incident will be reported to the administrators." })
                 } else {
                     data_parsed.rate++
                     fs.writeFileSync('utils/rate-limit-windows/' + IP + '.json', JSON.stringify(data_parsed))

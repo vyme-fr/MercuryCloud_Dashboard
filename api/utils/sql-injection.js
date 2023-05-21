@@ -1,41 +1,29 @@
 const rawbody = require('raw-body');
 const server = require('../server')
 
-function hasSql(value) {
+function validateInput(data) {
+    // Échappez tous les caractères spéciaux et les commentaires
+    // data = data.replace(/[-'`~!@#$%^&*()_|+=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+    // data = data.replace(/\/\*[\s\S]*?\*\//g, '');
 
-    if (value === null || value === undefined) {
-        return false;
+    // Vérifiez si la chaîne contient des mots-clés SQL
+    const sqlKeywords = ['SELECT', 'FROM', 'WHERE', 'AND', 'OR', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP', 'ALTER', 'TABLE'];
+    const normalizedData = data.toUpperCase();
+    for (const keyword of sqlKeywords) {
+        if (normalizedData.includes(keyword)) {
+            return true;
+        }
     }
 
-    var sql_meta = new RegExp('(%27)|(\')|(--)|(%23)|(#)', 'i');
-    if (sql_meta.test(value)) {
-        return true;
-    }
-
-    var sql_meta2 = new RegExp('((%3D)|(=))[^\n]*((%27)|(\')|(--)|(%3B)|(;))', 'i');
-    if (sql_meta2.test(value)) {
-        return true;
-    }
-
-    var sql_typical = new RegExp('w*((%27)|(\'))((%6F)|o|(%4F))((%72)|r|(%52))', 'i');
-    if (sql_typical.test(value)) {
-        return true;
-    }
-
-    var sql_union = new RegExp('((%27)|(\'))union', 'i');
-    if (sql_union.test(value)) {
-        return true;
-    }
-
+    // Si aucune erreur n'a été levée jusqu'à présent, cela signifie que les données sont valides
     return false;
 }
 
+
 function middleware(req, res, next) {
-
     var containsSql = false;
-
     if (req.originalUrl !== null && req.originalUrl !== undefined) {
-        if (hasSql(req.originalUrl) === true) {
+        if (validateInput(req.originalUrl) === true) {
             containsSql = true;
         }
     }
@@ -43,7 +31,7 @@ function middleware(req, res, next) {
     if (containsSql === false) {
         rawbody(req, {
             encoding: 'utf8'
-        }, function(err, body) {
+        }, function (err, body) {
 
             if (err) {
                 return next(err);
@@ -55,40 +43,40 @@ function middleware(req, res, next) {
                     body = JSON.stringify(body);
                 }
 
-                if (hasSql(body) === true) {
+                if (validateInput(body) === true) {
                     containsSql = true;
                 }
             }
 
             if (containsSql === true) {
-                var forwardedIpsStr = req.header('x-forwarded-for');
-                var IP = '';
-              
-                if (forwardedIpsStr) {
-                   IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+                let IP = ""
+                if (req.headers['x-forwarded-for'] == undefined) {
+                    IP = req.socket.remoteAddress.replace("::ffff:", "")
+                } else {
+                    IP = req.headers['x-forwarded-for'].split(',')[0]
                 }
-                server.logger(" [DEBUG] SQL injection from " + IP)
-                return res.status(403).json({
+                server.logger(" [DEBUG] Request body or params is not secure! [FROM " + IP + "] Body: " + body)
+                return res.status(500).json({
                     'error': true,
-                    'code': 403,
-                    'msg': 'SQL injection in the request! This incident will be reported to the administrators.'
+                    'code': 500,
+                    'msg': 'Request body or params is not secure! This incident will be reported to the administrators.'
                 });
             } else {
                 next();
             }
         });
     } else {
-        var forwardedIpsStr = req.header('x-forwarded-for');
-        var IP = '';
-      
-        if (forwardedIpsStr) {
-           IP = forwardedIps = forwardedIpsStr.split(',')[0];  
+        let IP = ""
+        if (req.headers['x-forwarded-for'] == undefined) {
+            IP = req.socket.remoteAddress.replace("::ffff:", "")
+        } else {
+            IP = req.headers['x-forwarded-for'].split(',')[0]
         }
-        server.logger(" [DEBUG] SQL injection from " + IP)
-        return res.status(403).json({
+        server.logger(" [DEBUG] Request body or params is not secure! [FROM " + IP + "] URL: " + req.originalUrl)
+        return res.status(500).json({
             'error': true,
-            'code': 403,
-            'msg': 'SQL injection in the request! This incident will be reported to the administrators.'
+            'code': 500,
+            'msg': 'Request body or params is not secure! This incident will be reported to the administrators.'
         });
     }
 }
